@@ -1,0 +1,26 @@
+
+
+.page-about>div:nth-of-type(2){
+  width:67%;
+}
+
+.page-about>div:nth-of-type(1){
+  /* this one should be left */
+  /* TODO: remove me */
+  border-width:1px;
+  border-style: dotted;
+  border-color:yellow;
+
+  width: 33%;
+
+}
+
+.page-about {
+
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+
+
+  height: 100%;
+}
