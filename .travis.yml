@@ -32,7 +32,7 @@ deploy:
   # production deploy
   - provider: script
     skip_cleanup: true
-    script: firebase deploy --project $FIREBASE_PROJECT --only production --token $FIREBASE_TOKEN --non-interactive
+    script: firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive
     on:
       all_branches: true
       condition: $TRAVIS_BRANCH = "master"
@@ -40,7 +40,7 @@ deploy:
   # staging deploy
   - provider: script
     skip_cleanup: true
-    script: firebase deploy -f --project $FIREBASE_PROJECT --only staging --token $FIREBASE_TOKEN --non-interactive
+    script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
     on:
       all_branches: true
       condition: $TRAVIS_BRANCH = "develop"
