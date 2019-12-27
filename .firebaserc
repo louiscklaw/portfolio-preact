@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "preactjs-projects"
+  },
+  "targets": {
+    "preactjs-projects": {
+      "hosting": {
+        "staging": [
+          "staging-portfolio-c7cb5"
+        ],
+        "production": [
+          "production-portfolio"
+        ]
+      }
+    }
   }
 }
