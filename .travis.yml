@@ -35,7 +35,7 @@ deploy:
     script: firebase deploy --project $FIREBASE_PROJECT --only production --token $FIREBASE_TOKEN --non-interactive
     on:
       all_branches: true
-      condition: $TRAVIS_BRANCH = "master" && $TRAVIS_NODE_VERSION = $FIREBASE_NODE_VER
+      condition: $TRAVIS_BRANCH = "master"
 
   # staging deploy
   - provider: script
@@ -43,7 +43,7 @@ deploy:
     script: firebase deploy -f --project $FIREBASE_PROJECT --only staging --token $FIREBASE_TOKEN --non-interactive
     on:
       all_branches: true
-      condition: $TRAVIS_BRANCH = "develop" && $FIREBASE_DEV_DEPLOY = "true" && $TRAVIS_NODE_VERSION = $FIREBASE_NODE_VER
+      condition: $TRAVIS_BRANCH = "develop"
 
 env:
   global:
