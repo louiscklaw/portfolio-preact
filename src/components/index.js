@@ -1,10 +1,10 @@
 
 import Home from './Home/index';
-import Leftmenu from './Leftmenu/index';
+import Nav from './Nav/index';
 import Helloworld from './Helloworld/index';
 
 export {
-  Leftmenu,
+  Nav,
   Helloworld,
   Home
 }

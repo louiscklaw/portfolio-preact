@@ -1,7 +1,9 @@
 import { Component } from 'preact';
 import { Link } from 'preact-router/match';
 
-export default class Nav extends Component {
+import './NavMiddle.css'
+
+export default class NavMiddle extends Component {
   render(){
     return(
       <div>

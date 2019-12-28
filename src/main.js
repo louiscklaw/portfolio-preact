@@ -6,7 +6,7 @@ import {
 import { Router } from 'preact-router';
 
 import {
-  Leftmenu,
+  Nav,
   Helloworld,
   Home
 } from './components/index';
@@ -23,7 +23,7 @@ export default class Main extends Component{
     return(
       <div>
         <div className="main">
-          <Leftmenu />
+          <Nav />
           <div className="content">
             <Router>
               <Home path="/" />

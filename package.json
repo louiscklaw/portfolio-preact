@@ -23,9 +23,11 @@
     "preact-cli": "^3.0.0-rc.6"
   },
   "dependencies": {
+    "node-sass": "^4.13.0",
     "preact": "^10.1.0",
     "preact-render-to-string": "^5.1.2",
     "preact-router": "^3.1.0",
-    "react-ga": "^2.7.0"
+    "react-ga": "^2.7.0",
+    "sass-loader": "7.3.1"
   }
 }
