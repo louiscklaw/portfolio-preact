@@ -1,6 +1,6 @@
 import {Component} from 'preact';
 
-import './NavTop.css'
+import './NavTop.scss'
 
 export default class NavTop extends Component{
   render(){

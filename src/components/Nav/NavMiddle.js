@@ -1,7 +1,7 @@
 import { Component } from 'preact';
 import { Link } from 'preact-router/match';
 
-import './NavMiddle.css'
+import './NavMiddle.scss'
 
 export default class NavMiddle extends Component {
   render(){
