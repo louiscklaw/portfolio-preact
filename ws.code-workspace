@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "/home/logic/_workspace/preactjs-playlist"
+		},
+		{
+			"path": "/home/logic/_workspace/portfolio-react"
+		},
+		{
+			"path": "/home/logic/_workspace/travis-playlist"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
