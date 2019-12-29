@@ -8,7 +8,7 @@ export default class NavMiddle extends Component {
     return(
       <div>
         <Link activeClassName="active" href="/">Home</Link>
-        <Link activeClassName="active" href="/projects">Projects</Link>
+        <Link activeClassName="active" href="/projects_catalogue">Projects</Link>
         <Link activeClassName="active" href="/about">About</Link>
         <Link activeClassName="active" href="/credits">Credits</Link>
       </div>

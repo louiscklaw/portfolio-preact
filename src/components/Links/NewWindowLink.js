@@ -1,6 +1,3 @@
-import {Component} from 'preact';
-
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import './NewWindowLink.css'

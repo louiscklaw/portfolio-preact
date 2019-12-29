@@ -12,10 +12,11 @@ import {
 } from './components/index';
 
 import {
-  Projects,
+  // Projects,
   About,
   Credits,
   Logs,
+  ProjectCatalogue,
   ProjectDetail
 } from './pages/index'
 
@@ -28,7 +29,7 @@ export default class Main extends Component{
           <div className="content">
             <Router>
               <Home path="/" />
-              <Projects path="/projects" />
+              <ProjectCatalogue path="/projects_catalogue" />
               <ProjectDetail path="/project_detail/:project_to_show" />
               <Logs path="/logs" />
               <About path="/about" />

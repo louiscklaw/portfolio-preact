@@ -1,19 +1,12 @@
-import {Component} from 'preact'
-
-import {TradingviewDashboard} from './catalogue'
 
 
-export default class ProjectDetail extends Component{
-  constructor(){
-    super()
-  }
-  render(){
+import TradingviewDashboard from './TradingviewDashboard/TradingviewDashboard'
 
-    return(
-      <div>
-        project detail
-        <TradingviewDashboard />
-      </div>
-    )
-  }
+export default () => {
+
+  return(
+    <div>
+      <TradingviewDashboard />
+    </div>
+  )
 }
