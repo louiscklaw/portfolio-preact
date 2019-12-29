@@ -10,6 +10,13 @@ import ProdConfig from './config/prod.config';
 
 import Main from './main';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+library.add(fab, fas, far)
+
+
 const CHECK_DEV_ENV = () => {
 	let check_result = process.env.NODE_ENV === 'development';
   if(check_result){
