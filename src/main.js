@@ -15,7 +15,8 @@ import {
   Projects,
   About,
   Credits,
-  Logs
+  Logs,
+  ProjectDetail
 } from './pages/index'
 
 export default class Main extends Component{
@@ -28,6 +29,7 @@ export default class Main extends Component{
             <Router>
               <Home path="/" />
               <Projects path="/projects" />
+              <ProjectDetail path="/project_detail/:project_to_show" />
               <Logs path="/logs" />
               <About path="/about" />
               <Credits path="/credits" />

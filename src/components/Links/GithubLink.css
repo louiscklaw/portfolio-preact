@@ -1,0 +1,9 @@
+
+.fa_icon{
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.github-link a:hover{
+  color: #192a56;
+}
