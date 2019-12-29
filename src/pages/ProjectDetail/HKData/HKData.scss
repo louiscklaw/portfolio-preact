@@ -1,0 +1,33 @@
+.desc-container{
+  padding: 50px 20px;
+
+  display:unset;
+
+  .project-description{
+
+    width: 80%;
+    margin: auto;
+
+    text-align: center;
+  }
+  .text-description{
+    text-align: left;
+    padding-top: 20px;
+    margin-left: 20px;
+  }
+  .description-title {
+    margin-top: 20px;
+
+  }
+  .project-image-container{
+    img{
+      margin-left: 20px;
+      width: 75%;
+    }
+  }
+
+  .rel-links{
+    margin-top: 30px;
+  }
+
+}
