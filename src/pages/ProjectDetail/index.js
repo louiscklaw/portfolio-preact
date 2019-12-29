@@ -1,12 +1,10 @@
 
+import {showProject} from './config'
 
-import TradingviewDashboard from './TradingviewDashboard/TradingviewDashboard'
-
-export default () => {
-
+export default ({project_to_show}) => {
   return(
     <div>
-      <TradingviewDashboard />
+      {showProject(project_to_show)}
     </div>
   )
 }
