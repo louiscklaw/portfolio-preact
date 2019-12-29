@@ -5,16 +5,16 @@ import {
   NewWindowLink,
   BackToProjects,
   YoutubeContainers,
-  MetaTitle,
+  // MetaTitle,
   GithubLink,
-  MetaProjectDetail
+  // MetaProjectDetail
 } from '../../../components/index'
 
 // import './ProjectDescription.css';
 // import './VoronTryout.css'
 
 // import head_pic from '../../assets/down_sampled/voron-tryout/IMG_20190325_115322.jpg'
-import head_pic from '../../../components/misc/parking.png'
+import head_pic from './traefik-tryout.png'
 
 let page_topic = 'traefik tryout'
 
@@ -23,8 +23,8 @@ class ProjectDescription extends React.Component{
   render(){
     return (
       <>
-      <MetaProjectDetail />
-      <MetaTitle text={page_topic} />
+      {/* <MetaProjectDetail /> */}
+      {/* <MetaTitle text={page_topic} /> */}
 
       <div className="desc-container">
         <div className="project-description">

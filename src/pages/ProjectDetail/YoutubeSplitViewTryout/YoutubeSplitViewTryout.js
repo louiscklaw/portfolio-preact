@@ -7,7 +7,7 @@ import {
   YoutubeContainers,
   // MetaTitle,
   GithubLink,
-  MetaProjectDetail
+  // MetaProjectDetail
 } from '../../../components/index'
 
 // import './ProjectDescription.css';
@@ -19,7 +19,7 @@ class ProjectDescription extends React.Component{
   render(){
     return (
       <>
-        <MetaProjectDetail />
+        {/* <MetaProjectDetail /> */}
         {/* <MetaTitle text="youtube split view" /> */}
 
         <div className="desc-container">
