@@ -1,7 +1,7 @@
 import {Component} from 'preact'
 import {Link} from 'preact-router/match'
 
-import {project_list} from './config'
+// import {project_list} from './config'
 
 function getProjectDetailLink(href, text){
   return (
@@ -12,9 +12,7 @@ function getProjectDetailLink(href, text){
 }
 
 export default class ProjectDetail extends Component{
-  constructor(){
-    super()
-  }
+
   render(){
 
     let test_jsx = project_list.map( a => getProjectDetailLink(a[0], a[1]))
