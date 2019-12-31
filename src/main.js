@@ -17,7 +17,7 @@ import {
   Logs,
   ProjectCatalogue,
   Credits,
-  // ProjectDetail
+  ProjectDetail
 } from './pages/index'
 
 export default class Main extends Component{
@@ -30,7 +30,7 @@ export default class Main extends Component{
             <Router>
               <Home path="/" />
               <ProjectCatalogue path="/projects_catalogue" />
-              {/* <ProjectDetail path="/project_detail/:project_to_show" /> */}
+              <ProjectDetail path="/project_detail/:project_to_show" />
               <Logs path="/logs" />
               <About path="/about" />
               <Credits path="/credits" />
