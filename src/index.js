@@ -4,11 +4,10 @@ import { Component } from 'preact';
 import ReactGA from 'react-ga';
 
 import './style';
+import Main from './main';
 
 import DevConfig from './config/dev.config';
 import ProdConfig from './config/prod.config';
-
-import Main from './main';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { far } from '@fortawesome/free-regular-svg-icons'
@@ -35,9 +34,9 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<div>
+			<>
         <Main />
-			</div>
+			</>
 		);
   }
 

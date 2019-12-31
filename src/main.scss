@@ -1,0 +1,41 @@
+.main{
+  display: flex;
+  flex-direction: row ;
+  width: 100%;
+}
+
+nav{
+  width: 20vw;
+  min-height: 100vw;
+  background-color: gold;
+}
+
+.content {
+  /* background-color: red; */
+
+  width: calc( 100vw - 20vw ) ;
+  background-color: #ecf0f1;
+}
+
+.App {
+  display: flex;
+  flex-direction: row ;
+
+
+  width: 100%;
+}
+
+#root {
+  background-color: #ecf0f1;
+
+  display: blcok;
+  width:100%;
+  height: 100%;
+}
+
+body{
+  padding: 0px;
+  margin: 0px;
+  height: 100vh;
+
+}

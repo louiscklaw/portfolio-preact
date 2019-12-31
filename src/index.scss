@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.back_to_proj_home {
+  display: block;
+  width: 100%;
+  padding-top: 50px
+}
+
+.post-body {
+  padding: 50px
+}
+
+.lang_link i {
+  padding: 2px
+}
+
+.lang_link a {
+  padding: 3px
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden
+}
+
+.video-container embed,
+.video-container iframe,
+.video-container object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+
+.video-list {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center
+}
+
+.gist_link {
+  font-size: .8em
+}
+
+button {
+  outline: 0;
+  background: 0 0;
+  border: 0
+}
+
+p {
+  line-height: 1.8;
+  text-align: justify
+}
+
+p span {
+  letter-spacing: 0
+}
+
+a {
+  color: #95a5a6;
+  font-weight: 700
+}
