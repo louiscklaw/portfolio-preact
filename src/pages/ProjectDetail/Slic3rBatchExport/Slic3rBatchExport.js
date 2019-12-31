@@ -1,9 +1,22 @@
-import {Component} from 'preact'
+import {Component} from 'preact';
 
-export default () => {
-  return(
-    <div>
-      Slic3rBatchExport
-    </div>
-  )
-}
+import {
+  ProjectTitle,
+  NewWindowLink,
+  BackToProjects,
+  YoutubeContainers,
+  MetaTitle,
+  GithubLink,
+  MetaProjectDetail
+} from '../../../components/index'
+
+// import './ProjectDescription.css';
+// import './TradingviewDashboard.css';
+
+// import head_pic from './appium-behave-notes.png'
+
+export default (
+  <div>
+    slic3r
+  </div>
+)
