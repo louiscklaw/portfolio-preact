@@ -1,8 +1,5 @@
 
-import {
-  Component
-} from 'preact';
-
+import { Component } from 'preact';
 import { Router } from 'preact-router';
 
 import {
