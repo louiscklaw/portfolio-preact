@@ -7,3 +7,49 @@
   //   padding-top: 80px;
   // } */
 }
+
+
+.buildStatus{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.sourceCodeLink{
+  width:100%;
+  text-align: center;
+  font-size:0.9em;
+}
+
+
+.creditContainer{
+  padding-top: 30px;
+  color: #fff;
+  font-size: 0.8em;
+  text-align: center;
+  a{
+    position: relative;
+    top: 10px;
+  }
+}
+.socialLinks {
+  display: inline-flex;
+  list-style: none;
+
+  li {
+    a {
+      color: #fff;
+
+      font-size: 1.5em;
+      font-weight: normal;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.socialLinksContainer{
+  width: 100%;
+  text-align:center;
+}
