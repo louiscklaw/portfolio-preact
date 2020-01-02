@@ -1,5 +1,6 @@
 
-import TradingviewDashboard from './TradingviewDashboard/TradingviewDashboard'
+import {TradContent, TradThumbnail} from './TradingviewDashboard/TradingviewDashboard'
+
 import AppiumBehaveNotes from './AppiumBehaveNotes/AppiumBehaveNotes'
 import AllwinnerV3sTryout from './AllwinnerV3sTryout/AllwinnerV3sTryout'
 import HKData from './HKData/index'
@@ -19,24 +20,26 @@ import VoronTryout from './VoronTryout/VoronTryout'
 import YoutubeSplitViewTryout from './YoutubeSplitViewTryout/YoutubeSplitViewTryout'
 import ZTransferDemo from './ZTransferDemo/ZTransferDemo'
 
+
+
 let project_list = {
-  'tradingview_dashboard' : ['tradingview dashboard', TradingviewDashboard ],
-  'appium_behave_notes' : ['appium behave notes', AppiumBehaveNotes ],
-  'allwinner_v3s_tryout' : ['AllwinnerV3sTryout', AllwinnerV3sTryout],
-  'hk_data' : ['HKData', HKData],
-  'HKOWeatherBot' : ['HKOWeatherBot', HKOWeatherBot],
-  'LinuxToolbox' : ['LinuxToolbox', LinuxToolbox],
-  'OpenCVCarCounting' : ['OpenCVCarCounting', OpenCVCarCounting],
-  'PetPugProject' : ['PetPugProject', PetPugProject],
-  'Portfolio' : ['Portfolio', Portfolio],
-  'PrinterBoard' : ['PrinterBoard', PrinterBoard],
-  'Rthk31Rthk32LinuxViewer' : ['Rthk31Rthk32LinuxViewer', Rthk31Rthk32LinuxViewer],
-  'Slic3rBatchExport' : ['Slic3rBatchExport', Slic3rBatchExport],
-  'Tappy' : ['Tappy', Tappy],
-  'TraefikTryout' : ['TraefikTryout', TraefikTryout],
-  'VoronTryout' : ['VoronTryout', VoronTryout],
-  'YoutubeSplitViewTryout' : ['YoutubeSplitViewTryout', YoutubeSplitViewTryout],
-  'ZTransferDemo' : ['ZTransferDemo', ZTransferDemo],
+  'tradingview_dashboard' : [ 'tradingview dashboard', TradContent, TradThumbnail ],
+  // 'appium_behave_notes' : ['appium behave notes', AppiumBehaveNotes, './AppiumBehaveNotes/thumbnail.png' ],
+  // 'allwinner_v3s_tryout' : ['AllwinnerV3sTryout', AllwinnerV3sTryout, './AllwinnerV3sTryout/thumbnail.png'],
+  // 'hk_data' : ['HKData', HKData, './HKData/thumbnail.png'],
+  // 'HKOWeatherBot' : ['HKOWeatherBot', HKOWeatherBot, './HkoWeatherBot/thumbnail.png'],
+  // 'LinuxToolbox' : ['LinuxToolbox', LinuxToolbox, './LinuxToolbox/thumbnail.png'],
+  // 'OpenCVCarCounting' : ['OpenCVCarCounting', OpenCVCarCounting, './OpencvCarCounting/thumbnail.png'],
+  // 'PetPugProject' : ['PetPugProject', PetPugProject, './PetPugProject/thumbnail.png'],
+  // 'Portfolio' : ['Portfolio', Portfolio, './Portfolio/thumbnail.png'],
+  // 'PrinterBoard' : ['PrinterBoard', PrinterBoard, './PrinterBoard/thumbnail.png'],
+  // 'Rthk31Rthk32LinuxViewer' : ['Rthk31Rthk32LinuxViewer', Rthk31Rthk32LinuxViewer, './Rthk31Rthk32LinuxViewer/thumbnail.png'],
+  // 'Slic3rBatchExport' : ['Slic3rBatchExport', Slic3rBatchExport, './Slic3rBatchExport/thumbnail.png'],
+  // 'Tappy' : ['Tappy', Tappy, './Tappy/thumbnail.png'],
+  // 'TraefikTryout' : ['TraefikTryout', TraefikTryout, './TraefikTryout/thumbnail.png'],
+  // 'VoronTryout' : ['VoronTryout', VoronTryout, './VoronTryout/thumbnail.png'],
+  // 'YoutubeSplitViewTryout' : ['YoutubeSplitViewTryout', YoutubeSplitViewTryout, './YoutubeSplitViewTryout/thumbnail.png'],
+  // 'ZTransferDemo' : ['ZTransferDemo', ZTransferDemo, './ZTransferDemo/thumbnail.png'],
 }
 
 function showProject(proj_name){
