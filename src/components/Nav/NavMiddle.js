@@ -12,7 +12,7 @@ export default class NavMiddle extends Component {
             <Link activeClassName="active" href="/">Home</Link>
           </li>
           <li>
-            <Link activeClassName="active" href="/projects_catalogue">Projects</Link>
+            <Link activeClassName="active" href="/project_catalogue">Projects</Link>
           </li>
           <li>
             <Link activeClassName="active" href="/about">About</Link>

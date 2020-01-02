@@ -1,12 +1,12 @@
 import { Component } from 'preact';
-import style from './Credits.scss';
+import style from './Logs.scss';
 
-export default class Credits extends Component {
+export default class Logs extends Component {
   render(){
     return(
       <div>
         <div className={style.helloworld}>
-          Credits
+          Logs
         </div>
       </div>
     )

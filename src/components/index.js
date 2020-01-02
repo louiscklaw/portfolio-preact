@@ -9,7 +9,13 @@ import GithubLink from './Links/GithubLink'
 import Nav from './Nav/index'
 import Home from './Home/index'
 
+// pages
 import About from './pages/About/About'
+import Credits from './pages/Credits/Credits'
+import Logs from './pages/Logs/Logs'
+import PagesHelloworld from './pages/Helloworld/index'
+import PageProjectCatalogue from './pages/ProjectDetail/catalogue'
+import PageProjectDetail from './pages/ProjectDetail/index'
 
 export {
   ProjectTitle,
@@ -21,5 +27,12 @@ export {
   // MetaTitle,
   Nav,
   Home,
-  About
+
+  // pages
+  About,
+  Credits,
+  Logs,
+  PagesHelloworld,
+  PageProjectCatalogue,
+  PageProjectDetail
 }

@@ -6,17 +6,22 @@ import {
   Nav,
   Helloworld,
   Home,
-  About
+  About,
+  Credits,
+  Logs,
+  pagesHelloworld,
+  PageProjectCatalogue,
+  PageProjectDetail
 } from './components/index';
 
-import {
-  // PagesHelloworld,
-  // About,
-  Logs,
-  ProjectCatalogue,
-  Credits,
-  ProjectDetail
-} from './pages/index'
+// import {
+//   // PagesHelloworld,
+//   // About,
+//   // Logs,
+//   // Credits,
+//   // ProjectCatalogue,
+//   // ProjectDetail
+// } from './pages/index'
 
 import './main.scss'
 
@@ -28,8 +33,8 @@ export default class Main extends Component{
         <div className="content">
           <Router>
             <Home path="/" />
-            <ProjectCatalogue path="/projects_catalogue" />
-            <ProjectDetail path="/project_detail/:project_to_show" />
+            <PageProjectCatalogue path="/project_catalogue" />
+            <PageProjectDetail path="/project_detail/:project_to_show" />
             <Logs path="/logs" />
             <About path="/about" />
             <Credits path="/credits" />
