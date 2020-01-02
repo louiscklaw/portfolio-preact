@@ -23,6 +23,15 @@ export default class NavMiddle extends Component {
           <li>
             <Link href="//search-trend-vue.firebaseapp.com/">GOOGLE SEARCH TREND</Link>
           </li>
+          <li>
+            <Link href="//staging-portfolio-c7cb5.web.app/projects_catalogue">Staging site</Link>
+          </li>
+          <li>
+            <Link href="//staging-portfolio-c7cb5.web.app/projects_catalogue">Staging site</Link>
+          </li>
+          <li>
+            <Link href="//travis-ci.org/louiscklaw/portfolio-preact/branches">travis build</Link>
+          </li>
         </ul>
       </div>
     )
