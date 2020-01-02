@@ -10,13 +10,21 @@ import {
   MetaProjectDetail
 } from '../../../../components/index'
 
-// import './ProjectDescription.css';
-// import './TradingviewDashboard.css';
+import head_pic from './appium-behave-notes.png';
 
-import head_pic from './appium-behave-notes.png'
+import AppiumThumbnail from './thumbnail.png';
 
-export default (
-  <div>
-    appium behave notes
-  </div>
-)
+class AppiumContent extends Component{
+  render(){
+    return(
+      <div>
+        appium behave notes
+      </div>
+    )
+  }
+}
+
+export {
+  AppiumContent,
+  AppiumThumbnail
+}

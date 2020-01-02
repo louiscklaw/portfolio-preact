@@ -15,8 +15,19 @@ import {
 
 // import head_pic from './appium-behave-notes.png'
 
-export default (
-  <div>
-    Portfolio
-  </div>
-)
+import PortfolioThumbnail from './thumbnail.png';
+
+class PortfolioContent extends Component{
+  render(){
+    return(
+      <div>
+        Portfolio behave notes
+      </div>
+    )
+  }
+}
+
+export {
+  PortfolioContent,
+  PortfolioThumbnail
+}

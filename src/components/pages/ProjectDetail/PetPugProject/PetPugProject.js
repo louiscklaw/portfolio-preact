@@ -15,8 +15,19 @@ import {
 
 // import head_pic from './appium-behave-notes.png'
 
-export default (
-  <div>
-    pet pug project
-  </div>
-)
+import PetPugProjectThumbnail from './thumbnail.png';
+
+class PetPugProjectContent extends Component{
+  render(){
+    return(
+      <div>
+        PetPugProject behave notes
+      </div>
+    )
+  }
+}
+
+export {
+  PetPugProjectContent,
+  PetPugProjectThumbnail
+}

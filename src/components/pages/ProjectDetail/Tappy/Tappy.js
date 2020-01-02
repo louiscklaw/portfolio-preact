@@ -15,8 +15,19 @@ import {
 
 // import head_pic from './appium-behave-notes.png'
 
-export default (
-  <div>
-    tappy
-  </div>
-)
+import TappyThumbnail from './thumbnail.png';
+
+class TappyContent extends Component{
+  render(){
+    return(
+      <div>
+        Slic3r behave notes
+      </div>
+    )
+  }
+}
+
+export {
+  TappyContent,
+  TappyThumbnail
+}

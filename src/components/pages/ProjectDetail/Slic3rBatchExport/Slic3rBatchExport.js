@@ -15,8 +15,19 @@ import {
 
 // import head_pic from './appium-behave-notes.png'
 
-export default (
-  <div>
-    slic3r
-  </div>
-)
+import Slic3rThumbnail from './thumbnail.png';
+
+class Slic3rContent extends Component{
+  render(){
+    return(
+      <div>
+        Slic3r behave notes
+      </div>
+    )
+  }
+}
+
+export {
+  Slic3rContent,
+  Slic3rThumbnail
+}

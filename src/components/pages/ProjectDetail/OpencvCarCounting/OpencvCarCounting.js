@@ -15,8 +15,19 @@ import {
 
 // import head_pic from './appium-behave-notes.png'
 
-export default (
-  <div>
-    open cv car counting
-  </div>
-)
+import OpencvCarThumbnail from './thumbnail.png';
+
+class OpencvCarContent extends Component{
+  render(){
+    return(
+      <div>
+        OpencvCar behave notes
+      </div>
+    )
+  }
+}
+
+export {
+  OpencvCarContent,
+  OpencvCarThumbnail
+}

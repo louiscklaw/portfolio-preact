@@ -15,8 +15,19 @@ import {
 
 // import head_pic from './appium-behave-notes.png'
 
-export default (
-  <div>
-    LinuxToolbox
-  </div>
-)
+import LinuxToolboxThumbnail from './thumbnail.png';
+
+class LinuxToolboxContent extends Component{
+  render(){
+    return(
+      <div>
+        LinuxToolbox behave notes
+      </div>
+    )
+  }
+}
+
+export {
+  LinuxToolboxContent,
+  LinuxToolboxThumbnail
+}

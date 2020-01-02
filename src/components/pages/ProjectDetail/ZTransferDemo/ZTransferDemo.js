@@ -15,8 +15,19 @@ import {
 
 // import head_pic from './appium-behave-notes.png'
 
-export default (
-  <div>
-    z transfer tryout
-  </div>
-)
+import ZTransferDemoThumbnail from './thumbnail.png';
+
+class ZTransferDemoContent extends Component{
+  render(){
+    return(
+      <div>
+        Slic3r behave notes
+      </div>
+    )
+  }
+}
+
+export {
+  ZTransferDemoContent,
+  ZTransferDemoThumbnail
+}

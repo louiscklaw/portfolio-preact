@@ -15,8 +15,19 @@ import {
 
 // import head_pic from './appium-behave-notes.png'
 
-export default (
-  <div>
-    HKOWeatherBot
-  </div>
-)
+import HKOWeatherBotThumbnail from './thumbnail.png';
+
+class HKOWeatherBotContent extends Component{
+  render(){
+    return(
+      <div>
+        HKOWeatherBot behave notes
+      </div>
+    )
+  }
+}
+
+export {
+  HKOWeatherBotContent,
+  HKOWeatherBotThumbnail
+}

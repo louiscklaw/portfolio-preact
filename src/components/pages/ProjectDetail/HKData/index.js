@@ -13,10 +13,21 @@ import {
 // import './ProjectDescription.css';
 // import './TradingviewDashboard.css';
 
-// import head_pic from './appium-behave-notes.png'
+// import head_pic from './HKData-behave-notes.png'
 
-export default (
-  <div>
-    HKData
-  </div>
-)
+import HKDataThumbnail from './thumbnail.png';
+
+class HKDataContent extends Component{
+  render(){
+    return(
+      <div>
+        HKData behave notes
+      </div>
+    )
+  }
+}
+
+export {
+  HKDataContent,
+  HKDataThumbnail
+}

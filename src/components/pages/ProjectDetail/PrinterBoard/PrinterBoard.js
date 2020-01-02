@@ -15,8 +15,19 @@ import {
 
 // import head_pic from './appium-behave-notes.png'
 
-export default (
-  <div>
-    printer board
-  </div>
-)
+import PrinterBoardThumbnail from './thumbnail.png';
+
+class PrinterBoardContent extends Component{
+  render(){
+    return(
+      <div>
+        PrinterBoard behave notes
+      </div>
+    )
+  }
+}
+
+export {
+  PrinterBoardContent,
+  PrinterBoardThumbnail
+}

@@ -15,8 +15,19 @@ import {
 
 // import head_pic from './appium-behave-notes.png'
 
-export default (
-  <div>
-    voron
-  </div>
-)
+import VoronTryoutThumbnail from './thumbnail.png';
+
+class VoronTryoutContent extends Component{
+  render(){
+    return(
+      <div>
+        Slic3r behave notes
+      </div>
+    )
+  }
+}
+
+export {
+  VoronTryoutContent,
+  VoronTryoutThumbnail
+}

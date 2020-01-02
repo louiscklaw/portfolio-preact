@@ -15,8 +15,19 @@ import {
 
 // import head_pic from './appium-behave-notes.png'
 
-export default (
-  <div>
-    TraefikTryout
-  </div>
-)
+import TraefikTryoutThumbnail from './thumbnail.png';
+
+class TraefikTryoutContent extends Component{
+  render(){
+    return(
+      <div>
+        Slic3r behave notes
+      </div>
+    )
+  }
+}
+
+export {
+  TraefikTryoutContent,
+  TraefikTryoutThumbnail
+}

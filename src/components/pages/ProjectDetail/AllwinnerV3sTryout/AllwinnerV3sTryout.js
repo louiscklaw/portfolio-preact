@@ -15,8 +15,19 @@ import {
 
 // import head_pic from './appium-behave-notes.png'
 
-export default (
-  <div>
-    allwinner_v3s_tryout
-  </div>
-)
+import AllWinnerThumbnail from './thumbnail.png';
+
+class AllwinnerContent extends Component{
+  render(){
+    return(
+      <div>
+        allwinner_v3s_tryout
+      </div>
+    )
+  }
+}
+
+export {
+  AllwinnerContent,
+  AllWinnerThumbnail
+}
