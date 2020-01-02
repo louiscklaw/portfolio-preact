@@ -9,6 +9,8 @@ import GithubLink from './Links/GithubLink'
 import Nav from './Nav/index'
 import Home from './Home/index'
 
+import About from './pages/About/About'
+
 export {
   ProjectTitle,
   NewWindowLink,
@@ -18,5 +20,6 @@ export {
   // MetaProjectDetail,
   // MetaTitle,
   Nav,
-  Home
+  Home,
+  About
 }

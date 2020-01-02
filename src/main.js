@@ -5,12 +5,13 @@ import { Router } from 'preact-router';
 import {
   Nav,
   Helloworld,
-  Home
+  Home,
+  About
 } from './components/index';
 
 import {
   // PagesHelloworld,
-  About,
+  // About,
   Logs,
   ProjectCatalogue,
   Credits,

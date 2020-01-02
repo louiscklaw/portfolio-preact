@@ -1,15 +1,17 @@
+import style from './About.scss';
+
 import { Component } from 'preact';
-import './About.css';
 
 export default class Home extends Component {
 	render(){
+    console.log(style)
 		return(
-      <div className="page-about">
-        <div>
-          <h3 className="about-title">title</h3>
+      <div className={style.pageAbout}>
+        <div className={style.page_header}>
+          About
         </div>
-        <div>
-          <div className="about-content">
+
+        <div className={style.paragraph_body}>
           <h4>Languages:</h4>
           <p>Cantonese, English, Mandarin, JavaScript, Java, Python, PHP, C</p>
 
@@ -27,8 +29,10 @@ export default class Home extends Component {
 
 
           </div>
-        </div>
       </div>
+      // <div className={style.pageAbout}>
+
+      // </div>
 		)
 	}
 }
