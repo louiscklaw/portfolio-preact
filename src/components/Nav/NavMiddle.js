@@ -1,5 +1,6 @@
 import { Component } from 'preact';
-import { Link } from 'preact-router/match';
+// import { Link } from 'preact-router/match';
+import {Link} from 'react-router-dom';
 
 import style from './NavMiddle.scss'
 
@@ -9,25 +10,25 @@ export default class NavMiddle extends Component {
       <div className={style.NavMiddle}>
         <ul>
           <li>
-            <Link activeClassName="active" href="/">Home</Link>
+            <Link activeClassName="active" to="/">Home</Link>
           </li>
           <li>
-            <Link activeClassName="active" href="/project_catalogue">Projects</Link>
+            <Link activeClassName="active" to="/project_catalogue">Projects</Link>
           </li>
           <li>
-            <Link activeClassName="active" href="/about">About</Link>
+            <Link activeClassName="active" to="/about">About</Link>
           </li>
           <li>
-            <Link activeClassName="active" href="/credits">Credits</Link>
+            <Link activeClassName="active" to="/credits">Credits</Link>
           </li>
           <li>
-            <Link href="//search-trend-vue.firebaseapp.com/">GOOGLE SEARCH TREND</Link>
+            <Link to="//search-trend-vue.firebaseapp.com/">GOOGLE SEARCH TREND</Link>
           </li>
           <li>
-            <Link href="//staging-portfolio-c7cb5.web.app/projects_catalogue">Staging site</Link>
+            <Link to="//staging-portfolio-c7cb5.web.app/projects_catalogue">Staging site</Link>
           </li>
           <li>
-            <Link href="//travis-ci.org/louiscklaw/portfolio-preact/branches">travis build</Link>
+            <Link to="//travis-ci.org/louiscklaw/portfolio-preact/branches">travis build</Link>
           </li>
         </ul>
       </div>
