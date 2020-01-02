@@ -1,3 +1,5 @@
+import style from './catalogue.scss'
+
 import {Component} from 'preact'
 import {Link} from 'preact-router/match'
 
@@ -6,7 +8,9 @@ import {project_list} from './config'
 function getProjectDetailLink(href, text){
   return (
     <>
-      <Link href={'/project_detail/'+href} >{text}</Link>
+      <li>
+        <Link href={'/project_detail/'+href} >{text}</Link>
+      </li>
     </>
   )
 }
@@ -22,9 +26,10 @@ export default class ProjectCatalogue extends Component{
     // let test_jsx = '123321';
 
     return(
-      <div>
-        <h1>project catalogue</h1>
+      <div className={style.helloworld}>
+        <ul>
           {test_jsx}
+        </ul>
       </div>
     )
   }
