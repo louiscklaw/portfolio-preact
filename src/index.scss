@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+
 .back_to_proj_home {
   display: block;
   width: 100%;
@@ -55,14 +56,15 @@ button {
 
 p {
   line-height: 1.8;
-  text-align: justify
 }
 
 p span {
-  letter-spacing: 0
+  letter-spacing: 0;
 }
 
-a {
-  color: #95a5a6;
-  font-weight: 700
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }

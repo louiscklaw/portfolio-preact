@@ -18,7 +18,9 @@ function getProjectDetailLink(href, text, thumbnail_path){
             </div>
             <div className={style.blackBackdrop}>
               <div className={style.thumbnailTitleContainer} >
-                <FontAwesomeIcon icon={['fab', 'linkedin' ]}/>
+                <div className={style.MagniferIcon}>
+                  <FontAwesomeIcon className="fa-2x" icon={['fas', 'search' ]}/>
+                </div>
                 <p>
                   {text}
                 </p>
