@@ -6,11 +6,26 @@ import {Link} from 'preact-router/match'
 
 import {project_list} from './config'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 function getProjectDetailLink(href, text, thumbnail_path){
   return (
     <>
-      <li style={{backgroundImage:`url("${thumbnail_path}")`}}>
-        <Link href={'/project_detail/'+href}>{text}</Link>
+      <li>
+        <Link href={'/project_detail/'+href}>
+          <div className={style.project_thumbnail_container}>
+            <div className={style.project_thumbnail_background} style={{backgroundImage:`url("${thumbnail_path}")`}}>
+            </div>
+            <div className={style.blackBackdrop}>
+              <div className={style.thumbnailTitleContainer} >
+                <FontAwesomeIcon icon={['fab', 'linkedin' ]}/>
+                <p>
+                  {text}
+                </p>
+              </div>
+            </div>
+          </div>
+        </Link>
       </li>
     </>
   )

@@ -22,4 +22,42 @@
     width: 25%;
     height: 25%;
   }
+
+  .project_thumbnail_container{
+    width: 100%;
+    height: 100%;
+  }
+
+  .project_thumbnail_background{
+    width: 100%;
+    height: 100%;
+  }
+
+  .blackBackdrop{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(1,1,1,0.5);
+    position: relative;
+    top: -100%;
+  }
+
+  .thumbnailTitleContainer{
+    width: 100%;
+    position: relative;
+    top: 25%;
+    text-align: center;
+  }
+
+  .thumbnailTitle {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+  }
 }
