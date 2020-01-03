@@ -28,17 +28,25 @@
     height: 100%;
   }
 
-  .project_thumbnail_background{
-    width: 100%;
-    height: 100%;
-  }
-
   .blackBackdrop{
     height: 100%;
     width: 100%;
     background-color: rgba(1,1,1,0.5);
     position: relative;
     top: -100%;
+    display:none;
+
+    backdrop-filter: blur(2px);
+  }
+
+  .project_thumbnail_container:hover .blackBackdrop{
+    // background-color:red;
+    display: block;
+  }
+
+  .project_thumbnail_background{
+    width: 100%;
+    height: 100%;
   }
 
   .thumbnailTitleContainer{
