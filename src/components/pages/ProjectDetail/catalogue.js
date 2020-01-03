@@ -2,6 +2,7 @@ import style from './catalogue.scss'
 
 import {Component} from 'preact'
 import {Link} from 'preact-router/match'
+// import {Link} from 'react-router-dom';
 
 import {project_list} from './config'
 

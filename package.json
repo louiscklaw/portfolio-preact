@@ -31,10 +31,9 @@
     "node-sass": "^4.13.0",
     "preact": "^10.1.0",
     "preact-render-to-string": "^5.1.2",
-    "preact-router": "^3.1.0",
     "react-ga": "^2.7.0",
-    "react-router": "4",
-    "react-router-dom": "4",
+    "preact-router": "^3.1.0",
+    "preact-async-route": "^2.2.1",
     "sass-loader": "7.3.1"
   }
 }

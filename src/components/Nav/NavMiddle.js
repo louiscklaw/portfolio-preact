@@ -1,5 +1,6 @@
 import { Component } from 'preact';
 import { Link } from 'preact-router/match';
+// import {Link} from 'react-router-dom';
 
 import style from './NavMiddle.scss'
 

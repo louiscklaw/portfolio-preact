@@ -1,6 +1,7 @@
 import {Component} from 'preact';
 
 import {Link} from 'preact-router'
+// import {Link} from 'react-router-dom';
 
 import style from './NavBottom.scss'
 
@@ -64,7 +65,7 @@ export default class NavBottom extends Component{
         <div className={style.creditContainer}>
           <span role="img" aria-label="heart">❤️</span> coded by louiscklaw.<br />
           Built on the solder of <br />
-          <Link to="/credits"> THESE GIANTS</Link>
+          <Link href="/credits"> THESE GIANTS</Link>
         </div>
       </div>
     )

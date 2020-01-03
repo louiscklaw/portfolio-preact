@@ -1,6 +1,9 @@
+import './main.scss';
 
 import { Component } from 'preact';
+// import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import { Router } from 'preact-router';
+import AsyncRoute from 'preact-async-route';
 
 import {
   Nav,
@@ -23,24 +26,33 @@ import {
 //   // ProjectDetail
 // } from './pages/index'
 
-import './main.scss'
+
 
 export default class Main extends Component{
   render(){
     return(
-      <div className="main">
-        <Nav />
-        <div className="content">
-          <Router>
-            <Home path="/" />
-            <PageProjectCatalogue path="/project_catalogue" />
-            <PageProjectDetail path="/project_detail/:project_to_show" />
-            <Logs path="/logs" />
-            <About path="/about" />
-            <Credits path="/credits" />
-          </Router>
+
+        <div className="main">
+            <Nav />
+
+            <div className="content">
+              <Router>
+                <AsyncRoute path="/home" component={Home} />
+                <AsyncRoute path="/project_catalogue" component={PageProjectCatalogue}/>
+                <AsyncRoute path="/project_detail/:project_to_show" component={PageProjectDetail}/>
+
+                <AsyncRoute path="/logs" component={Logs} />
+                <AsyncRoute path="/about" component={About} />
+                <AsyncRoute path="/credits" component={Credits} />
+
+                {/* <PageProjectDetail path="/project_detail/:project_to_show" />
+                <Logs path="/logs" />
+                <About path="/about" />
+                <Credits path="/credits" /> */}
+              </Router>
+            </div>
         </div>
-      </div>
+
     )
   }
 }
