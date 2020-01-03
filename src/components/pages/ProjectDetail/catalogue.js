@@ -18,12 +18,8 @@ function getProjectDetailLink(href, text, thumbnail_path){
 export default class ProjectCatalogue extends Component{
   render(){
     // let test_jsx = project_list.map( a => getProjectDetailLink(a[0], a[1]))
-    // let test_jsx = Object.keys(project_list)
-      // .map( k => getProjectDetailLink(k, project_list[k][0], project_list[k][2]))
-    // console.log(project_list);
-    // let test_jsx = '123321';
-
-    let test_jsx = '<li>test li</li>'
+    let test_jsx = Object.keys(project_list)
+      .map( k => getProjectDetailLink(k, project_list[k][0], project_list[k][2]))
 
     return(
       <div className={style.helloworld}>
