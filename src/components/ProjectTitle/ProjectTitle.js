@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './ProjectTitle.scss';
+import style from './ProjectTitle.scss';
 
 class ProjectTitle extends React.Component{
   render(){
     return(
-      <div className="project-title">
+      <div className={style.projectTitle}>
         <h3>{this.props.project_title}</h3>
       </div>
     )

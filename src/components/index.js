@@ -8,6 +8,7 @@ import GithubLink from './Links/GithubLink'
 // import MetaTitle from './MetaTitle/MetaTitle'
 import Nav from './Nav/index'
 import Home from './Home/index'
+import Spare from './Spare/index'
 
 // pages
 import About from './pages/About/About'
@@ -27,6 +28,7 @@ export {
   // MetaTitle,
   Nav,
   Home,
+  Spare,
 
   // pages
   About,
