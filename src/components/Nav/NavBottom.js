@@ -63,7 +63,7 @@ export default class NavBottom extends Component{
           <span role="img" aria-label="heart">❤️</span> coded by louiscklaw.<br />
           Built on the solder of <br />
 
-          <Link href="/credits">THESE GIANTS</Link>
+          <Link className={style.CreditsLink} href="/credits">THESE GIANTS</Link>
 
         </div>
       </div>
