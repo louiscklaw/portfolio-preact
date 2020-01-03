@@ -2,7 +2,7 @@ import style from './About.scss';
 
 import { Component } from 'preact';
 
-export default class Home extends Component {
+export default class About extends Component {
 	render(){
     console.log(style)
 		return(
