@@ -1,4 +1,4 @@
-import style from './NewWindowLink.css'
+import style from './NewWindowLink.scss'
 
 import {Component} from 'preact';
 
@@ -6,12 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default ({link, text}) => {
   return (
-    <div >
-      <a href={link} target="_blank" className={style.windowLink} rel="noopener noreferrer" >
+    <div className={style.NewWindowLink}>
+      <a href={link} target="_blank" className={style.WindowLink} rel="noopener noreferrer" >
         {text || link}
-        <div className={style.atest}>
+        <div className={style.FaNewWinIcon}>
           <FontAwesomeIcon icon={['fas', 'external-link-alt' ]}/>
-      </div>
+        </div>
       </a>
     </div>
   )
