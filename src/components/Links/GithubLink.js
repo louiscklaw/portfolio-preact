@@ -1,6 +1,7 @@
+import './GithubLink.scss';
+
 import {Component} from 'preact';
 
-import './GithubLink.css'
 
 export default class GithubLink extends Component{
   render(){

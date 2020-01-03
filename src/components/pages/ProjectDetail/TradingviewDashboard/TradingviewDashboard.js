@@ -11,7 +11,8 @@ import {
   MetaTitle,
   GithubLink,
   MetaProjectDetail,
-  HeaderFigure
+  HeaderFigure,
+  Spare
 } from '../../../../components/index'
 
 import head_pic from './tradingview-dashboard.png';
@@ -27,7 +28,7 @@ class TradContent extends Component{
           <div className={projectDetailStyle.ProjectHead}>
             <BackToProjects />
             <ProjectTitle project_title="tradingview dashboard" />
-            <div>Spare</div>
+            <Spare />
           </div>
 
           <HeaderFigure

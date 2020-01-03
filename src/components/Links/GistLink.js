@@ -1,3 +1,4 @@
+import style from './GistLink.scss';
 import {Component} from 'preact';
 
 // import Gist from 'react-gist';
