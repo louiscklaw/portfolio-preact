@@ -23,7 +23,9 @@ export default class ProjectCatalogue extends Component{
 
     return(
       <div className={style.helloworld}>
-        {test_jsx}
+        <ul>
+          {test_jsx}
+        </ul>
       </div>
     )
   }
