@@ -1,13 +1,15 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import style from './NewWindowLink.css'
 
-import './NewWindowLink.css'
+import {Component} from 'preact';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default ({link, text}) => {
   return (
     <div >
-      <a href={link} target="_blank" className="window-link" rel="noopener noreferrer" >
+      <a href={link} target="_blank" className={style.windowLink} rel="noopener noreferrer" >
         {text || link}
-        <div className="atest">
+        <div className={style.atest}>
           <FontAwesomeIcon icon={['fas', 'external-link-alt' ]}/>
       </div>
       </a>

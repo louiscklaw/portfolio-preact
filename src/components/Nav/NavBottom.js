@@ -1,9 +1,9 @@
-import {Component} from 'preact';
-
-import {Link} from 'preact-router'
-// import {Link} from 'react-router-dom';
-
 import style from './NavBottom.scss'
+
+import { Component } from 'preact';
+import { Link } from 'preact-router'
+
+import {NewWindowLink} from '../index'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -49,23 +49,22 @@ export default class NavBottom extends Component{
         </div>
 
         <div className={style.buildStatus}>
-          <a href="//travis-ci.org/louiscklaw/portfolio-react" target="_blank" rel="noopener noreferrer">
-            <img src="https://travis-ci.org/louiscklaw/portfolio-react.svg?branch=master" alt="" srcSet="" />
+          <a href="https://travis-ci.org/louiscklaw/portfolio-preact/branches" target="_blank" rel="noopener noreferrer">
+            <img src="https://travis-ci.org/louiscklaw/portfolio-preact.svg?branch=master" alt="" srcSet="" />
           </a>
         </div>
 
         <div className={style.sourceCodeLink}>
-          <a href="//github.com/louiscklaw/portfolio-react" target="_blank" rel="noopener noreferrer">
-            source code
-            <i className="fas fa-external-link-alt"></i>
-          </a>
+          <NewWindowLink link="//github.com/louiscklaw/portfolio-preact" text="source code" />
         </div>
 
 
         <div className={style.creditContainer}>
           <span role="img" aria-label="heart">❤️</span> coded by louiscklaw.<br />
           Built on the solder of <br />
-          <Link href="/credits"> THESE GIANTS</Link>
+
+          <Link href="/credits">THESE GIANTS</Link>
+
         </div>
       </div>
     )
