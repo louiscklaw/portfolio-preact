@@ -17,7 +17,7 @@ import head_pic from './tradingview-dashboard.png';
 
 import TradThumbnail from './thumbnail.png';
 
-class TradContent extends Component{
+class TradContent1 extends Component{
   render() {
     return(
       <div className="desc-container">
@@ -42,6 +42,16 @@ class TradContent extends Component{
         </div>
       </div>
     </div>
+    )
+  }
+}
+
+class TradContent extends Component{
+  render(){
+    return(
+      <div>
+        test trad content
+      </div>
     )
   }
 }

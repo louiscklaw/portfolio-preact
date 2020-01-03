@@ -45,6 +45,7 @@ let project_list = {
 function showProject(proj_name){
   return(
     <pre>
+      this is test
       {project_list[proj_name][1]}
     </pre>
   )
