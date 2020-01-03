@@ -9,6 +9,7 @@ import GithubLink from './Links/GithubLink'
 import Nav from './Nav/index'
 import Home from './Home/index'
 import Spare from './Spare/index'
+import HeaderFigure from './HeaderFigure/index'
 
 // pages
 import About from './pages/About/About'
@@ -29,6 +30,7 @@ export {
   Nav,
   Home,
   Spare,
+  HeaderFigure,
 
   // pages
   About,

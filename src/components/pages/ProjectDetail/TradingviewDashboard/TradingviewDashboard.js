@@ -10,7 +10,8 @@ import {
   YoutubeContainers,
   MetaTitle,
   GithubLink,
-  MetaProjectDetail
+  MetaProjectDetail,
+  HeaderFigure
 } from '../../../../components/index'
 
 import head_pic from './tradingview-dashboard.png';
@@ -29,12 +30,10 @@ class TradContent extends Component{
             <div>Spare</div>
           </div>
 
-
-          <div className={projectDetailStyle.descHeaderPicture} >
-            <figure>
-              <img className={projectDetailStyle.HeaderPicture} src={head_pic} alt="The Pulpit Rock"  />
-            </figure>
-          </div>
+          <HeaderFigure
+            img_src={head_pic}
+            caption="trading view dashboard"
+          />
 
           <div className={projectDetailStyle.DescBody}>
             <h3 className={projectDetailStyle.DescTopic}>
