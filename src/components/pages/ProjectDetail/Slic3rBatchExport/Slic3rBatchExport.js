@@ -90,7 +90,7 @@ class Slic3rContent extends Component{
             <h3 className={projectDetailStyle.DescTopic}>
               How it works:
             </h3>
-            <YoutubeContainers id="YNCB23V38x0" />
+            <YoutubeContainer vid="YNCB23V38x0" video_title="passing example"/>
 
             <h3 className={projectDetailStyle.DescTopic}>
               Repoistory:
