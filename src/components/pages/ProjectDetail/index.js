@@ -8,7 +8,7 @@ import {active_config} from '../../../config/config'
 
 // import {TradContent, TradThumbnail} from './TradingviewDashboard/TradingviewDashboard'
 
-import {TestHelmet} from '../../index'
+import {UrlHelmet} from '../../index'
 
 export default ({project_to_show}) => {
   console.log("project_to_show", project_to_show);
@@ -17,7 +17,7 @@ export default ({project_to_show}) => {
   // console.log('tradcontent,', (<div><TradContent /></div>))
 　 return(
     <div className="ProjectDetail">
-      <TestHelmet url={active_config.ROOT_URL+'/project_detail/'+project_to_show} />
+      <UrlHelmet url={active_config.ROOT_URL+'/project_detail/'+project_to_show} />
 
       {showProject(project_to_show)}
 

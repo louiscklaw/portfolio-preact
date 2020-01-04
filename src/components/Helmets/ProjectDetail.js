@@ -2,19 +2,7 @@
 import {Component} from 'preact';
 import Helmet from "preact-helmet";
 
-class TitleHelmet extends Component{
-  render(){
-    return(
-      <>
-        <Helmet
-          defaultTitle="louislabs.com"
-          titleTemplate="%s | louislabs.com"
-        />
-      </>
-    )
-  }
-}
-
+import TitleHelmet from './Title';
 
 export default ({
   title,
@@ -28,10 +16,9 @@ export default ({
 
   return (
     <div>
-      <TitleHelmet />
-      <Helmet
-        title={title}
+      <TitleHelmet title={title}/>
 
+      <Helmet
         meta={[
           {name: "description", content: description},
 

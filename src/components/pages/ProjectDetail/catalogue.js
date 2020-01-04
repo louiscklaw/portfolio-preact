@@ -2,7 +2,8 @@ import style from './catalogue.scss'
 
 import {Component} from 'preact'
 import {Link} from 'preact-router/match'
-// import {Link} from 'react-router-dom';
+
+import {TitleHelmet} from '../../index'
 
 import {project_list} from './config'
 
@@ -12,6 +13,7 @@ function getProjectDetailLink(href, text, thumbnail_path){
   return (
     <>
       <li>
+        <TitleHelmet title="project catalogue" />
         <Link href={'/project_detail/'+href}>
           <div className={style.project_thumbnail_container}>
             <div className={style.project_thumbnail_background} style={{backgroundImage:`url("${thumbnail_path}")`}}>

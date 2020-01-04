@@ -13,7 +13,8 @@ import HeaderFigure from './HeaderFigure/index'
 
 // Helmets
 import ProjectDetailHelmets from './Helmets/ProjectDetail'
-import TestHelmet from './Helmets/index'
+import UrlHelmet from './Helmets/url'
+import TitleHelmet from './Helmets/Title'
 
 // pages
 import About from './pages/About/About'
@@ -45,6 +46,7 @@ export {
   PageProjectDetail,
 
   // Helmets
-  TestHelmet,
+  UrlHelmet,
   ProjectDetailHelmets,
+  TitleHelmet,
 }
