@@ -3,6 +3,7 @@ import style from './TradingviewDashboard.scss';
 
 import {Component} from 'preact';
 
+
 import {
   ProjectTitle,
   NewWindowLink,
@@ -12,17 +13,25 @@ import {
   GithubLink,
   MetaProjectDetail,
   HeaderFigure,
-  Spare
+  Spare,
+  ProjectDetailHelmets
 } from '../../../../components/index'
 
 import head_pic from './tradingview-dashboard.png';
 
 import TradThumbnail from './thumbnail.png';
 
+
+
 class TradContent extends Component{
   render() {
     return(
       <div className={projectDetailStyle.Container}>
+
+        <ProjectDetailHelmets
+          title="Tradingview Dashboard"
+        />
+
         <div className={projectDetailStyle.ProjectDescription}>
 
           <div className={projectDetailStyle.ProjectHead}>

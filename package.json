@@ -30,10 +30,11 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "node-sass": "^4.13.0",
     "preact": "^10.1.0",
-    "preact-render-to-string": "^5.1.2",
-    "react-ga": "^2.7.0",
-    "preact-router": "^3.1.0",
     "preact-async-route": "^2.2.1",
+    "preact-helmet": "^4.0.0-alpha-3",
+    "preact-render-to-string": "^5.1.2",
+    "preact-router": "^3.1.0",
+    "react-ga": "^2.7.0",
     "sass-loader": "7.3.1"
   }
 }

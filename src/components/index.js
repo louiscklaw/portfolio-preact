@@ -11,6 +11,8 @@ import Home from './Home/index'
 import Spare from './Spare/index'
 import HeaderFigure from './HeaderFigure/index'
 
+import ProjectDetailHelmets from './Helmets/ProjectDetail'
+
 // pages
 import About from './pages/About/About'
 import Credits from './pages/Credits/Credits'
@@ -38,5 +40,8 @@ export {
   Logs,
   PagesHelloworld,
   PageProjectCatalogue,
-  PageProjectDetail
+  PageProjectDetail,
+
+  // Helmets
+  ProjectDetailHelmets,
 }
