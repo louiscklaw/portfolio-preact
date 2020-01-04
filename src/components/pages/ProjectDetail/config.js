@@ -19,6 +19,7 @@ import {TraefikTryoutContent, TraefikTryoutThumbnail} from './TraefikTryout/Trae
 import {VoronTryoutContent, VoronTryoutThumbnail} from './VoronTryout/VoronTryout'
 import {YoutubeSplitContent, YoutubeSplitThumbnail} from './YoutubeSplitViewTryout/YoutubeSplitViewTryout'
 import {ZTransferDemoContent, ZTransferDemoThumbnail} from './ZTransferDemo/ZTransferDemo'
+import { h } from 'preact'
 
 
 
@@ -43,12 +44,8 @@ let project_list = {
 }
 
 function showProject(proj_name){
-  return(
-    <pre>
-      this is test
-      {project_list[proj_name][1]}
-    </pre>
-  )
+  let test = new project_list[proj_name][1];
+  return test.render();
 }
 
 export {
