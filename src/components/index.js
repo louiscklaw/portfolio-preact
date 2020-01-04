@@ -9,7 +9,16 @@ import GithubLink from './Links/GithubLink'
 import Nav from './Nav/index'
 import Home from './Home/index'
 import Spare from './Spare/index'
-import HeaderFigure from './HeaderFigure/index'
+
+// ProjectDetail
+import HeaderFigure from './HeaderFigure/index';
+import {
+  CodeHighlight,
+  HighlightJavascript,
+  HighlightPython,
+  HighlightBash
+} from './containers/Highlightjs/index'
+
 
 // Helmets
 import ProjectDetailHelmets from './Helmets/ProjectDetail'
@@ -47,4 +56,9 @@ export {
   // Helmets
   TestHelmet,
   ProjectDetailHelmets,
+
+  CodeHighlight,
+  HighlightJavascript,
+  HighlightPython,
+  HighlightBash,
 }
