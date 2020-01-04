@@ -6,7 +6,7 @@ class ProjectTitle extends React.Component{
   render(){
     return(
       <div className={style.projectTitle}>
-        <h3>{this.props.project_title}</h3>
+        <h1>{this.props.project_title}</h1>
       </div>
     )
   }
