@@ -1,40 +1,19 @@
-import {Component} from 'preact';
+import { Component } from 'preact';
 
-import './youtube.css'
+import style from './YoutubeContainer.scss'
 
-export default class YoutubeContainers extends Component{
-  render(){
-    let video_id = src.split('/').pop()
-
+class YoutubeContainer extends Component {
+  state = {  }
+  render() {
     return (
-      <div className="test-container">
-        <div className="video-container">
-          <iframe title={'video_id_'+video_id}
-            src={src}
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+      <div className={style.youtubeVideoContainer}>
+        <div className={style.videoContainer}>
+          <iframe title="youtube-iframe" width="853" height="480" src={'https://www.youtube.com/embed/'+this.props.vid} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="allowfullscreen" />
         </div>
-
+        <div className={style.videoTitle}>{this.props.video_title}</div>
       </div>
-    )
+     );
   }
 }
 
-// export default ({src}) => {
-//   let video_id = src.split('/').pop()
-//   return (
-//     <div className="test-container">
-//       <div className="video-container">
-//         <iframe title={'video_id_'+video_id}
-//           src={src}
-//           frameBorder="0"
-//           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-//           allowFullScreen
-//         />
-//       </div>
-
-//     </div>
-//   )
-// }
+export default YoutubeContainer;
