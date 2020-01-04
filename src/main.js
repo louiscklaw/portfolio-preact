@@ -14,7 +14,8 @@ import {
   Logs,
   pagesHelloworld,
   PageProjectCatalogue,
-  PageProjectDetail
+  PageProjectDetail,
+  CommonHelmet,
 } from './components/index';
 
 // import {
@@ -31,24 +32,23 @@ import {
 export default class Main extends Component{
   render(){
     return(
+      <div className="main">
+        <Nav />
 
-        <div className="main">
-            <Nav />
+        <div className="content">
+          <Router>
+            <AsyncRoute path="/home" component={Home} />
+            <AsyncRoute path="/project_catalogue" component={PageProjectCatalogue}/>
 
-            <div className="content">
-              <Router>
-                <AsyncRoute path="/home" component={Home} />
-                <AsyncRoute path="/project_catalogue" component={PageProjectCatalogue}/>
+            <AsyncRoute path="/project_detail/:project_to_show" component={PageProjectDetail}/>
 
-                <AsyncRoute path="/project_detail/:project_to_show" component={PageProjectDetail}/>
+            <AsyncRoute path="/logs" component={Logs} />
+            <AsyncRoute path="/about" component={About} />
+            <AsyncRoute path="/credits" component={Credits} />
 
-                <AsyncRoute path="/logs" component={Logs} />
-                <AsyncRoute path="/about" component={About} />
-                <AsyncRoute path="/credits" component={Credits} />
-
-              </Router>
-            </div>
+          </Router>
         </div>
+      </div>
 
     )
   }

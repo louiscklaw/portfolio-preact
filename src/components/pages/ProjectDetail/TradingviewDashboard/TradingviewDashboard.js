@@ -30,13 +30,17 @@ class TradContent extends Component{
 
         <ProjectDetailHelmets
           title="Tradingview Dashboard"
+          description="A tradingview dashboard"
+          image={TradThumbnail}
         />
 
         <div className={projectDetailStyle.ProjectDescription}>
 
           <div className={projectDetailStyle.ProjectHead}>
             <BackToProjects />
-            <ProjectTitle project_title="tradingview dashboard" />
+            <ProjectTitle
+              project_title="Tradingview Dashboard"
+            />
             <Spare />
           </div>
 

@@ -11,7 +11,9 @@ import Home from './Home/index'
 import Spare from './Spare/index'
 import HeaderFigure from './HeaderFigure/index'
 
+// Helmets
 import ProjectDetailHelmets from './Helmets/ProjectDetail'
+import TestHelmet from './Helmets/index'
 
 // pages
 import About from './pages/About/About'
@@ -43,5 +45,6 @@ export {
   PageProjectDetail,
 
   // Helmets
+  TestHelmet,
   ProjectDetailHelmets,
 }
