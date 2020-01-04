@@ -11,7 +11,7 @@ from fabric.api import local, shell_env, lcd, run, settings
 SLACK_TOKEN = os.environ['SLACK_TOKEN']
 
 BRANCH_TO_MERGE_INTO='develop'
-BRANCH_TO_MERGE_REGEX='^feature'
+BRANCH_TO_MERGE_REGEX='(^feature|^fix)'
 TRAVIS_BRANCH = os.environ['TRAVIS_BRANCH']
 TRAVIS_COMMIT = os.environ['TRAVIS_COMMIT']
 TRAVIS_BUILD_NUMBER = os.environ['TRAVIS_BUILD_NUMBER']
