@@ -1,0 +1,24 @@
+digraph D {
+  rankdir=LR;
+
+  node [fontname="Arial", shape=box];
+
+  start [label="start"]
+  end [label="end"]
+
+  pass [label="pass"]
+  fail [label="fail"]
+  wait [label="wait"]
+
+  test_purpose [label="my test purpose"]
+
+  start -> pass
+  start -> fail
+  start -> wait
+  pass -> test_purpose
+  fail -> test_purpose
+  wait -> test_purpose
+
+  test_purpose -> end
+
+}

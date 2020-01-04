@@ -12,13 +12,16 @@ import {
   MetaProjectDetail,
   HeaderFigure,
   Spare,
-  ProjectDetailHelmets
+  ProjectDetailHelmets,
+  HighlightBash
 } from '../../../../components/index'
 
 import head_pic from './appium-behave.png';
 
 import AppiumThumbnail from './thumbnail.png';
-import { HighlightBash } from '../../../containers/Highlightjs';
+
+import system_structure_svg from './system_structure.svg';
+import behave_grammer_svg from './behave_grammer.svg';
 
 class AppiumContent extends Component{
   render(){
@@ -114,6 +117,33 @@ class AppiumContent extends Component{
             system structure:
           </h3>
 
+          <img src={system_structure_svg} />
+
+
+
+          <h3 className={projectDetailStyle.DescTopic}>
+            behave grammer:
+          </h3>
+
+          <img src={behave_grammer_svg} />
+
+          <h3 className={projectDetailStyle.DescTopic}>
+            stack on MAC machine:
+          </h3>
+
+          <HighlightBash>
+            brew cask install visual-studio-code
+            brew install zsh-history-substring-search
+            brew install zsh
+            brew install zsh-lovers
+            brew install zsh-autosuggestions
+            brew install zsh-navigation-tools
+            brew install zsh-completions
+            brew install zsh-syntax-highlighting
+            brew install zsh-git-prompt
+            brew install zshdb
+            brew install git-flow
+          </HighlightBash>
 
         </div>
       </div>
