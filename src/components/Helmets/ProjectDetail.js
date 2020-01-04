@@ -26,6 +26,8 @@ export default ({
     console.error('error from preact-helmet, description too short');
   }
 
+  // {/* https://css-tricks.com/essential-meta-tags-social-media/ */}
+
   return (
     <div>
       <TitleHelmet />
@@ -39,14 +41,12 @@ export default ({
           {property: "og:title", content: title},
           ,
           {property: "og:image", content: image},
-          {property: "og:description", content: description}
+          {property: "og:description", content: description},
 
-        ]}
-
-        link={[
-          {rel: "canonical", href: "http://mysite.com/example"},
-          {rel: "apple-touch-icon", href: "http://mysite.com/img/apple-touch-icon-57x57.png"},
-          {rel: "apple-touch-icon", sizes: "72x72", href: "http://mysite.com/img/apple-touch-icon-72x72.png"}
+          {name:"twitter:title", content: title},
+          {name:"twitter:description", content: description},
+          {name:"twitter:image", content: image},
+          {name:"twitter:card", content: description},
         ]}
 
       />
