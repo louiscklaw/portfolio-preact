@@ -4,7 +4,7 @@ import {
   ProjectTitle,
   NewWindowLink,
   BackToProjects,
-  YoutubeContainers,
+  YoutubeContainer,
   MetaTitle,
   GithubLink,
   MetaProjectDetail
