@@ -8,7 +8,9 @@
     "build": "preact build",
     "serve": "preact build && preact serve",
     "dev": "preact watch",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "build_dot_file": "node ./gen_dot.js",
+    "watch_dot_file": "nodemon -w . --ext '*.dot' --exec yarn build_dot_file"
   },
   "eslintConfig": {
     "extends": "eslint-config-synacor"
