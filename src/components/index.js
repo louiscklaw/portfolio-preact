@@ -12,12 +12,13 @@ import Spare from './Spare/index'
 
 // ProjectDetail
 import HeaderFigure from './HeaderFigure/index';
-import {
-  CodeHighlight,
-  HighlightJavascript,
-  HighlightPython,
-  HighlightBash
-} from './containers/Highlightjs/index'
+
+// import {
+//   CodeHighlight,
+//   HighlightJavascript,
+//   HighlightPython,
+//   HighlightBash
+// } from './containers/Highlightjs/index'
 
 
 // Helmets
@@ -57,8 +58,8 @@ export {
   TestHelmet,
   ProjectDetailHelmets,
 
-  CodeHighlight,
-  HighlightJavascript,
-  HighlightPython,
-  HighlightBash,
+  // CodeHighlight,
+  // HighlightJavascript,
+  // HighlightPython,
+  // HighlightBash,
 }
