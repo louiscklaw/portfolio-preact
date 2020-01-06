@@ -19,7 +19,7 @@ import HeaderFigure from './HeaderFigure/index';
 //   HighlightPython,
 //   HighlightBash
 // } from './containers/Highlightjs/index'
-import HelloPrism from './containers/prismjs/index';
+import {PrismHelloworld, PrismBash} from './containers/prismjs/index';
 
 
 // Helmets
@@ -59,7 +59,8 @@ export {
   TestHelmet,
   ProjectDetailHelmets,
 
-  HelloPrism,
+  PrismHelloworld,
+  PrismBash
   // CodeHighlight,
   // HighlightJavascript,
   // HighlightPython,
