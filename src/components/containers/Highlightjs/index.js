@@ -2,9 +2,9 @@ import {Component} from 'preact';
 
 import 'highlight.js/styles/vs2015.css'
 
-import "./Highlightjs.scss"
+// import "./Highlightjs.scss"
 
-import hljs from 'highlight.js'
+// import hljs from 'highlight.js'
 
 class CodeHighlight extends Component {
   getCodeId(){

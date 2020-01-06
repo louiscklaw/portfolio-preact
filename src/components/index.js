@@ -13,6 +13,15 @@ import Spare from './Spare/index'
 // ProjectDetail
 import HeaderFigure from './HeaderFigure/index';
 
+// import {
+//   CodeHighlight,
+//   HighlightJavascript,
+//   HighlightPython,
+//   HighlightBash
+// } from './containers/Highlightjs/index'
+import {PrismHelloworld, PrismBash} from './containers/prismjs/index';
+
+
 // Helmets
 import ProjectDetailHelmets from './Helmets/ProjectDetail'
 import TestHelmet from './Helmets/index'
@@ -49,4 +58,11 @@ export {
   // Helmets
   TestHelmet,
   ProjectDetailHelmets,
+
+  PrismHelloworld,
+  PrismBash
+  // CodeHighlight,
+  // HighlightJavascript,
+  // HighlightPython,
+  // HighlightBash,
 }
