@@ -57,9 +57,6 @@ brew install zshdb
 brew install git-flow
 `.trim();
 
-import system_structure_svg from './system_structure.svg';
-import behave_grammer_svg from './behave_grammer.svg';
-
 class AppiumContent extends Component{
   render(){
     return(
