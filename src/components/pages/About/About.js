@@ -6,7 +6,7 @@ export default class About extends Component {
 	render(){
     console.log(style)
 		return(
-      <div className={style.pageAbout}>
+      <div className={style.page_about}>
         <div className={style.page_header}>
           About
         </div>
