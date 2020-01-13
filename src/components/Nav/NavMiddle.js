@@ -9,9 +9,9 @@ export default class NavMiddle extends Component {
     return(
       <div className={style.NavMiddle}>
         <ul>
-          <li>
+          {/* <li>
             <Link activeClassName="active" href="/">Home</Link>
-          </li>
+          </li> */}
           <li>
             <Link activeClassName="active" href="/project_catalogue">Projects</Link>
           </li>

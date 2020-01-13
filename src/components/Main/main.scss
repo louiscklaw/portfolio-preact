@@ -7,6 +7,9 @@
 .content {
   /* background-color: red; */
 
+  position: relative;
+  left: 20vw;
+
   width: calc( 100vw - 20vw ) ;
   background-color: #ecf0f1;
 }

@@ -1,12 +1,16 @@
-nav {
-  display: block;
-  width:20vw;
+.navContainer{
+  position: fixed;
   background-color: #273c75;
-  min-height: 100vh;
 
   a {
     text-decoration: none;
     color: #fff;
   }
 
+}
+
+nav {
+  display: block;
+  width:20vw;
+  min-height: 100vh;
 }
