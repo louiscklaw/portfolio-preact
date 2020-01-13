@@ -17,16 +17,12 @@ import {
   PrismBash
 } from '../../../../components/index'
 
-
-
 import head_pic from './appium-behave.png';
 
 import AppiumThumbnail from './thumbnail.png';
-import TradThumbnail from './thumbnail.png';
 
 import system_structure_svg from './system_structure.svg';
 import behave_grammer_svg from './behave_grammer.svg';
-
 
 // content
 const execute_code = `
