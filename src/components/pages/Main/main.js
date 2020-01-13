@@ -14,14 +14,12 @@ import {
   PageProjectCatalogue,
   PageProjectDetail,
   CommonHelmet,
-} from '../index';
+} from '../../index';
 
 import style from './main.scss';
 
 export default class Main extends Component{
   render(){
-    console.log(style);
-
     return(
       <div className={style.main}>
         <Nav />

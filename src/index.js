@@ -1,14 +1,13 @@
-
 import { Component } from 'preact';
 
-import ReactGA from 'react-ga';
-
 import style from './index.scss';
-// import Main from './main';
-import Main from './components/Main/main';
+
+import Main from './components/pages/Main/main';
 
 import DevConfig from './config/dev.config';
 import ProdConfig from './config/prod.config';
+
+import ReactGA from 'react-ga';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { far } from '@fortawesome/free-regular-svg-icons'
