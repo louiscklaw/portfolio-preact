@@ -4,6 +4,26 @@ import { Link } from 'preact-router/match';
 
 import style from './NavMiddle.scss'
 
+function getStagingSite(){
+  if (true){
+    return(
+      <li>
+        <a href="//staging-portfolio-c7cb5.firebaseapp.com" target="_blank">Staging site</a>
+      </li>
+    )
+  }
+}
+
+function getTravisBuildSite(){
+  if (true){
+    return(
+      <li>
+        <a href="//travis-ci.org/louiscklaw/portfolio-preact/branches" target="_blank">travis build</a>
+      </li>
+    )
+  }
+}
+
 export default class NavMiddle extends Component {
   render(){
     return(
@@ -22,14 +42,10 @@ export default class NavMiddle extends Component {
             <Link activeClassName="active" href="/credits">Credits</Link>
           </li>
           <li>
-            <Link href="//search-trend-vue.firebaseapp.com/">GOOGLE SEARCH TREND</Link>
+            <a href="//search-trend-vue.firebaseapp.com/" target="_blank" >GOOGLE SEARCH TREND</a>
           </li>
-          <li>
-            <Link href="//staging-portfolio-c7cb5.firebaseapp.com">Staging site</Link>
-          </li>
-          <li>
-            <Link href="//travis-ci.org/louiscklaw/portfolio-preact/branches">travis build</Link>
-          </li>
+          {getStagingSite()}
+          {getTravisBuildSite()}
         </ul>
       </div>
     )
