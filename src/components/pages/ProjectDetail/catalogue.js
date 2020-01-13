@@ -40,7 +40,7 @@ export default class ProjectCatalogue extends Component{
       .map( k => getProjectDetailLink(k, project_list[k][0], project_list[k][2]))
 
     return(
-      <div className={style.project_catalogue}>
+      <div className={style.projectCatalogue}>
         <ul>
           {test_jsx}
         </ul>
