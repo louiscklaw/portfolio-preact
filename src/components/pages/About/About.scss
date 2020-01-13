@@ -1,13 +1,20 @@
 .page_about {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   flex-wrap: nowrap;
-  height: 100%;
+
+  padding-left: 10em;
+  padding-right: 10em;
+  padding-top: 5em;
+  padding-bottom: 10em;
+
 }
 
 .page_header{
-  background-color:red;
-  width:33%;
+  font-size: 2em;
+  padding-bottom: 1.5em;
+
+  width:100%;
 }
 
 .paragraph_body{
@@ -16,7 +23,18 @@
   border-width:1px;
   border-style: dotted;
   border-color:yellow;
-  width: 33%;
+  width: 100%;
+
+  section{
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    h4 {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+
+  }
 }
 
 .pragraph_title {
