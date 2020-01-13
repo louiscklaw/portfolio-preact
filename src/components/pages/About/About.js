@@ -8,7 +8,7 @@ export default class About extends Component {
       <div className={style.page_about}>
 
         <div className={style.page_header}>
-          About
+          About Me
         </div>
 
         <div className={style.paragraph_body}>
