@@ -38,7 +38,6 @@ export default class App extends Component {
 		return (
 			<>
         <Main />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.js"></script>
 			</>
 		);
   }

@@ -18,6 +18,14 @@ import {
 
 import style from './main.scss';
 
+function onRouteChangeHelloworld(){
+  console.log('on route change helloworld');
+  window.scrollTo({
+    top: 0
+  });
+
+}
+
 export default class Main extends Component{
   render(){
     return(
@@ -25,7 +33,7 @@ export default class Main extends Component{
         <Nav />
 
         <div className={style.content}>
-          <Router>
+          <Router onChange={onRouteChangeHelloworld}>
 
             <AsyncRoute path="/project_catalogue" component={PageProjectCatalogue}/>
 
