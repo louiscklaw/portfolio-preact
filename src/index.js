@@ -17,6 +17,7 @@ library.add(fab, fas, far)
 
 
 const CHECK_DEV_ENV = () => {
+  // true => development, false => production
 	let check_result = process.env.NODE_ENV === 'development';
   if(check_result){
     console.warn("check running environment.");
@@ -24,6 +25,7 @@ const CHECK_DEV_ENV = () => {
   return check_result;
 }
 
+// get the final configuration by run environment
 const ACTIVE_CONFIG = (CHECK_DEV_ENV() === 'development' ? DevConfig: ProdConfig);
 
 export default class App extends Component {
