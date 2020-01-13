@@ -26,7 +26,7 @@ const CHECK_DEV_ENV = () => {
 }
 
 // get the final configuration by run environment
-const ACTIVE_CONFIG = (CHECK_DEV_ENV() === 'development' ? DevConfig: ProdConfig);
+const ACTIVE_CONFIG = (CHECK_DEV_ENV() ? DevConfig: ProdConfig);
 
 export default class App extends Component {
 	componentDidMount(){

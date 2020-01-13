@@ -4,8 +4,15 @@ import { Link } from 'preact-router/match';
 
 import style from './NavMiddle.scss'
 
+// // TODO: using react context
+const CHECK_DEV_ENV = () => {
+  // true => development, false => production
+	let check_result = process.env.NODE_ENV === 'development';
+  return check_result;
+}
+
 function getStagingSite(){
-  if (true){
+  if (CHECK_DEV_ENV()){
     return(
       <li>
         <a href="//staging-portfolio-c7cb5.firebaseapp.com" target="_blank">Staging site</a>
@@ -15,7 +22,7 @@ function getStagingSite(){
 }
 
 function getTravisBuildSite(){
-  if (true){
+  if (CHECK_DEV_ENV()){
     return(
       <li>
         <a href="//travis-ci.org/louiscklaw/portfolio-preact/branches" target="_blank">travis build</a>

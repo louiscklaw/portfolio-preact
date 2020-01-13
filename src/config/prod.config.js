@@ -1,4 +1,5 @@
 export default {
+  name: 'production',
   GAKey: 'UA-73146416-11',
 
   // sentry portfolio-react
