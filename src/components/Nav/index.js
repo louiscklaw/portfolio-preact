@@ -1,4 +1,3 @@
-
 import {
   Component
 } from 'preact';
@@ -8,21 +7,16 @@ import NavMiddle from './NavMiddle'
 import NavBottom from './NavBottom'
 
 // import for nav
-import './style.scss'
+import style from './style.scss'
 
 export default class Nav extends Component{
   render(){
     return(
-      <nav>
+      <nav className={style.navContainer}>
         <NavTop></NavTop>
         <NavMiddle></NavMiddle>
         <NavBottom></NavBottom>
       </nav>
     )
-    // return(
-    //   <div>
-    //     helloworld
-    //   </div>
-    // )
   }
 }
