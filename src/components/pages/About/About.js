@@ -1,6 +1,6 @@
-import style from './About.scss';
-
 import { Component } from 'preact';
+
+import style from './About.scss';
 
 export default class About extends Component {
 	render(){
