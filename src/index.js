@@ -3,8 +3,9 @@ import { Component } from 'preact';
 
 import ReactGA from 'react-ga';
 
-import './index.scss';
-import Main from './main';
+import style from './index.scss';
+// import Main from './main';
+import Main from './components/Main/main';
 
 import DevConfig from './config/dev.config';
 import ProdConfig from './config/prod.config';

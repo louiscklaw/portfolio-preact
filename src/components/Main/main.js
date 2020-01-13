@@ -1,5 +1,3 @@
-import './main.scss';
-
 import { Component } from 'preact';
 // import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import { Router } from 'preact-router';
@@ -16,26 +14,19 @@ import {
   PageProjectCatalogue,
   PageProjectDetail,
   CommonHelmet,
-} from './components/index';
+} from '../index';
 
-// import {
-//   // PagesHelloworld,
-//   // About,
-//   // Logs,
-//   // Credits,
-//   // ProjectCatalogue,
-//   // ProjectDetail
-// } from './pages/index'
-
-
+import style from './main.scss';
 
 export default class Main extends Component{
   render(){
+    console.log(style);
+
     return(
-      <div className="main">
+      <div className={style.main}>
         <Nav />
 
-        <div className="content">
+        <div className={style.content}>
           <Router>
             <AsyncRoute path="/home" component={Home} />
             <AsyncRoute path="/project_catalogue" component={PageProjectCatalogue}/>
