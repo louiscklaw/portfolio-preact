@@ -26,7 +26,7 @@ export default class Main extends Component{
 
         <div className={style.content}>
           <Router>
-            <AsyncRoute path="/home" component={Home} />
+
             <AsyncRoute path="/project_catalogue" component={PageProjectCatalogue}/>
 
             <AsyncRoute path="/project_detail/:project_to_show" component={PageProjectDetail}/>
@@ -34,6 +34,9 @@ export default class Main extends Component{
             <AsyncRoute path="/logs" component={Logs} />
             <AsyncRoute path="/about" component={About} />
             <AsyncRoute path="/credits" component={Credits} />
+
+            {/* default page */}
+            <AsyncRoute path="/" component={PageProjectCatalogue} />
 
           </Router>
         </div>
