@@ -25,23 +25,24 @@ class YoutubeSplitContent extends Component{
       <div className={projectDetailStyle.Container}>
 
         <ProjectDetailHelmets
-          title="Youtube Split Viewer"
-          description="A Youtube Split Viewer"
-          image={TradThumbnail}
+          title="youtube split view tryout"
+          description="A youtube split view tryout"
+          image={YoutubeSplitThumbnail}
         />
+
         <div className={projectDetailStyle.ProjectDescription}>
 
           <div className={projectDetailStyle.ProjectHead}>
             <BackToProjects />
             <ProjectTitle
-              project_title="Youtube Split Viewer"
+              project_title="youtube split view tryout"
             />
             <Spare />
           </div>
 
           <HeaderFigure
             img_src={head_pic}
-            caption="Youtube Split Viewer"
+            caption="youtube split view demo screen"
           />
 
           <div className={projectDetailStyle.DescBody}>
@@ -49,7 +50,7 @@ class YoutubeSplitContent extends Component{
               Purpose:
             </h3>
             <p>
-              a simple youtube split viewer
+              This is a page to monitor multiple channels in youtube.
             </p>
 
             <h3 className={projectDetailStyle.DescTopic}>
@@ -62,9 +63,7 @@ class YoutubeSplitContent extends Component{
             </h3>
             <NewWindowLink link="https://github.com/louiscklaw/youtube-split-view-tryout" />
           </div>
-
         </div>
-
       </div>
     )
   }
