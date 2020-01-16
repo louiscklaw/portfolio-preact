@@ -10,6 +10,9 @@ import Nav from './Nav/index'
 import Home from './Home/index'
 import Spare from './Spare/index'
 
+// draw io
+import {GitflowProcedure} from './containers/drawio/index'
+
 // ProjectDetail
 import HeaderFigure from './HeaderFigure/index';
 
@@ -60,9 +63,11 @@ export {
   ProjectDetailHelmets,
 
   PrismHelloworld,
-  PrismBash
+  PrismBash,
   // CodeHighlight,
   // HighlightJavascript,
   // HighlightPython,
   // HighlightBash,
+
+  GitflowProcedure
 }
