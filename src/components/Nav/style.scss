@@ -1,16 +1,48 @@
-.navContainer{
-  position: fixed;
-  background-color: #273c75;
+@import '../../var.scss';
 
-  a {
-    text-decoration: none;
-    color: #fff;
+@media only screen and (min-width: $break-small) {
+  .navContainer {
+    // position: fixed;
+    background-color: #273c75;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  .mobile_menu {
+    display: block;
+    background-color: #273c75;
+  }
+
+  nav {
+    width: 100%;
   }
 
 }
 
-nav {
-  display: block;
-  width:20vw;
-  min-height: 100vh;
+@media only screen and (min-width: $break-large) {
+
+  .navContainer {
+    position: fixed;
+    background-color: #273c75;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+  }
+
+  nav {
+    display: block;
+    width: 20vw;
+    min-height: 100vh;
+  }
+
+  .mobile_menu {
+    display: none;
+  }
+
 }

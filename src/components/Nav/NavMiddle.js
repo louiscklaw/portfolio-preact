@@ -31,7 +31,19 @@ function getTravisBuildSite(){
   }
 }
 
+function closeMobileMenu(){
+  console.log('close mobile menu');
+}
+
 export default class NavMiddle extends Component {
+  componentDidMount(){
+    console.log(document.querySelectorAll(`.${style['NavMiddle']} ul li a`));
+    document.querySelectorAll(`.${style['NavMiddle']} ul li a`).forEach(ele => {
+      ele.addEventListener('click', () => {
+        console.log("adding testing Link ??");
+      });
+    })
+  }
   render(){
     return(
       <div className={style.NavMiddle}>
@@ -40,16 +52,16 @@ export default class NavMiddle extends Component {
             <Link activeClassName="active" href="/">Home</Link>
           </li> */}
           <li>
-            <Link activeClassName="active" href="/project_catalogue">Projects</Link>
+            <a href="/project_catalogue" >Projects</a>
           </li>
           <li>
-            <Link activeClassName="active" href="/about">About</Link>
+            <a href="/about" >About</a>
           </li>
           <li>
-            <Link activeClassName="active" href="/credits">Credits</Link>
+            <a href="/credits">Credits</a>
           </li>
           <li>
-            <a href="//search-trend-vue.firebaseapp.com/" target="_blank" >GOOGLE SEARCH TREND</a>
+            <a href="//search-trend-vue.firebaseapp.com" target="_blank">GOOGLE SEARCH TREND</a>
           </li>
           {getStagingSite()}
           {getTravisBuildSite()}
