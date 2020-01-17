@@ -20,9 +20,14 @@ import style from './main.scss';
 
 function onRouteChangeHelloworld(){
   console.log('on route change helloworld');
-  window.scrollTo({
-    top: 0
-  });
+  try{
+    window.scrollTo({
+      top: 0
+    });
+
+  } catch(oErr){
+    console.log(oErr);
+  }
 
 }
 
