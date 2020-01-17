@@ -1,6 +1,6 @@
 @import '../../var.scss';
 
-@media only screen and (min-width: $break-small) {
+@media only screen and (max-width: $max-small) {
   .navContainer {
     // position: fixed;
     background-color: #273c75;
@@ -27,7 +27,7 @@
 
 }
 
-@media only screen and (min-width: $break-large) {
+@media only screen and (min-width: $min-large) {
 
   .navContainer {
     position: fixed;
@@ -50,8 +50,8 @@
     display: none;
   }
 
-  // .menuBody{
-  //   // display: none;
+  .menuBody{
+    display: block;
   //   background-color: red;
-  // }
+  }
 }

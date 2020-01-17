@@ -31,7 +31,15 @@ function getTravisBuildSite(){
   }
 }
 
+function checkIfSmallScreen(){
+
+  console.log('checkIfSmallScreen', windowWidth);
+  return windowWidth < 500;
+}
+
 export default class NavMiddle extends Component {
+
+
   componentDidMount(){
     // console.log(document.querySelectorAll(`.${style['NavMiddle']} ul li a`));
     console.log('this.props', this.props['hamburger_is_active_class']);
@@ -44,12 +52,18 @@ export default class NavMiddle extends Component {
     document.querySelectorAll(`.${style['NavMiddle']} ul li a`).forEach(ele => {
       ele.addEventListener('click', function(){
         console.log(hamburger_button_is_active_class);
-        // fallback menu button
-        var mobile_menu_classlist = document.querySelector('.mobile_menu_container').classList
-        mobile_menu_classlist.remove(hamburger_button_is_active_class);
 
-        // hide menu body
-        document.querySelector(selector_menu_body).style.display='none';
+        let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+
+        if (windowWidth < 500){
+          // fallback menu button
+          var mobile_menu_classlist = document.querySelector('.mobile_menu_container').classList
+          mobile_menu_classlist.remove(hamburger_button_is_active_class);
+
+          // hide menu body
+          document.querySelector(selector_menu_body).style.display='none';
+
+        }
       });
     })
   }
