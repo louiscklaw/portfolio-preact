@@ -97,7 +97,18 @@ class ZTransferDemoContent extends Component{
               Source:
             </h3>
 
-            <GistLink />
+            <GistLink id="f9a49076aff09449a5e5e0078b30ce65" />
+
+
+            <h3 className={projectDetailStyle.DescTopic}>
+              How to install:
+            </h3>
+
+            <ul>
+              <li>ztransfer</li>
+              <li>it return a link with transfer.sh</li>
+            </ul>
+
           </div>
         </div>
       </div>
