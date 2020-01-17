@@ -31,16 +31,20 @@ function getTravisBuildSite(){
   }
 }
 
-function closeMobileMenu(){
-  console.log('close mobile menu');
-}
-
 export default class NavMiddle extends Component {
   componentDidMount(){
-    console.log(document.querySelectorAll(`.${style['NavMiddle']} ul li a`));
+    // console.log(document.querySelectorAll(`.${style['NavMiddle']} ul li a`));
+    console.log('this.props', this.props['hamburger_is_active_class']);
+    var hamburger_button_is_active_class = this.props['hamburger_is_active_class'];
     document.querySelectorAll(`.${style['NavMiddle']} ul li a`).forEach(ele => {
-      ele.addEventListener('click', () => {
-        console.log("adding testing Link ??");
+      ele.addEventListener('click', function(){
+        console.log(hamburger_button_is_active_class);
+        // fallback menu button
+        var mobile_menu_classlist = document.querySelector('.mobile_menu_container').classList
+        mobile_menu_classlist.remove(hamburger_button_is_active_class);
+
+        // hide menu body
+        document.querySelector('.menuBody').style.display='none';
       });
     })
   }
