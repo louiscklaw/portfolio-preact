@@ -25,7 +25,7 @@ function getTravisBuildSite(){
   if (CHECK_DEV_ENV()){
     return(
       <li>
-        <a href="//travis-ci.org/louiscklaw/portfolio-preact/branches" target="_blank">travis build</a>
+        <a href="//travis-ci.com/louiscklaw/portfolio-preact/branches" target="_blank">travis build</a>
       </li>
     )
   }
