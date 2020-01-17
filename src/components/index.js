@@ -3,7 +3,10 @@ import ProjectTitle from './ProjectTitle/ProjectTitle'
 import NewWindowLink from './Links/NewWindowLink'
 import BackToProjects from './Links/BackToProjects'
 import YoutubeContainer from './containers/youtube'
+
 import GithubLink from './Links/GithubLink'
+import GistLink from './Links/GistLink'
+
 // import MetaProjectDetail from './meta/ProjectDetail'
 // import MetaTitle from './MetaTitle/MetaTitle'
 import Nav from './Nav/index'
@@ -40,6 +43,7 @@ export {
   BackToProjects,
   YoutubeContainer,
   GithubLink,
+  GistLink,
   // MetaProjectDetail,
   // MetaTitle,
   Nav,
