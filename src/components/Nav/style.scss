@@ -20,6 +20,11 @@
     width: 100%;
   }
 
+  .menuBody {
+    display: none;
+    background-color: red;
+  }
+
 }
 
 @media only screen and (min-width: $break-large) {
@@ -45,4 +50,8 @@
     display: none;
   }
 
+  // .menuBody{
+  //   // display: none;
+  //   background-color: red;
+  // }
 }

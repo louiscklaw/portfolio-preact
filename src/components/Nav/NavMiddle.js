@@ -35,7 +35,12 @@ export default class NavMiddle extends Component {
   componentDidMount(){
     // console.log(document.querySelectorAll(`.${style['NavMiddle']} ul li a`));
     console.log('this.props', this.props['hamburger_is_active_class']);
+
     var hamburger_button_is_active_class = this.props['hamburger_is_active_class'];
+
+    var menu_body_class = this.props['menu_body_class'];
+    var selector_menu_body = '.'+menu_body_class
+
     document.querySelectorAll(`.${style['NavMiddle']} ul li a`).forEach(ele => {
       ele.addEventListener('click', function(){
         console.log(hamburger_button_is_active_class);
@@ -44,7 +49,7 @@ export default class NavMiddle extends Component {
         mobile_menu_classlist.remove(hamburger_button_is_active_class);
 
         // hide menu body
-        document.querySelector('.menuBody').style.display='none';
+        document.querySelector(selector_menu_body).style.display='none';
       });
     })
   }
