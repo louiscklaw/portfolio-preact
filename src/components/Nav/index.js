@@ -1,13 +1,12 @@
-import {
-  Component
-} from 'preact';
+import { Component } from 'preact';
 
 import NavTop from './NavTop'
 import NavMiddle from './NavMiddle'
 import NavBottom from './NavBottom'
 
 // import for nav
-import style from './style.scss'
+// import style from './style.scss'
+import style from '../../style/index'
 
 import hamburger_menu from './hamburgers.css'
 
@@ -48,8 +47,8 @@ export default class Nav extends Component{
 
   render(){
     return(
-      <nav className={style.navContainer}>
-        <div className={style.mobile_menu}>
+      <nav style={style.nav.nav_container}>
+        <div style={style.nav.mobile_menu}>
           <button className={'mobile_menu_container'+' '+ hamburger_menu['hamburger'] + ' ' + hamburger_menu['hamburger--collapse']} type="button" onClick={click_helloworld} aria-label="Menu">
             <span className={hamburger_menu['hamburger-box']}>
               <span className={hamburger_menu['hamburger-inner']}></span>
@@ -57,7 +56,7 @@ export default class Nav extends Component{
           </button>
         </div>
 
-        <div className={style.menuBody}>
+        <div style={style.nav.menu_body}>
           <NavTop></NavTop>
           <NavMiddle
             hamburger_is_active_class={hamburger_menu['is-active']}

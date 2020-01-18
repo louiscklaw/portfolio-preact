@@ -16,7 +16,8 @@ import {
   CommonHelmet,
 } from '../../index';
 
-import style from './main.scss';
+// import style from './main.scss';
+import style_js from '../../../style/index'
 
 function onRouteChangeHelloworld(){
   // console.log('on route change helloworld');
@@ -34,10 +35,12 @@ function onRouteChangeHelloworld(){
 export default class Main extends Component{
   render(){
     return(
-      <div className={style.main}>
-        <Nav />
+      <div style={style_js.main.main}>
+        <div style={style_js.main.nav_container}>
+          <Nav />
+        </div>
 
-        <div className={style.content}>
+        <div style={style_js.main.content}>
           <Router onChange={onRouteChangeHelloworld}>
 
             <AsyncRoute path="/project_catalogue" component={PageProjectCatalogue}/>
@@ -48,7 +51,7 @@ export default class Main extends Component{
             <AsyncRoute path="/about" component={About} />
             <AsyncRoute path="/credits" component={Credits} />
 
-            {/* default page */}
+            {/* // default page */}
             <AsyncRoute path="/" component={PageProjectCatalogue} />
 
           </Router>

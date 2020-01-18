@@ -1,3 +1,4 @@
+import theme from './theme.js'
 
 var nav_top = {
   height: '33vh',
@@ -99,12 +100,25 @@ var social_links_container={
 }
 
 var nav_container={
+  backgroundColor: theme.THEME_COLOR
+}
 
+
+var mobile_menu={
+  display:'none',
+  backgroundColor: theme.THEME_COLOR
+}
+
+var menu_body={
+  display: 'block',
+  // backgroundColor: 'red'
 }
 
 export default {
   // all nav
   nav_container,
+  mobile_menu,
+  menu_body,
 
   // nav_top
   nav_top,

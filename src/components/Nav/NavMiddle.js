@@ -69,7 +69,7 @@ export default class NavMiddle extends Component {
   render(){
     console.log('style_js', style);
     return(
-      <div className={style.nav.nav_middle}>
+      <div style={style.nav.nav_middle}>
         <ul style={style.nav.ul}>
           <li style={style.nav.nav_middle_li}>
             <a style={style.nav.a} href="/project_catalogue" >Projects</a>
