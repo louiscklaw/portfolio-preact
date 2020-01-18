@@ -4,7 +4,7 @@ import { Component } from 'preact';
 
 export default ({img_src, caption}) => {
   return(
-    <div className={style.HeaderFigure} >
+    <div className={style.HeaderFigureContainer} >
       <figure>
         <img src={img_src} alt="" />
       </figure>

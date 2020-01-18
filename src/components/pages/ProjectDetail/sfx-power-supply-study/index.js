@@ -18,20 +18,20 @@ import {
   PrismBash
 } from '../../../../components/index'
 
-import head_pic from './src/PS-STP-0600FPCGXX-G_d061bebe05a4488c96fe855efa35f9b3.jpg';
+import head_pic from './src/PS-STP-0600FPCGXX-G_d061bebe05a4488c96fe855efa35f9b3.jpg'
 
-import Thumbnail from './thumbnail.jpg';
+import SFXPowerSupplyThumbnail from './thumbnail.jpg';
 
 
-export default class PostContent extends Component{
+class SFXPowerSupplyContent extends Component{
   render(){
     return(
       <div className={projectDetailStyle.Container}>
 
         <ProjectDetailHelmets
-          title="Printer baord tryout"
-          description="A Printer baord tryout"
-          image={PrinterBoardThumbnail}
+          title="sfx power supply study"
+          description="A sfx power supply study"
+          image={SFXPowerSupplyThumbnail}
         />
 
         <div className={projectDetailStyle.ProjectDescription}>
@@ -39,14 +39,14 @@ export default class PostContent extends Component{
           <div className={projectDetailStyle.ProjectHead}>
             <BackToProjects />
             <ProjectTitle
-              project_title="Printer baord tryout"
+              project_title="sfx power supply study"
             />
             <Spare />
           </div>
 
           <HeaderFigure
             img_src={head_pic}
-            caption="Printer baord tryout"
+            caption="sfx power supply study"
           />
 
           <div className={projectDetailStyle.DescBody}>
@@ -54,7 +54,19 @@ export default class PostContent extends Component{
               Purpose:
             </h3>
             <p>
-              create a pcb for voron printer.
+              some background information about SFX power supply
+            </p>
+
+          </div>
+
+          {/*  */}
+
+          <div className={projectDetailStyle.DescBody}>
+            <h3 className={projectDetailStyle.DescTopic}>
+              Repos:
+            </h3>
+            <p>
+              <GithubLink link="https://github.com/louiscklaw/sfx-power-supply-playlist.git" />
             </p>
 
           </div>
@@ -62,4 +74,9 @@ export default class PostContent extends Component{
       </div>
     )
   }
+}
+
+export {
+  SFXPowerSupplyContent,
+  SFXPowerSupplyThumbnail
 }
