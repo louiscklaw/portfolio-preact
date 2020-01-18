@@ -1,18 +1,18 @@
-import style from './NavTop.scss'
-
 import {Component} from 'preact';
+
+import style from '../../style/index.js';
 
 import avatar from './avatar.jpeg';
 
 export default class NavTop extends Component{
   render(){
     return(
-      <div className={style.NavTop}>
-        <div className={style.GreetingPlate}>
+      <div style={style.nav.nav_top}>
+        <div style={style.nav.nav_top_greeting_plate}>
           Hi, I'm louis <span role="img" aria-label="Hi">👋</span>
         </div>
-        <div className={style.NavAvatar}>
-          <img src={avatar} />
+        <div style={style.nav.nav_top_avatar}>
+          <img src={avatar} style={style.nav.nav_top_avatar_img}/>
         </div>
       </div>
 

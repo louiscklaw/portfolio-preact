@@ -15,7 +15,7 @@ const hello_red={
   color: 'red'
 }
 
-var all_style = {
+export default {
   THEME_COLOR,
   THEME_COLOR_DARKER, THEME_COLOR_DARKEST,
   THEME_COLOR_LIGHTER, THEME_COLOR_LIGHTEST,
@@ -25,7 +25,6 @@ var all_style = {
   nav
 }
 
-export default all_style;
 
 function ColorLuminance(hex, lum) {
 

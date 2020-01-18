@@ -1,7 +1,7 @@
 import { Component } from 'preact';
 import { Link } from 'preact-router/match';
 
-import style_js from '../../style/index.js';
+import style from '../../style/index.js';
 
 // // TODO: using react context
 const CHECK_DEV_ENV = () => {
@@ -13,8 +13,8 @@ const CHECK_DEV_ENV = () => {
 function getStagingSite(){
   if (CHECK_DEV_ENV()){
     return(
-      <li style={style_js.nav.nav_middle_li}>
-        <a style={style_js.nav.a} href="//staging-portfolio-c7cb5.firebaseapp.com" target="_blank">Staging site</a>
+      <li style={style.nav.nav_middle_li}>
+        <a style={style.nav.a} href="//staging-portfolio-c7cb5.firebaseapp.com" target="_blank">Staging site</a>
       </li>
     )
   }
@@ -23,8 +23,8 @@ function getStagingSite(){
 function getTravisBuildSite(){
   if (CHECK_DEV_ENV()){
     return(
-      <li style={style_js.nav.nav_middle_li}>
-        <a style={style_js.nav.a} href="//travis-ci.com/louiscklaw/portfolio-preact/branches" target="_blank">travis build</a>
+      <li style={style.nav.nav_middle_li}>
+        <a style={style.nav.a} href="//travis-ci.com/louiscklaw/portfolio-preact/branches" target="_blank">travis build</a>
       </li>
     )
   }
@@ -67,21 +67,21 @@ export default class NavMiddle extends Component {
     })
   }
   render(){
-    console.log('style_js', style_js);
+    console.log('style_js', style);
     return(
-      <div className={style_js.nav.nav_middle}>
-        <ul style={style_js.nav.ul}>
-          <li style={style_js.nav.nav_middle_li}>
-            <a style={style_js.nav.a} href="/project_catalogue" >Projects</a>
+      <div className={style.nav.nav_middle}>
+        <ul style={style.nav.ul}>
+          <li style={style.nav.nav_middle_li}>
+            <a style={style.nav.a} href="/project_catalogue" >Projects</a>
           </li>
-          <li style={style_js.nav.nav_middle_li}>
-            <a style={style_js.nav.a} href="/about" >About</a>
+          <li style={style.nav.nav_middle_li}>
+            <a style={style.nav.a} href="/about" >About</a>
           </li>
-          <li style={style_js.nav.nav_middle_li}>
-            <a style={style_js.nav.a} href="/credits">Credits</a>
+          <li style={style.nav.nav_middle_li}>
+            <a style={style.nav.a} href="/credits">Credits</a>
           </li>
-          <li style={style_js.nav.nav_middle_li}>
-            <a style={style_js.nav.a} href="//search-trend-vue.firebaseapp.com" target="_blank">GOOGLE SEARCH TREND</a>
+          <li style={style.nav.nav_middle_li}>
+            <a style={style.nav.a} href="//search-trend-vue.firebaseapp.com" target="_blank">GOOGLE SEARCH TREND</a>
           </li>
           {getStagingSite()}
           {getTravisBuildSite()}
