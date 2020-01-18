@@ -1,22 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-@import 'var.scss';
-
-
-@media only screen and (min-width: $break-small) {
-  body {
-    // color: lightblue;
-  }
-}
-
-
-@media only screen and (min-width: $break-large) {
-  body {
-    // color: cyan;
-  }
-}
-
-
 
 .back_to_proj_home {
   display: block;
