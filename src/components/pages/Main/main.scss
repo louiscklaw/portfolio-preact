@@ -1,42 +1,70 @@
-.main{
-  display: flex;
-  flex-direction: row ;
-  width: 100%;
-}
+@import '../../../var.scss';
 
-.content {
-  /* background-color: red; */
+@media only screen and (min-width: $break-small) {
+  body {
+    // color: lightblue;
+  }
 
-  position: relative;
-  left: 20vw;
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
-  width: calc( 100vw - 20vw ) ;
-  background-color: #ecf0f1;
-}
-
-.App {
-  display: flex;
-  flex-direction: row ;
-
-
-  width: 100%;
-}
-
-#root {
-  background-color: #ecf0f1;
-
-  display: blcok;
-  width:100%;
-  height: 100%;
-}
-
-body{
-  padding: 0px;
-  margin: 0px;
-  height: 100vh;
+  .content {
+    width: 100%;
+  }
 
 }
 
-.helloworld {
-  background-color: red;
+@media only screen and (min-width: $break-large) {
+
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  body {
+    // color: cyan;
+  }
+
+  .content {
+    /* background-color: red; */
+
+    position: relative;
+    left: 20vw;
+
+    width: calc(100vw - 20vw);
+    background-color: #ecf0f1;
+  }
+
+
+  .App {
+    display: flex;
+    flex-direction: row;
+
+
+    width: 100%;
+  }
+
+  #root {
+    background-color: #ecf0f1;
+
+    display: blcok;
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+
+  }
+
+  .helloworld {
+    background-color: red;
+  }
 }

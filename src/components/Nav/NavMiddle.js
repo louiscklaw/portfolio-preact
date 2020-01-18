@@ -31,7 +31,42 @@ function getTravisBuildSite(){
   }
 }
 
+function checkIfSmallScreen(){
+
+  console.log('checkIfSmallScreen', windowWidth);
+  return windowWidth < 500;
+}
+
 export default class NavMiddle extends Component {
+
+
+  componentDidMount(){
+    // console.log(document.querySelectorAll(`.${style['NavMiddle']} ul li a`));
+    console.log('this.props', this.props['hamburger_is_active_class']);
+
+    var hamburger_button_is_active_class = this.props['hamburger_is_active_class'];
+
+    var menu_body_class = this.props['menu_body_class'];
+    var selector_menu_body = '.'+menu_body_class
+
+    document.querySelectorAll(`.${style['NavMiddle']} ul li a`).forEach(ele => {
+      ele.addEventListener('click', function(){
+        console.log(hamburger_button_is_active_class);
+
+        let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+
+        if (windowWidth < 500){
+          // fallback menu button
+          var mobile_menu_classlist = document.querySelector('.mobile_menu_container').classList
+          mobile_menu_classlist.remove(hamburger_button_is_active_class);
+
+          // hide menu body
+          document.querySelector(selector_menu_body).style.display='none';
+
+        }
+      });
+    })
+  }
   render(){
     return(
       <div className={style.NavMiddle}>
@@ -40,16 +75,16 @@ export default class NavMiddle extends Component {
             <Link activeClassName="active" href="/">Home</Link>
           </li> */}
           <li>
-            <Link activeClassName="active" href="/project_catalogue">Projects</Link>
+            <a href="/project_catalogue" >Projects</a>
           </li>
           <li>
-            <Link activeClassName="active" href="/about">About</Link>
+            <a href="/about" >About</a>
           </li>
           <li>
-            <Link activeClassName="active" href="/credits">Credits</Link>
+            <a href="/credits">Credits</a>
           </li>
           <li>
-            <a href="//search-trend-vue.firebaseapp.com/" target="_blank" >GOOGLE SEARCH TREND</a>
+            <a href="//search-trend-vue.firebaseapp.com" target="_blank">GOOGLE SEARCH TREND</a>
           </li>
           {getStagingSite()}
           {getTravisBuildSite()}
