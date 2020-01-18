@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# reference build https://travis-ci.org/louiscklaw/test_git_repo/builds/625335510
+# reference build https://travis-ci.com/louiscklaw/test_git_repo/builds/625335510
 # https://docs.travis-ci.com/user/environment-variables/
 
 import os, re, subprocess

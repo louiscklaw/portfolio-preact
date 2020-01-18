@@ -14,7 +14,9 @@ function getStagingSite(){
   if (CHECK_DEV_ENV()){
     return(
       <li style={style.nav.nav_middle_li}>
-        <a style={style.nav.a} href="//staging-portfolio-c7cb5.firebaseapp.com" target="_blank">Staging site</a>
+        <a style={style.nav.a} href="//staging-portfolio-c7cb5.firebaseapp.com" target="_blank">
+          Staging site
+        </a>
       </li>
     )
   }
@@ -24,7 +26,21 @@ function getTravisBuildSite(){
   if (CHECK_DEV_ENV()){
     return(
       <li style={style.nav.nav_middle_li}>
-        <a style={style.nav.a} href="//travis-ci.com/louiscklaw/portfolio-preact/branches" target="_blank">travis build</a>
+        <a style={style.nav.a} href="//travis-ci.com/louiscklaw/portfolio-preact/branches" target="_blank">
+          travis build
+        </a>
+      </li>
+    )
+  }
+}
+
+function getFirebaseConsole(){
+  if(CHECK_DEV_ENV()){
+    return(
+      <li style={style.nav.nav_middle_li}>
+        <a style={style.nav.a} href='//console.firebase.google.com/u/1/project/preactjs-projects/overview' target="_blank">
+          firebase console
+        </a>
       </li>
     )
   }
@@ -85,6 +101,7 @@ export default class NavMiddle extends Component {
           </li>
           {getStagingSite()}
           {getTravisBuildSite()}
+          {getFirebaseConsole()}
         </ul>
       </div>
     )

@@ -50,8 +50,8 @@ export default class NavBottom extends Component{
         </div>
 
         <div style={style.nav.build_status}>
-          <a href="https://travis-ci.org/louiscklaw/portfolio-preact/branches" target="_blank" rel="noopener noreferrer">
-            <img src="https://travis-ci.org/louiscklaw/portfolio-preact.svg?branch=master" alt="" srcSet="" />
+          <a href="https://travis-ci.com/louiscklaw/portfolio-preact/branches" target="_blank" rel="noopener noreferrer">
+            <img src="https://travis-ci.com/louiscklaw/portfolio-preact.svg?branch=master" alt="" srcSet="" />
           </a>
         </div>
 
