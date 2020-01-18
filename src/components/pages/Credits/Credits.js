@@ -1,19 +1,19 @@
 import { Component } from 'preact';
 
-import style from './Credits.scss';
+import style from './style.js';
 
 export default class Credits extends Component {
   render(){
     return(
-      <div className={style.page_credit}>
+      <div style={style.page_credit}>
 
-        <div className={style.page_header}>
+        <div style={style.page_header}>
           Credits
         </div>
 
-        <div className={style.paragraph_body}>
-          <section>
-            <h4>Tools:</h4>
+        <div style={style.paragraph_body}>
+          <section style={style.paragraph_body_section}>
+            <h4 style={style.paragraph_body_h4}>Tools:</h4>
             <ul>
               <li>
                 <a href="https://github.com/preactjs/preact">preact</a>
@@ -24,8 +24,8 @@ export default class Credits extends Component {
             </ul>
           </section>
 
-          <section>
-            <h4>opensource projects:</h4>
+          <section style={style.paragraph_body_section}>
+            <h4 style={style.paragraph_body_h4}>opensource projects:</h4>
             <ul>
               <li>
                 preact, react

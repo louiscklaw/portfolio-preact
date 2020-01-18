@@ -10,22 +10,22 @@
 
 }
 
-.page_header{
+.page_header {
   font-size: 2em;
   padding-bottom: 1.5em;
 
-  width:100%;
+  width: 100%;
 }
 
-.paragraph_body{
+.paragraph_body {
   /* this one should be left */
   /* TODO: remove me */
-  border-width:1px;
+  border-width: 1px;
   border-style: dotted;
-  border-color:yellow;
+  border-color: yellow;
   width: 100%;
 
-  section{
+  section {
     padding-top: 1em;
     padding-bottom: 1em;
 
@@ -38,5 +38,5 @@
 }
 
 .pragraph_title {
-  width:67%;
+  width: 67%;
 }
