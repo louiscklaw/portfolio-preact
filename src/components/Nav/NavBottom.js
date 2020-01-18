@@ -59,13 +59,12 @@ export default class NavBottom extends Component{
           <NewWindowLink link="//github.com/louiscklaw/portfolio-preact" text="source code" />
         </div>
 
-
         <div style={style.nav.credit_container}>
           <span role="img" aria-label="heart">❤️</span> coded by louiscklaw.<br />
           Built on the solder of <br />
 
-          <div style={style.nav.credits_link}>
-            <a href="/credits">THESE GIANTS</a>
+          <div style={style.nav.credits_link_container}>
+            <a style={style.nav.credits_link} href="/credits">THESE GIANTS</a>
           </div>
 
         </div>

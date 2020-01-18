@@ -51,9 +51,15 @@ var nav_bottom={
   height: '34vh'
 }
 
+var credits_link_container={
+  paddingTop: '30px'
+}
+
 var credits_link ={
   textDecoration: 'underline',
-  fontWeight: 'bold'
+  marginTop: '20px',
+  fontWeight: 'bold',
+  color: theme.DEFAULT_LINK_COLOR
 }
 
 var build_status={
@@ -141,5 +147,6 @@ export default {
   credit_container_a,
   social_links,
   social_link_a,
-  social_links_container
+  social_links_container,
+  credits_link_container
 }
