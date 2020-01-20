@@ -1,8 +1,6 @@
-import style from './catalogue.scss'
+// import style from './catalogue.scss'
 
 import {Component} from 'preact'
-import {Link} from 'preact-router/match'
-// import {Link} from 'react-router-dom';
 
 import {project_list} from './config'
 
@@ -10,6 +8,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 export default class ProjectCatalogue extends Component{
+  helloworld(e){
+    var target_element = e.target;
+    var target_backdrop = target_element.parentNode.querySelector('.blackBackdrop')
+    if (target_backdrop != null){
+      target_backdrop.style.display="block";
+    }
+  }
+
+  helloLeave(e){
+    var target_element = e.target;
+    var target_backdrop = target_element.parentNode.querySelector('.blackBackdrop')
+    if (target_backdrop != null){
+      target_backdrop.style.display="none";
+    }
+  }
+
   getProjectDetailLink(href, text, thumbnail_path){
     var style = {
       li:{
@@ -45,28 +59,40 @@ export default class ProjectCatalogue extends Component{
         height: '100%',
         color: '#fff',
         fontWeight: '700',
+      },
+      a:{
+        textDecoration: 'none',
+        color: '#fff',
+        fontWeight: '700',
+      },
+      p:{
+        fontSize: '1.2em',
+        fontFamily: "Montserrat,sans-serif",
+      },
+      MagniferIcon:{
+        marginBottom: '1.1em',
       }
 
     }
     return (
       <>
-        <li style={style.li}>
-          <Link href={'/project_detail/'+href}>
-            <div style={style.project_thumbnail_container}>
+        <li style={style.li} >
+          <a href={'/project_detail/'+href} style={style.a}>
+            <div style={style.project_thumbnail_container} className="project_thumbnail" onMouseOver={this.helloworld} onMouseLeave={this.helloLeave}>
               <div style={style.project_thumbnail_background}>
               </div>
-              <div style={style.blackBackdrop}>
-                <div className={style.thumbnailTitleContainer} >
-                  <div className={style.MagniferIcon}>
+              <div style={style.blackBackdrop} className="blackBackdrop">
+                <div style={style.thumbnailTitleContainer} >
+                  <div style={style.MagniferIcon}>
                     <FontAwesomeIcon className="fa-2x" icon={['fas', 'search' ]}/>
                   </div>
-                  <p>
+                  <p style={style.p}>
                     {text}
                   </p>
                 </div>
               </div>
             </div>
-          </Link>
+          </a>
         </li>
       </>
     )
