@@ -6,7 +6,7 @@ import AsyncRoute from 'preact-async-route';
 import theme from '../../../style/theme.js'
 
 import {
-  Nav,
+  SideMenu,
   TopBar,
   Helloworld,
   Home,
@@ -72,7 +72,7 @@ export default class Main extends Component{
       <div style={style_js.main}>
         <div style={style_js.nav_container}>
         { styles.showSidebar ? (
-          <Nav />
+          <SideMenu />
           ) : (
           <TopBar />
         ) }

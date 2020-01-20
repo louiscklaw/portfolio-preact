@@ -26,6 +26,9 @@ export default class TopBar extends Component{
       },
       narrow_menu_container:{
         paddingTop: '2em',
+      },
+      a :{
+        color: theme.THEME_COLOR_LIGHTEST
       }
     }
 
@@ -38,15 +41,15 @@ export default class TopBar extends Component{
         <div style={style.narrow_menu_container}>
           <ul style={style.narrow_menu}>
             <li>
-              projects
+              <a style={style.a} href="/project_catalogue" >Projects</a>
             </li>
 
             <li>
-              about
+              <a style={style.a} href="/about" >About</a>
             </li>
 
             <li>
-              credits
+              <a style={style.a} href="/credits">Credits</a>
             </li>
           </ul>
 

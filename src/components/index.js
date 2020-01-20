@@ -9,10 +9,11 @@ import GistLink from './Links/GistLink'
 
 // import MetaProjectDetail from './meta/ProjectDetail'
 // import MetaTitle from './MetaTitle/MetaTitle'
-import Nav from './Nav/index'
 import Home from './Home/index'
 import Spare from './Spare/index'
-import TopBar from './TopBar/index'
+
+import SideMenu from './Menu/SideMenu'
+import TopBar from './Menu/TopBar'
 
 // ProjectDetail
 import HeaderFigure from './HeaderFigure/index';
@@ -47,7 +48,7 @@ export {
   GistLink,
   // MetaProjectDetail,
   // MetaTitle,
-  Nav,
+  SideMenu,
   Home,
   Spare,
   HeaderFigure,
