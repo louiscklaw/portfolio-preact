@@ -58,9 +58,14 @@ export default class App extends Component {
   }
 
   render() {
+    const { windowWidth } = this.state;
+    const styles = {
+      showSidebar: windowWidth > 768
+    }
+
     return (
       <>
-        <Main />
+        <Main style={styles}/>
       </>
     );
   }

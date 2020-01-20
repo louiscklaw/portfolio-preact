@@ -1,9 +1,9 @@
-import theme from '../../../style/theme.js'
+
 
 export default {
   main: {
     display: 'flex',
-    fiexDirection: 'row',
+    fiexDirection: showSidebar? 'row' : 'column',
 
     width: '100%',
     minHeight: '100vh'

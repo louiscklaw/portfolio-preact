@@ -3,8 +3,11 @@ import { Component } from 'preact';
 import { Router } from 'preact-router';
 import AsyncRoute from 'preact-async-route';
 
+import theme from '../../../style/theme.js'
+
 import {
   Nav,
+  TopBar,
   Helloworld,
   Home,
   About,
@@ -17,7 +20,7 @@ import {
 } from '../../index';
 
 // import style from './main.scss';
-import style_js from './style'
+// import style_js from './style'
 
 function onRouteChangeHelloworld(){
   // console.log('on route change helloworld');
@@ -34,10 +37,45 @@ function onRouteChangeHelloworld(){
 
 export default class Main extends Component{
   render(){
+    var styles = this.props.style;
+    console.log('styles', styles);
+
+    const style_js = {
+      main: {
+        display: 'flex',
+        flexDirection: styles.showSidebar? 'row' : 'column',
+
+        width: '100%',
+        minHeight: '100vh'
+      },
+
+      content: {
+        position: 'relative',
+
+        left: styles.showSidebar? '20vw' : 'unset',
+        width: styles.showSidebar? '80vw' : 'unset',
+        top: styles.showSidebar? 'unset': '20vh',
+
+        backgroundColor: theme.THEME_COLOR_LIGHTER,
+      },
+
+      nav_container: {
+        position: 'fixed',
+        backgroundColor: theme.THEME_COLOR,
+        width: styles.showSidebar? '20vw': '100vw',
+
+        minHeight: styles.showSidebar? '100vh': '20vh',
+      }
+    }
+
     return(
       <div style={style_js.main}>
         <div style={style_js.nav_container}>
+        { styles.showSidebar ? (
           <Nav />
+          ) : (
+          <TopBar />
+        ) }
         </div>
 
         <div style={style_js.content}>

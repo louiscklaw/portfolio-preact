@@ -12,6 +12,7 @@ import GistLink from './Links/GistLink'
 import Nav from './Nav/index'
 import Home from './Home/index'
 import Spare from './Spare/index'
+import TopBar from './TopBar/index'
 
 // ProjectDetail
 import HeaderFigure from './HeaderFigure/index';
@@ -50,6 +51,7 @@ export {
   Home,
   Spare,
   HeaderFigure,
+  TopBar,
 
   // pages
   About,
