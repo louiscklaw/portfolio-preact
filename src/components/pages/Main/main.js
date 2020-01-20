@@ -72,7 +72,7 @@ export default class Main extends Component{
       <div style={style_js.main}>
         <div style={style_js.nav_container}>
         { styles.showSidebar ? (
-          <SideMenu />
+          <SideMenu style={styles} />
           ) : (
           <TopBar />
         ) }

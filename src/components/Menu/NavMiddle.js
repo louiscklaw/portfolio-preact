@@ -84,7 +84,6 @@ export default class NavMiddle extends Component {
     })
   }
   render(){
-    console.log('style_js', style);
     return(
       <div style={style.nav_middle}>
         <ul style={style.ul}>

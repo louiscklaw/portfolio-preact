@@ -32,8 +32,8 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      windowWidth: 0,
-      windowHeight: 0
+      windowInnerWidth: 0,
+      windowInnerHeight: 0
     };
     this.updateDimensions = this.updateDimensions.bind(this);
   }
@@ -51,16 +51,17 @@ export default class App extends Component {
   }
 
   updateDimensions() {
-    let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
-    let windowHeight = typeof window !== "undefined" ? window.innerHeight : 0;
+    let windowInnerWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+    let windowInnerHeight = typeof window !== "undefined" ? window.innerHeight : 0;
 
-    this.setState({ windowWidth, windowHeight });
+    this.setState({ windowInnerWidth, windowInnerHeight });
   }
 
   render() {
-    const { windowWidth } = this.state;
+    const { windowInnerWidth, windowInnerHeight } = this.state;
     const styles = {
-      showSidebar: windowWidth > 768
+      showSidebar: windowInnerWidth > 768,
+      showAvatar: windowInnerHeight > 875
     }
 
     return (

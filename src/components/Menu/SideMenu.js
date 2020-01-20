@@ -47,13 +47,16 @@ export default class Nav extends Component{
   }
 
   render(){
+    const styles = this.props.style;
+
     return(
       <nav style={style.nav_container}>
         <div style={style.menu_body}>
-          <NavTop />
+          <NavTop style={styles}/>
           <NavMiddle
             hamburger_is_active_class={hamburger_menu['is-active']}
             menu_body_class={style['menuBody']}
+            style={styles}
             />
           <NavBottom />
         </div>

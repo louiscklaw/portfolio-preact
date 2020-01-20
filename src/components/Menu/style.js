@@ -1,30 +1,5 @@
 import theme from '../../style/theme.js'
 
-var nav_top = {
-  height: '33vh',
-  textAlign: 'center',
-}
-
-var nav_top_greeting_plate={
-  fontSize:'2em',
-  color: '#fff',
-  textAlign: 'center',
-  paddingTop: '80px'
-}
-
-var nav_top_avatar ={
-  width: '100%',
-  textAlign:'center'
-}
-
-var nav_top_avatar_img = {
-  backgroundColor: 'gold',
-  width: '115px',
-  height: '115px',
-  marginTop: '50px',
-  borderRadius: '50%'
-}
-
 var nav_middle = {
   paddingTop: '1em',
   height: '33vh'
@@ -127,10 +102,10 @@ export default {
   menu_body,
 
   // nav_top
-  nav_top,
-  nav_top_greeting_plate,
-  nav_top_avatar,
-  nav_top_avatar_img,
+  // nav_top,
+  // nav_top_greeting_plate,
+  // nav_top_avatar,
+  // nav_top_avatar_img,
 
   // nav_middle
   nav_middle,
