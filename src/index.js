@@ -29,9 +29,25 @@ const CHECK_DEV_ENV = () => {
 const ACTIVE_CONFIG = (CHECK_DEV_ENV() ? DevConfig: ProdConfig);
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      windowWidth: 0,
+      windowHeight: 0
+    };
+    this.updateDimensions = this.updateDimensions.bind(this);
+  }
+
   componentDidMount(){
     ReactGA.initialize(ACTIVE_CONFIG.GAKey);
     ReactGA.pageview(window.location.pathname + window.location.search);
+
+    this.updateDimensions();
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
   }
 
   updateDimensions() {
