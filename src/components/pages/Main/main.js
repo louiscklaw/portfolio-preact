@@ -17,7 +17,7 @@ import {
 } from '../../index';
 
 // import style from './main.scss';
-import style_js from '../../../style/index'
+import style_js from './style'
 
 function onRouteChangeHelloworld(){
   // console.log('on route change helloworld');
@@ -35,12 +35,12 @@ function onRouteChangeHelloworld(){
 export default class Main extends Component{
   render(){
     return(
-      <div style={style_js.main.main}>
-        <div style={style_js.main.nav_container}>
+      <div style={style_js.main}>
+        <div style={style_js.nav_container}>
           <Nav />
         </div>
 
-        <div style={style_js.main.content}>
+        <div style={style_js.content}>
           <Router onChange={onRouteChangeHelloworld}>
 
             <AsyncRoute path="/project_catalogue" component={PageProjectCatalogue}/>
