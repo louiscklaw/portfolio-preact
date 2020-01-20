@@ -6,7 +6,8 @@ import NavBottom from './NavBottom'
 
 // import for nav
 // import style from './style.scss'
-import style from '../../style/index'
+// import style from '../../style/index'
+import style from './style'
 
 import hamburger_menu from './hamburgers.css'
 
@@ -47,8 +48,8 @@ export default class Nav extends Component{
 
   render(){
     return(
-      <nav style={style.nav.nav_container}>
-        <div style={style.nav.mobile_menu}>
+      <nav style={style.nav_container}>
+        <div style={style.mobile_menu}>
           <button className={'mobile_menu_container'+' '+ hamburger_menu['hamburger'] + ' ' + hamburger_menu['hamburger--collapse']} type="button" onClick={click_helloworld} aria-label="Menu">
             <span className={hamburger_menu['hamburger-box']}>
               <span className={hamburger_menu['hamburger-inner']}></span>
@@ -56,7 +57,7 @@ export default class Nav extends Component{
           </button>
         </div>
 
-        <div style={style.nav.menu_body}>
+        <div style={style.menu_body}>
           <NavTop></NavTop>
           <NavMiddle
             hamburger_is_active_class={hamburger_menu['is-active']}

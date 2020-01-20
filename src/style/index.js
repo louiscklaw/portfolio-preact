@@ -1,5 +1,5 @@
 import theme from './theme.js';
-import nav from './nav.js';
+// import nav from './nav.js';
 import main from './main.js';
 
 const helloworld_style_js='helloworld-style-js';
@@ -9,7 +9,7 @@ const hello_red={
 }
 
 export default {
-  nav,
+  // nav,
   main,
 
   theme,

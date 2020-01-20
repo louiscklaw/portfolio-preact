@@ -1,7 +1,8 @@
 import { Component } from 'preact';
 import { Link } from 'preact-router/match';
 
-import style from '../../style/index.js';
+// import style from '../../style/index.js';
+import style from './style';
 
 // // TODO: using react context
 const CHECK_DEV_ENV = () => {
@@ -13,8 +14,8 @@ const CHECK_DEV_ENV = () => {
 function getStagingSite(){
   if (CHECK_DEV_ENV()){
     return(
-      <li style={style.nav.nav_middle_li}>
-        <a style={style.nav.a} href="//staging-portfolio-c7cb5.firebaseapp.com" target="_blank">
+      <li style={style.nav_middle_li}>
+        <a style={style.a} href="//staging-portfolio-c7cb5.firebaseapp.com" target="_blank">
           Staging site
         </a>
       </li>
@@ -25,8 +26,8 @@ function getStagingSite(){
 function getTravisBuildSite(){
   if (CHECK_DEV_ENV()){
     return(
-      <li style={style.nav.nav_middle_li}>
-        <a style={style.nav.a} href="//travis-ci.com/louiscklaw/portfolio-preact/branches" target="_blank">
+      <li style={style.nav_middle_li}>
+        <a style={style.a} href="//travis-ci.com/louiscklaw/portfolio-preact/branches" target="_blank">
           travis build
         </a>
       </li>
@@ -37,8 +38,8 @@ function getTravisBuildSite(){
 function getFirebaseConsole(){
   if(CHECK_DEV_ENV()){
     return(
-      <li style={style.nav.nav_middle_li}>
-        <a style={style.nav.a} href='//console.firebase.google.com/u/1/project/preactjs-projects/overview' target="_blank">
+      <li style={style.nav_middle_li}>
+        <a style={style.a} href='//console.firebase.google.com/u/1/project/preactjs-projects/overview' target="_blank">
           firebase console
         </a>
       </li>
@@ -85,19 +86,19 @@ export default class NavMiddle extends Component {
   render(){
     console.log('style_js', style);
     return(
-      <div style={style.nav.nav_middle}>
-        <ul style={style.nav.ul}>
-          <li style={style.nav.nav_middle_li}>
-            <a style={style.nav.a} href="/project_catalogue" >Projects</a>
+      <div style={style.nav_middle}>
+        <ul style={style.ul}>
+          <li style={style.nav_middle_li}>
+            <a style={style.a} href="/project_catalogue" >Projects</a>
           </li>
-          <li style={style.nav.nav_middle_li}>
-            <a style={style.nav.a} href="/about" >About</a>
+          <li style={style.nav_middle_li}>
+            <a style={style.a} href="/about" >About</a>
           </li>
-          <li style={style.nav.nav_middle_li}>
-            <a style={style.nav.a} href="/credits">Credits</a>
+          <li style={style.nav_middle_li}>
+            <a style={style.a} href="/credits">Credits</a>
           </li>
-          <li style={style.nav.nav_middle_li}>
-            <a style={style.nav.a} href="//search-trend-vue.firebaseapp.com" target="_blank">GOOGLE SEARCH TREND</a>
+          <li style={style.nav_middle_li}>
+            <a style={style.a} href="//search-trend-vue.firebaseapp.com" target="_blank">GOOGLE SEARCH TREND</a>
           </li>
           {getStagingSite()}
           {getTravisBuildSite()}
