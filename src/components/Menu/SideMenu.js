@@ -43,6 +43,9 @@ function click_helloworld(){
 export default class Nav extends Component{
   componentDidMount(){
     // console.log('component did mount');
+  }
+
+  componentDidUpdate(){
 
   }
 
@@ -51,7 +54,7 @@ export default class Nav extends Component{
 
     return(
       <nav style={style.nav_container}>
-        <div style={style.menu_body}>
+        <div style={style.menu_body} id="side-menu">
           <NavTop style={styles}/>
           <NavMiddle
             hamburger_is_active_class={hamburger_menu['is-active']}

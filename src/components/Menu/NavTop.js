@@ -5,10 +5,13 @@ import {Component} from 'preact';
 
 import avatar from './avatar.jpeg';
 
-export default class NavTop extends Component{
 
+
+
+export default class NavTop extends Component{
   render(){
     // console.log('nav_top', this.props.style);
+    var show_hi_hands = this.props.style.windowInnerWidth > 1140;
     const {showAvatar} = this.props.style;
     const style={
       nav_top : {
@@ -19,7 +22,7 @@ export default class NavTop extends Component{
         fontSize:'2em',
         color: '#fff',
         textAlign: 'center',
-        paddingTop: '80px'
+        paddingTop: '3em'
       },
       nav_top_avatar :{
         display: showAvatar ? 'block':'none',
@@ -33,16 +36,16 @@ export default class NavTop extends Component{
         borderRadius: '50%'
       },
       hi_container:{
-        display: 'block'
+        display: show_hi_hands? 'unset': 'none'
       }
     }
 
     return(
-      <div style={style.nav_top}>
+      <div style={style.nav_top} id="nav_top">
         <div style={style.nav_top_greeting_plate}>
           Hi, I'm louis <span style={style.hi_container} role="img" aria-label="Hi">👋</span>
         </div>
-        <div style={style.nav_top_avatar}>
+        <div style={style.nav_top_avatar} id="avatar_img_circle">
           <img src={avatar} style={style.nav_top_avatar_img}/>
         </div>
       </div>

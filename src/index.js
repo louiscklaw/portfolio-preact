@@ -61,7 +61,9 @@ export default class App extends Component {
     const { windowInnerWidth, windowInnerHeight } = this.state;
     const styles = {
       showSidebar: windowInnerWidth > 768,
-      showAvatar: windowInnerHeight > 875
+      showAvatar: windowInnerHeight > 875,
+      windowInnerWidth,
+      windowInnerHeight
     }
 
     return (
