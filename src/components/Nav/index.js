@@ -49,21 +49,13 @@ export default class Nav extends Component{
   render(){
     return(
       <nav style={style.nav_container}>
-        <div style={style.mobile_menu}>
-          <button className={'mobile_menu_container'+' '+ hamburger_menu['hamburger'] + ' ' + hamburger_menu['hamburger--collapse']} type="button" onClick={click_helloworld} aria-label="Menu">
-            <span className={hamburger_menu['hamburger-box']}>
-              <span className={hamburger_menu['hamburger-inner']}></span>
-            </span>
-          </button>
-        </div>
-
         <div style={style.menu_body}>
-          <NavTop></NavTop>
+          <NavTop />
           <NavMiddle
             hamburger_is_active_class={hamburger_menu['is-active']}
             menu_body_class={style['menuBody']}
-            ></NavMiddle>
-          <NavBottom></NavBottom>
+            />
+          <NavBottom />
         </div>
       </nav>
     )
