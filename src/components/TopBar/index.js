@@ -5,7 +5,20 @@ export default class TopBar extends Component{
   render(){
     return(
       <div>
-        hello top bar
+        <ul>
+          <li>
+            projects
+          </li>
+
+          <li>
+            about
+          </li>
+
+          <li>
+            credits
+          </li>
+
+        </ul>
       </div>
     )
   }
