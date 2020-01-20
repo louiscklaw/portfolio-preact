@@ -18,7 +18,7 @@ library.add(fab, fas, far)
 
 const CHECK_DEV_ENV = () => {
   // true => development, false => production
-	let check_result = process.env.NODE_ENV === 'development';
+  let check_result = process.env.NODE_ENV === 'development';
   if(check_result){
     console.warn("check running environment.");
   }
@@ -29,17 +29,24 @@ const CHECK_DEV_ENV = () => {
 const ACTIVE_CONFIG = (CHECK_DEV_ENV() ? DevConfig: ProdConfig);
 
 export default class App extends Component {
-	componentDidMount(){
-		ReactGA.initialize(ACTIVE_CONFIG.GAKey);
-		ReactGA.pageview(window.location.pathname + window.location.search);
-	}
+  componentDidMount(){
+    ReactGA.initialize(ACTIVE_CONFIG.GAKey);
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
 
-	render() {
-		return (
-			<>
+  updateDimensions() {
+    let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+    let windowHeight = typeof window !== "undefined" ? window.innerHeight : 0;
+
+    this.setState({ windowWidth, windowHeight });
+  }
+
+  render() {
+    return (
+      <>
         <Main />
-			</>
-		);
+      </>
+    );
   }
 
 }
