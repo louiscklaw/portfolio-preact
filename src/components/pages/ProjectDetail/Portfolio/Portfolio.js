@@ -29,7 +29,7 @@ import build_flow from './build_flow.svg';
 class PortfolioContent extends Component{
 
   render(){
-    console.log(projectDetailStyle);
+    // console.log(projectDetailStyle);
     return(
       <div style={projectDetailStyle.Container}>
 
@@ -79,13 +79,44 @@ class PortfolioContent extends Component{
               Build flow:
             </h3>
             <FigureContainer img_src={build_flow} caption="current build flow of my portfolio" />
-            <p>
-              production site: production-portfolio.web.app (https://louiscklaw.github.io/)
-            </p>
-            <p>
-              repository: https://github.com/louiscklaw/portfolio-preact
-            </p>
+
           </div>
+
+          <div style={projectDetailStyle.DescBody}>
+            <h3 style={projectDetailStyle.DescTopic}>
+              Some information:
+            </h3>
+            <ul style={projectDetailStyle.ul}>
+              <li>
+                production site: https://louiscklaw.github.io/
+              </li>
+              <li>
+                firebase hosting of productino site: https://production-portfolio.web.app
+              </li>
+              <li>
+                firebase hosting of staging site: https://staging-portfolio-c7cb5.web.app/
+              </li>
+            </ul>
+
+          </div>
+
+          <div style={projectDetailStyle.DescBody}>
+            <h3 style={projectDetailStyle.DescTopic}>
+              Repository:
+            </h3>
+
+            <ul style={projectDetailStyle.ul}>
+              <li>
+                https://github.com/louiscklaw/portfolio-preact
+              </li>
+              <li>
+                https://github.com/louiscklaw/portfolio-preact
+              </li>
+            </ul>
+
+
+          </div>
+
         </div>
       </div>
     )
