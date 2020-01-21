@@ -11,7 +11,7 @@ export default class About extends Component {
     const is_mobile = theme.isMobile;
 
     const style={
-      page_about: {
+      page: {
         display: 'flex',
         flexFlow: 'column',
         flexWrap: 'nowrap',
@@ -55,7 +55,7 @@ export default class About extends Component {
 
 
     return(
-      <div style={style.page_about}>
+      <div style={style.page}>
 
         <div style={style.page_header}>
           About Me
