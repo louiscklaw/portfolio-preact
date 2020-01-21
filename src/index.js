@@ -12,7 +12,7 @@ import ReactGA from 'react-ga';
 
 import {Theme, BuildInfo} from './context/index';
 
-import {BUILD_VER, BUILD_DATE} from './build_ver';
+import {BUILD_VER, BUILD_DATE} from './build_info';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { far } from '@fortawesome/free-regular-svg-icons'
