@@ -12,62 +12,62 @@ var nav_middle_li = {
   textAlign: 'center',
 }
 
-var a ={
+var a = {
   color: '#fff',
-  fontWeight:'bold'
+  fontWeight: 'bold'
 }
 
-var ul={
+var ul = {
   listStyle: 'none'
 }
 
-var nav_bottom={
+var nav_bottom = {
   paddingTop: '2em',
   height: '34vh'
 }
 
-var credits_link_container={
+var credits_link_container = {
   paddingTop: '30px'
 }
 
-var credits_link ={
+var credits_link = {
   textDecoration: 'underline',
   marginTop: '20px',
   fontWeight: 'bold',
   color: theme.DEFAULT_LINK_COLOR
 }
 
-var build_status={
+var build_status = {
   paddingTop: '10px',
-  paddingBottom:'10px',
+  paddingBottom: '10px',
   textAlign: 'center'
 }
 
-var source_code_link={
+var source_code_link = {
   width: '100%',
   textAlign: 'center',
   fontSize: '0.9em'
 }
 
-var credit_container={
+var credit_container = {
   paddingTop: '30px',
   color: '#fff',
   fontSize: '0.8em',
   textAlign: 'center'
 }
 
-var credit_container_a={
-  position:'relative',
-  listStyle:'none'
+var credit_container_a = {
+  position: 'relative',
+  listStyle: 'none'
 }
 
-var social_links={
+var social_links = {
   display: 'inline-flex',
-  listStyle:'none'
+  listStyle: 'none'
 }
 
-var social_link_a={
-  color:'#fff',
+var social_link_a = {
+  color: '#fff',
   fontSize: '1.5em',
   fontWeight: 'normal',
   paddingLeft: '3px',
@@ -75,22 +75,22 @@ var social_link_a={
   paddingBottom: '10px'
 }
 
-var social_links_container={
+var social_links_container = {
   width: '100%',
-  textAlign:'center'
+  textAlign: 'center'
 }
 
-var nav_container={
+var nav_container = {
   backgroundColor: theme.THEME_COLOR
 }
 
 
-var mobile_menu={
-  display:'none',
+var mobile_menu = {
+  display: 'none',
   backgroundColor: theme.THEME_COLOR
 }
 
-var menu_body={
+var menu_body = {
   display: 'block',
   // backgroundColor: 'red'
 }
