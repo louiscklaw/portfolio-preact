@@ -8,11 +8,31 @@ import {NewWindowLink} from '../index'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import {BuildInfo} from '../../context/index';
+import theme from '../../style/theme';
 
 export default class NavBottom extends Component{
   render(){
     var build_info_context = useContext(BuildInfo);
     var {BUILD_VER, BUILD_DATE} = build_info_context;
+
+    const style_js = {
+      build_version:{
+        textDecoration: 'underline',
+        marginTop: '10px',
+        fontWeight:'bold',
+        color: theme.THEME_COLOR_LIGHTEST,
+        fontSize: '0.8em',
+        textAlign:'center'
+      },
+      build_date:{
+        textDecoration: 'underline',
+        marginTop: '10px',
+        fontWeight:'bold',
+        color: theme.THEME_COLOR_LIGHTEST,
+        fontSize: '0.8em',
+        textAlign:'center'
+      }
+    }
 
     return(
       <div style={style.nav_bottom}>
@@ -71,8 +91,10 @@ export default class NavBottom extends Component{
           </div>
         </div>
 
-        <div>
+        <div style={style_js.build_version}>
           {BUILD_VER}
+        </div>
+        <div style={style_js.build_date}>
           {BUILD_DATE}
         </div>
 
