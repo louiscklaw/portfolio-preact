@@ -27,12 +27,9 @@ import PortfolioThumbnail from './thumbnail.png';
 import build_flow from './build_flow.svg';
 
 class PortfolioContent extends Component{
-
   render(){
-    // console.log(projectDetailStyle);
     return(
       <div style={projectDetailStyle.Container}>
-
         <ProjectDetailHelmets
           title="My portfolio page"
           description="My portfolio page"
@@ -43,18 +40,15 @@ class PortfolioContent extends Component{
 
           <div style={projectDetailStyle.ProjectHead}>
             <BackToProjects />
-            <ProjectTitle
-              project_title="Making of my portfolio page"
-            />
+            <ProjectTitle project_title="Making of my portfolio page" />
             <Spare />
           </div>
 
-          <HeaderFigure
-            img_src={head_pic}
-            caption="screenshot of my portfolio page"
-          />
-
+          <HeaderFigure img_src={head_pic} caption="screenshot of my portfolio page" />
           <div style={projectDetailStyle.DescBody}>
+            <h3 style={projectDetailStyle.DescTopic}>
+              Background information.
+            </h3>
             <p>
               This is my portfolio.
             </p>
@@ -62,26 +56,12 @@ class PortfolioContent extends Component{
               This website contains my project information.
             </p>
           </div>
-
           <div style={projectDetailStyle.DescBody}>
-            <h3 style={projectDetailStyle.DescTopic}>>
-              Background information.
-            </h3>
-            <p>
-              production site: production-portfolio.web.app (https://louiscklaw.github.io/)
-            </p>
-            <p>
-              repository: https://github.com/louiscklaw/portfolio-preact
-            </p>
-          </div>
-          <div style={projectDetailStyle.DescBody}>
-            <h3 style={projectDetailStyle.DescTopic}>>
+            <h3 style={projectDetailStyle.DescTopic}>
               Build flow:
             </h3>
             <FigureContainer img_src={build_flow} caption="current build flow of my portfolio" />
-
           </div>
-
           <div style={projectDetailStyle.DescBody}>
             <h3 style={projectDetailStyle.DescTopic}>
               Some information:
@@ -91,32 +71,27 @@ class PortfolioContent extends Component{
                 production site: https://louiscklaw.github.io/
               </li>
               <li>
-                firebase hosting of productino site: https://production-portfolio.web.app
+                firebase hosting of production site: https://production-portfolio.web.app
               </li>
               <li>
                 firebase hosting of staging site: https://staging-portfolio-c7cb5.web.app/
               </li>
             </ul>
-
           </div>
 
           <div style={projectDetailStyle.DescBody}>
             <h3 style={projectDetailStyle.DescTopic}>
               Repository:
             </h3>
-
             <ul style={projectDetailStyle.ul}>
               <li>
-                https://github.com/louiscklaw/portfolio-preact
+                <NewWindowLink href="https://github.com/louiscklaw/portfolio-preact" />
               </li>
               <li>
-                https://github.com/louiscklaw/portfolio-preact
+                <NewWindowLink href="https://github.com/developit/preact-boilerplate" />
               </li>
             </ul>
-
-
           </div>
-
         </div>
       </div>
     )
