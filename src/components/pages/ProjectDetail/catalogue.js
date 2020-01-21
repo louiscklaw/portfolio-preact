@@ -1,11 +1,11 @@
-// import style from './catalogue.scss'
-
 import {Component} from 'preact'
+import { useContext } from 'preact/hooks';
 
 import {project_list} from './config'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import {Theme} from '../../../context/index';
 
 export default class ProjectCatalogue extends Component{
   helloworld(e){
@@ -25,10 +25,13 @@ export default class ProjectCatalogue extends Component{
   }
 
   getProjectDetailLink(href, text, thumbnail_path){
+    var theme = useContext(Theme);
+    var is_mobile = theme.isMobile;
+
     var style = {
       li:{
-        width: '25%',
-        height: '25%'
+        width: is_mobile? '100%':'25%',
+        height: is_mobile? '20%':'25%',
       },
       project_thumbnail_container:{
         width: '100%', height: '100%'
@@ -45,7 +48,7 @@ export default class ProjectCatalogue extends Component{
         backgroundColor: 'rgba(1,1,1,0.5)',
         position: 'relative',
         top: '-100%',
-        display:'none',
+        display:is_mobile? 'block': 'none',
         backdropFilter: 'blur(2px)',
       },
       thumbnailTitleContainer: {
@@ -99,6 +102,8 @@ export default class ProjectCatalogue extends Component{
   }
 
   render(){
+
+
     const style = {
       ul:{
         listStyle: 'none',

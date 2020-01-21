@@ -1,6 +1,7 @@
 import { Component, createContext } from 'preact';
 
 import style from './index.scss';
+import ThemeSetting from './style/theme';
 
 import Main from './components/pages/Main/main';
 
@@ -70,7 +71,8 @@ export default class App extends Component {
       showAvatar: windowInnerHeight > 875,
       windowInnerWidth,
       windowInnerHeight,
-      isMobile: this.isMobile()
+      isMobile: this.isMobile(),
+      currTheme: ThemeSetting
     }
 
     return (
