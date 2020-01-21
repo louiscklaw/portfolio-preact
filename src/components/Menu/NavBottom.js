@@ -95,7 +95,7 @@ export default class NavBottom extends Component{
           {BUILD_VER}
         </div>
         <div style={style_js.build_date}>
-          {BUILD_DATE}
+          last build on: {BUILD_DATE}
         </div>
 
       </div>
