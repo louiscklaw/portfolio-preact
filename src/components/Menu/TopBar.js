@@ -19,13 +19,16 @@ export default class TopBar extends Component{
         justifyContent: 'space-evenly',
         width: '100%',
         listStyle: 'none',
-        color: theme.THEME_COLOR_LIGHTEST
+        color: theme.THEME_COLOR_LIGHTEST,
+
+        backgroundColor: 'red'
       },
       greeting_container:{
 
       },
       narrow_menu_container:{
         paddingTop: '2em',
+        height: '10vh'
       },
       a :{
         color: theme.THEME_COLOR_LIGHTEST
