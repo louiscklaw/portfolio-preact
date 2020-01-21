@@ -1,0 +1,9 @@
+.projectTitle{
+
+  padding: 10px;
+  padding-bottom: 30px;
+
+  font-size: 1em;
+
+  text-align: center;
+}

@@ -5,7 +5,7 @@ var active_config = PROD_CONFIG;
 
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
   // dev code
-  console.debug('activate dev config');
+  console.warn('activate dev config');
   active_config = DEV_CONFIG;
 } else {
   // production code

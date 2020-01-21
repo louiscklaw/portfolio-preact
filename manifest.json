@@ -1,11 +1,11 @@
 {
-  "name": "portfolio-preact",
-  "short_name": "portfolio-preact",
+  "name": "louis-portfolio",
+  "short_name": "louis-portfolio",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
+  "theme_color": "#273c75",
+  "background_color": "#273c75",
   "icons": [
     {
       "src": "favicon.ico",

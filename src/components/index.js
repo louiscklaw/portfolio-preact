@@ -2,14 +2,30 @@
 import ProjectTitle from './ProjectTitle/ProjectTitle'
 import NewWindowLink from './Links/NewWindowLink'
 import BackToProjects from './Links/BackToProjects'
-import YoutubeContainers from './containers/youtube'
+import YoutubeContainer from './containers/youtube'
+
 import GithubLink from './Links/GithubLink'
+import GistLink from './Links/GistLink'
+
 // import MetaProjectDetail from './meta/ProjectDetail'
 // import MetaTitle from './MetaTitle/MetaTitle'
-import Nav from './Nav/index'
 import Home from './Home/index'
 import Spare from './Spare/index'
-import HeaderFigure from './HeaderFigure/index'
+
+import SideMenu from './Menu/SideMenu'
+import TopBar from './Menu/TopBar'
+
+// ProjectDetail
+import HeaderFigure from './HeaderFigure/index';
+
+// import {
+//   CodeHighlight,
+//   HighlightJavascript,
+//   HighlightPython,
+//   HighlightBash
+// } from './containers/Highlightjs/index'
+import {PrismHelloworld, PrismBash} from './containers/prismjs/index';
+
 
 // Helmets
 import ProjectDetailHelmets from './Helmets/ProjectDetail'
@@ -27,14 +43,16 @@ export {
   ProjectTitle,
   NewWindowLink,
   BackToProjects,
-  YoutubeContainers,
+  YoutubeContainer,
   GithubLink,
+  GistLink,
   // MetaProjectDetail,
   // MetaTitle,
-  Nav,
+  SideMenu,
   Home,
   Spare,
   HeaderFigure,
+  TopBar,
 
   // pages
   About,
@@ -47,4 +65,11 @@ export {
   // Helmets
   TestHelmet,
   ProjectDetailHelmets,
+
+  PrismHelloworld,
+  PrismBash
+  // CodeHighlight,
+  // HighlightJavascript,
+  // HighlightPython,
+  // HighlightBash,
 }

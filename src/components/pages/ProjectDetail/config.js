@@ -19,6 +19,9 @@ import {TraefikTryoutContent, TraefikTryoutThumbnail} from './TraefikTryout/Trae
 import {VoronTryoutContent, VoronTryoutThumbnail} from './VoronTryout/VoronTryout'
 import {YoutubeSplitContent, YoutubeSplitThumbnail} from './YoutubeSplitViewTryout/YoutubeSplitViewTryout'
 import {ZTransferDemoContent, ZTransferDemoThumbnail} from './ZTransferDemo/ZTransferDemo'
+
+import {SFXPowerSupplyContent, SFXPowerSupplyThumbnail} from './sfx-power-supply-study/index'
+
 import { h } from 'preact'
 
 
@@ -41,6 +44,7 @@ let project_list = {
   'VoronTryout' : ['VoronTryout', VoronTryoutContent, VoronTryoutThumbnail],
   'YoutubeSplitViewTryout' : ['YoutubeSplitViewTryout', YoutubeSplitContent, YoutubeSplitThumbnail],
   'ZTransferDemo' : ['ZTransferDemo', ZTransferDemoContent, ZTransferDemoThumbnail],
+  'SFXPowerSupplyStudy': ['SFXPowerSupplyStudy', SFXPowerSupplyContent, SFXPowerSupplyThumbnail]
 }
 
 function showProject(proj_name){

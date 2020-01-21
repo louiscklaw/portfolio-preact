@@ -1,4 +1,5 @@
 export default {
+  name: 'develop',
   GAKey: 'UA-73146416-11',
 
   // sentry demo-react

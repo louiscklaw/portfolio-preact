@@ -1,0 +1,48 @@
+
+@media only screen and (max-width: $max-small) {
+  .navContainer {
+    // position: fixed;
+    background-color: #273c75;
+
+  }
+
+  .mobile_menu {
+    display: block;
+    background-color: #273c75;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .menuBody {
+    display: none;
+    background-color: red;
+  }
+
+}
+
+@media only screen and (min-width: $min-large) {
+
+  .navContainer {
+    position: fixed;
+    background-color: #273c75;
+
+
+  }
+
+  nav {
+    display: block;
+    width: 20vw;
+    min-height: 100vh;
+  }
+
+  .mobile_menu {
+    display: none;
+  }
+
+  .menuBody{
+    display: block;
+  //   background-color: red;
+  }
+}

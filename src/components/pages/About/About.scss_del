@@ -1,0 +1,42 @@
+.page_about {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+
+  padding-left: 10em;
+  padding-right: 10em;
+  padding-top: 5em;
+  padding-bottom: 10em;
+
+}
+
+.page_header {
+  font-size: 2em;
+  padding-bottom: 1.5em;
+
+  width: 100%;
+}
+
+.paragraph_body {
+  /* this one should be left */
+  /* TODO: remove me */
+  border-width: 1px;
+  border-style: dotted;
+  border-color: yellow;
+  width: 100%;
+
+  section {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    h4 {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+
+  }
+}
+
+.pragraph_title {
+  width: 67%;
+}

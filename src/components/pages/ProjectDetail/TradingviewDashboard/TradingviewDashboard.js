@@ -3,12 +3,11 @@ import style from './TradingviewDashboard.scss';
 
 import {Component} from 'preact';
 
-
 import {
   ProjectTitle,
   NewWindowLink,
   BackToProjects,
-  YoutubeContainers,
+  YoutubeContainer,
   MetaTitle,
   GithubLink,
   MetaProjectDetail,

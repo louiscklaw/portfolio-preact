@@ -1,0 +1,19 @@
+digraph D {
+  node [fontname="Arial", shape=box];
+
+  operator [label="operator\l(jenkins)"]
+  jenkins [label="behave\l.steps\lfiles"]
+  python [label="python,\landroid_function.py\lhandy_logger.py"]
+  appium [label="appium"]
+  ADB [label="ADB"]
+  Android [label="Android"]
+  AVD [label="AVD/Genymotion"]
+
+  operator -> jenkins
+  jenkins -> python
+  python -> appium
+  appium -> ADB
+  ADB -> Android
+  ADB -> AVD
+  appium -> AVD
+}

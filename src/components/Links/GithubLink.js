@@ -1,16 +1,22 @@
-import './GithubLink.scss';
-
 import {Component} from 'preact';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import style from './GithubLink.scss';
 
-export default class GithubLink extends Component{
-  render(){
-    return (
-      <div className="github-link">
-        githublink not updated
-      </div>
-    )
-  }
+export default ({link, text}) => {
+  return (
+    <div className={style.GithubLinkContainer}>
+      <a href={link} target="_blank" className={style.GithubLink} rel="noopener noreferrer">
+        {text || link}
+        <div className={style.fa_icon}>
+          <FontAwesomeIcon icon={['fab', 'github' ]} />
+        </div>
+        <div className={style.fa_icon}>
+          <FontAwesomeIcon icon={['fas', 'external-link-alt' ]} />
+        </div>
+      </a>
+    </div>
+  )
 }
 
 
