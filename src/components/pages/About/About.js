@@ -1,10 +1,60 @@
 import { Component } from 'preact';
+import { useContext } from 'preact/hooks';
 
-import style from './style.js';
+import { Theme } from '../../../context/index'
+
+// import theme from '../../../style/theme'
 
 export default class About extends Component {
 	render(){
-		return(
+    const theme = useContext(Theme);
+    const is_mobile = theme.isMobile;
+
+    const style={
+      page_about: {
+        display: 'flex',
+        flexFlow: 'column',
+        flexWrap: 'nowrap',
+
+        padding: is_mobile? '1em 1em' :'5em 10em',
+        // paddingLeft: '10em',
+        // paddingRight: '10em',
+        // paddingTop: '5em',
+        // paddingBottom: '10em'
+      },
+
+      page_header: {
+        fontSize: '2em',
+        paddingBottom: '1.5em',
+        width: '100%',
+      },
+
+      paragraph_body: {
+        /* this one should be left */
+        /* TODO: remove me */
+        borderWidth: '1px',
+        borderStyle: 'dotted',
+        borderColor: 'yellow',
+        width: '100%',
+      },
+
+      paragraph_body_section: {
+        paddingTop: '1em',
+        paddingBottom: '1em',
+      },
+
+      paragraph_body_h4: {
+        paddingTop: '1em',
+        paddingBottom: '1em',
+      },
+
+      pragraph_title: {
+        width: '67%',
+      }
+    }
+
+
+    return(
       <div style={style.page_about}>
 
         <div style={style.page_header}>

@@ -1,4 +1,4 @@
-import { Component } from 'preact';
+import { Component, createContext } from 'preact';
 
 import style from './index.scss';
 
@@ -9,12 +9,13 @@ import ProdConfig from './config/prod.config';
 
 import ReactGA from 'react-ga';
 
+import {Theme} from './context/index';
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fab, fas, far)
-
 
 const CHECK_DEV_ENV = () => {
   // true => development, false => production
@@ -50,6 +51,11 @@ export default class App extends Component {
     window.removeEventListener("resize", this.updateDimensions);
   }
 
+  isMobile(){
+    const { windowInnerWidth, windowInnerHeight } = this.state;
+    return windowInnerWidth < 501;
+  }
+
   updateDimensions() {
     let windowInnerWidth = typeof window !== "undefined" ? window.innerWidth : 0;
     let windowInnerHeight = typeof window !== "undefined" ? window.innerHeight : 0;
@@ -63,12 +69,15 @@ export default class App extends Component {
       showSidebar: windowInnerWidth > 768,
       showAvatar: windowInnerHeight > 875,
       windowInnerWidth,
-      windowInnerHeight
+      windowInnerHeight,
+      isMobile: this.isMobile()
     }
 
     return (
       <>
-        <Main style={styles}/>
+        <Theme.Provider value={styles}>
+          <Main style={styles}/>
+        </Theme.Provider>
       </>
     );
   }

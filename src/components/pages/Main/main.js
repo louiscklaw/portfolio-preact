@@ -86,7 +86,7 @@ export default class Main extends Component{
             <AsyncRoute path="/project_detail/:project_to_show" component={PageProjectDetail}/>
 
             <AsyncRoute path="/logs" component={Logs} />
-            <AsyncRoute path="/about" component={About} />
+            <AsyncRoute path="/about" component={About} style={'helloworld_style'}/>
             <AsyncRoute path="/credits" component={Credits} />
 
             {/* // default page */}
