@@ -18,6 +18,8 @@ script:
 
 before_deploy:
   - npm install -g firebase-tools firebase-functions firebase-admin
+  - node ./scripts/update_build_info.js
+  - yarn build
 
 after_success:
   - cd _util
@@ -33,10 +35,7 @@ deploy:
   # production deploy
   - provider: script
     skip_cleanup: true
-    script:
-      - node ./scripts/update_build_info.js
-      - yarn build
-      - firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive
+    script: firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive
     on:
       all_branches: true
       condition: $TRAVIS_BRANCH = "master"
@@ -44,10 +43,7 @@ deploy:
   # staging deploy
   - provider: script
     skip_cleanup: true
-    script:
-      - node ./scripts/update_build_info.js
-      - yarn build
-      - firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
+    script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
     on:
       all_branches: true
       condition: $TRAVIS_BRANCH = "develop"
