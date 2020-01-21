@@ -72,6 +72,7 @@ export default class App extends Component {
       windowInnerWidth,
       windowInnerHeight,
       isMobile: this.isMobile(),
+      is_mobile: this.isMobile(),
       currTheme: ThemeSetting
     }
 

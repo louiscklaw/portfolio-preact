@@ -8,19 +8,37 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {Theme} from '../../../context/index';
 
 export default class ProjectCatalogue extends Component{
-  helloworld(e){
+
+
+  proj_thumbnail_mouseover(e){
+    var theme = useContext(Theme);
+    var {is_mobile} = theme;
+
     var target_element = e.target;
     var target_backdrop = target_element.parentNode.querySelector('.blackBackdrop')
-    if (target_backdrop != null){
-      target_backdrop.style.display="block";
+
+    if (is_mobile){
+
+    }else{
+      if (target_backdrop != null){
+        target_backdrop.style.display="block";
+      }
     }
   }
 
-  helloLeave(e){
+  proj_thumbnail_mouseleave(e){
+    var theme = useContext(Theme);
+    var {is_mobile} = theme;
+
     var target_element = e.target;
     var target_backdrop = target_element.parentNode.querySelector('.blackBackdrop')
-    if (target_backdrop != null){
-      target_backdrop.style.display="none";
+
+    if (is_mobile){
+
+    }else{
+      if (target_backdrop != null){
+        target_backdrop.style.display="none";
+      }
     }
   }
 
@@ -81,7 +99,7 @@ export default class ProjectCatalogue extends Component{
       <>
         <li style={style.li} >
           <a href={'/project_detail/'+href} style={style.a}>
-            <div style={style.project_thumbnail_container} className="project_thumbnail" onMouseOver={this.helloworld} onMouseLeave={this.helloLeave}>
+            <div style={style.project_thumbnail_container} className="project_thumbnail" onMouseOver={this.proj_thumbnail_mouseover} onMouseLeave={this.proj_thumbnail_mouseleave}>
               <div style={style.project_thumbnail_background}>
               </div>
               <div style={style.blackBackdrop} className="blackBackdrop">
