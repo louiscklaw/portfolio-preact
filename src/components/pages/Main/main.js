@@ -1,9 +1,12 @@
 import { Component } from 'preact';
-// import {BrowserRouter, Switch, Route} from 'react-router-dom';
+
+import {useContext} from 'preact/hooks';
+
 import { Router } from 'preact-router';
 import AsyncRoute from 'preact-async-route';
 
-import theme from '../../../style/theme.js'
+import {Theme} from '../../../context/index'
+import theme_settings from '../../../style/theme.js'
 
 import {
   SideMenu,
@@ -38,7 +41,9 @@ function onRouteChangeHelloworld(){
 export default class Main extends Component{
   render(){
     var styles = this.props.style;
-    console.log('styles', styles);
+    // console.log('styles', styles);
+    var theme_context = useContext(Theme);
+    var {is_mobile} = theme_context
 
     const style_js = {
       main: {
@@ -54,14 +59,16 @@ export default class Main extends Component{
 
         left: styles.showSidebar? '20vw' : 'unset',
         width: styles.showSidebar? '80vw' : 'unset',
-        top: styles.showSidebar? 'unset': '20vh',
 
-        backgroundColor: theme.THEME_COLOR_LIGHTER,
+        // TODO: remove me
+        // top: styles.showSidebar? 'unset': '0vh',
+
+        backgroundColor: theme_settings.THEME_COLOR_LIGHTER,
       },
 
       nav_container: {
-        position: 'fixed',
-        backgroundColor: theme.THEME_COLOR,
+        position: is_mobile ? 'relative' : 'fixed',
+        backgroundColor: theme_settings.THEME_COLOR,
         width: styles.showSidebar? '20vw': '100vw',
 
         minHeight: styles.showSidebar? '100vh': '20vh',
