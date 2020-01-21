@@ -1,15 +1,19 @@
 import { Component } from 'preact';
-import { Link } from 'preact-router'
+import {useContext} from 'preact/hooks';
 
-// import style from '../../style/index.js';
 import style from './style';
 
 import {NewWindowLink} from '../index'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import {BuildInfo} from '../../context/index';
+
 export default class NavBottom extends Component{
   render(){
+    var build_info_context = useContext(BuildInfo);
+    var {BUILD_VER, BUILD_DATE} = build_info_context;
+
     return(
       <div style={style.nav_bottom}>
         <div style={style.social_links_container}>
@@ -62,12 +66,16 @@ export default class NavBottom extends Component{
         <div style={style.credit_container}>
           <span role="img" aria-label="heart">❤️</span> coded by louiscklaw.<br />
           Built on the solder of <br />
-
           <div style={style.credits_link_container}>
             <a style={style.credits_link} href="/credits">THESE GIANTS</a>
           </div>
-
         </div>
+
+        <div>
+          {BUILD_VER}
+          {BUILD_DATE}
+        </div>
+
       </div>
     )
   }

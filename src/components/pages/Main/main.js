@@ -5,7 +5,7 @@ import {useContext} from 'preact/hooks';
 import { Router } from 'preact-router';
 import AsyncRoute from 'preact-async-route';
 
-import {Theme} from '../../../context/index'
+import {Theme, BuildInfo} from '../../../context/index'
 import theme_settings from '../../../style/theme.js'
 
 import {
@@ -43,6 +43,7 @@ export default class Main extends Component{
     var styles = this.props.style;
     // console.log('styles', styles);
     var theme_context = useContext(Theme);
+
     var {is_mobile} = theme_context
 
     const style_js = {

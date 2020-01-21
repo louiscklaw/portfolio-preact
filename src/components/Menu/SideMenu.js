@@ -1,4 +1,6 @@
 import { Component } from 'preact';
+import {useContext} from 'preact/hooks';
+import {BuildInfo} from '../../context/index';
 
 import NavTop from './NavTop'
 import NavMiddle from './NavMiddle'
@@ -51,6 +53,7 @@ export default class Nav extends Component{
 
   render(){
     const styles = this.props.style;
+
 
     return(
       <nav style={style.nav_container}>

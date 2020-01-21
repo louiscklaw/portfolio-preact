@@ -7,30 +7,36 @@ import { faFileExcel } from '@fortawesome/free-regular-svg-icons';
 export default class TopBar extends Component{
 
   handleOnScroll(sticky_menu_trigger_px){
-    console.log('capture onscroll')
-    console.log(window.pageYOffset);
-    var ele_top_menu_body = document.querySelector('.top-menu-body')
+    // console.log('capture onscroll')
+    // console.log(window.pageYOffset);
+    const ELE_TOP_MENU_BODY = document.querySelector('.top-menu-body');
 
-    if (window.pageYOffset > sticky_menu_trigger_px){
-      // ele_top_menu_body.style.backgroundColor = "green"
-      ele_top_menu_body.style.top= '0px'
-      ele_top_menu_body.style.position = 'fixed';
-      ele_top_menu_body.style.background = 'linear-gradient(180deg, rgba(39,60,117,1) 0%, rgba(39,60,117,1) 60%, rgba(39,60,117,0) 100%)'
-      // ele_top_menu_body.style.background="linear-gradient(180deg, rgba(39,60,117,1) 0%, rgba(39,60,117,1) 60%, rgba(39,60,117,0) 100%)";
-      // ele_top_menu_body.style.backgroundColor="red";
+    if(ELE_TOP_MENU_BODY != null){
+      if (window.pageYOffset > sticky_menu_trigger_px){
+        // ELE_TOP_MENU_BODY.style.backgroundColor = "green"
+        ELE_TOP_MENU_BODY.style.top= '0px'
+        ELE_TOP_MENU_BODY.style.position = 'fixed';
+        ELE_TOP_MENU_BODY.style.background = 'linear-gradient(180deg, rgba(39,60,117,1) 0%, rgba(39,60,117,1) 60%, rgba(39,60,117,0) 100%)'
+        // ELE_TOP_MENU_BODY.style.background="linear-gradient(180deg, rgba(39,60,117,1) 0%, rgba(39,60,117,1) 60%, rgba(39,60,117,0) 100%)";
+        // ELE_TOP_MENU_BODY.style.backgroundColor="red";
 
-    }else{
-      // ele_top_menu_body.style.backgroundColor = "gold"
-      ele_top_menu_body.style.top= 'unset'
-      ele_top_menu_body.style.position = 'unset';
-      ele_top_menu_body.style.background = 'unset';
+      }else{
+        // ELE_TOP_MENU_BODY.style.backgroundColor = "gold"
+        ELE_TOP_MENU_BODY.style.top= 'unset'
+        ELE_TOP_MENU_BODY.style.position = 'unset';
+        ELE_TOP_MENU_BODY.style.background = 'unset';
+      }
     }
   }
 
   componentDidMount(){
-    window.addEventListener('scroll',(event) => {
-      this.handleOnScroll(document.querySelector('.top-menu-body').offsetTop)
-    })
+    const ELE_TOP_MENU_BODY = document.querySelector('.top-menu-body');
+
+    if (ELE_TOP_MENU_BODY != null){
+      window.addEventListener('scroll',(event) => {
+        this.handleOnScroll(ELE_TOP_MENU_BODY.offsetTop)
+      })
+    }
   }
 
   render(){

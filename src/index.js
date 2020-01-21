@@ -1,4 +1,4 @@
-import { Component, createContext } from 'preact';
+import { Component } from 'preact';
 
 import style from './index.scss';
 import ThemeSetting from './style/theme';
@@ -10,7 +10,9 @@ import ProdConfig from './config/prod.config';
 
 import ReactGA from 'react-ga';
 
-import {Theme} from './context/index';
+import {Theme, BuildInfo} from './context/index';
+
+import {BUILD_VER, BUILD_DATE} from './build_ver';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { far } from '@fortawesome/free-regular-svg-icons'
@@ -31,29 +33,32 @@ const CHECK_DEV_ENV = () => {
 const ACTIVE_CONFIG = (CHECK_DEV_ENV() ? DevConfig: ProdConfig);
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor( props ) {
+    super( props );
     this.state = {
       windowInnerWidth: 0,
       windowInnerHeight: 0
     };
-    this.updateDimensions = this.updateDimensions.bind(this);
+    this.updateDimensions = this.updateDimensions.bind( this );
   }
 
-  componentDidMount(){
-    ReactGA.initialize(ACTIVE_CONFIG.GAKey);
-    ReactGA.pageview(window.location.pathname + window.location.search);
+  componentDidMount() {
+    ReactGA.initialize( ACTIVE_CONFIG.GAKey );
+    ReactGA.pageview( window.location.pathname + window.location.search );
 
     this.updateDimensions();
-    window.addEventListener("resize", this.updateDimensions);
+    window.addEventListener( "resize", this.updateDimensions );
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions);
+    window.removeEventListener( "resize", this.updateDimensions );
   }
 
-  isMobile(){
-    const { windowInnerWidth, windowInnerHeight } = this.state;
+  isMobile() {
+    const {
+      windowInnerWidth,
+      windowInnerHeight
+    } = this.state;
     return windowInnerWidth < 501;
   }
 
@@ -61,11 +66,17 @@ export default class App extends Component {
     let windowInnerWidth = typeof window !== "undefined" ? window.innerWidth : 0;
     let windowInnerHeight = typeof window !== "undefined" ? window.innerHeight : 0;
 
-    this.setState({ windowInnerWidth, windowInnerHeight });
+    this.setState( {
+      windowInnerWidth,
+      windowInnerHeight
+    } );
   }
-
   render() {
-    const { windowInnerWidth, windowInnerHeight } = this.state;
+    const {
+      windowInnerWidth,
+      windowInnerHeight
+    } = this.state;
+
     const styles = {
       showSidebar: windowInnerWidth > 768,
       showAvatar: windowInnerHeight > 875,
@@ -76,11 +87,15 @@ export default class App extends Component {
       currTheme: ThemeSetting
     }
 
+    const build_info = { BUILD_VER, BUILD_DATE }
+
     return (
       <>
-        <Theme.Provider value={styles}>
-          <Main style={styles}/>
-        </Theme.Provider>
+        <BuildInfo.Provider value={build_info}>
+          <Theme.Provider value={styles}>
+            <Main style={styles}/>
+          </Theme.Provider>
+        </BuildInfo.Provider>
       </>
     );
   }
