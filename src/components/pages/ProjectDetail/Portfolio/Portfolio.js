@@ -14,7 +14,8 @@ import {
   Spare,
   ProjectDetailHelmets,
   PrismHelloworld,
-  PrismBash
+  PrismBash,
+  FigureContainer
 } from '../../../../components/index'
 
 // import './ProjectDescription.css';
@@ -22,6 +23,8 @@ import {
 
 import head_pic from './screen_capture.jpeg'
 import PortfolioThumbnail from './thumbnail.png';
+
+import build_flow from './build_flow.svg';
 
 class PortfolioContent extends Component{
 
@@ -52,13 +55,36 @@ class PortfolioContent extends Component{
           />
 
           <div style={projectDetailStyle.DescBody}>
-            <h3 style={projectDetailStyle.DescTopic}>
-              Purpose:
+            <p>
+              This is my portfolio.
+            </p>
+            <p>
+              This website contains my project information.
+            </p>
+          </div>
+
+          <div style={projectDetailStyle.DescBody}>
+            <h3 style={projectDetailStyle.DescTopic}>>
+              Background information.
             </h3>
             <p>
-              create a pcb for voron printer.
+              production site: production-portfolio.web.app (https://louiscklaw.github.io/)
             </p>
-
+            <p>
+              repository: https://github.com/louiscklaw/portfolio-preact
+            </p>
+          </div>
+          <div style={projectDetailStyle.DescBody}>
+            <h3 style={projectDetailStyle.DescTopic}>>
+              Build flow:
+            </h3>
+            <FigureContainer img_src={build_flow} caption="current build flow of my portfolio" />
+            <p>
+              production site: production-portfolio.web.app (https://louiscklaw.github.io/)
+            </p>
+            <p>
+              repository: https://github.com/louiscklaw/portfolio-preact
+            </p>
           </div>
         </div>
       </div>

@@ -1,0 +1,185 @@
+// https://renenyffenegger.ch/notes/tools/Graphviz/examples/index
+digraph D {
+  // graph [fontname = "helvetica"];
+  // node [fontname = "helvetica"];
+  edge [
+    fontname = "helvetica"
+    fontsize="12"
+    ];
+  node [
+    shape=plaintext
+    fontname="Sans serif"
+    fontsize="12"
+  ];
+
+  step_1 [ label=<
+    <table border="1" cellborder="0" cellspacing="1">
+      <tr>
+        <td align="left"><b>Step1</b>
+        </td>
+      </tr>
+      <tr>
+        <td align="left">Local PC
+        </td>
+      </tr>
+      <tr>
+        <td align="left">(Developer machine)
+        </td>
+      </tr>
+      <tr>
+        <td align="left">contribute source code
+        </td>
+      </tr>
+      <tr>
+        <td align="left"><font color="darkgreen">commit</font>
+        </td>
+      </tr>
+    </table>
+  >];
+
+  step_2 [ label=<
+    <table border="1" cellborder="0" cellspacing="1">
+      <tr>
+        <td align="left"><b>Step 2</b>
+        </td>
+      </tr>
+      <tr>
+        <td align="left">Github receive and
+        </td>
+      </tr>
+      <tr>
+        <td align="left">store the source code
+        </td>
+      </tr>
+      <tr>
+        <td align="left"><font color="darkgreen">done</font>
+        </td>
+      </tr>
+    </table>
+  >];
+
+
+  step_3 [ label=<
+    <table border="1" cellborder="0" cellspacing="1">
+      <tr>
+        <td align="left"><b>Step 3</b>
+        </td>
+      </tr>
+      <tr>
+        <td align="left">Travis Building start<br />
+        </td>
+      </tr>
+      <tr>
+        <td align="left">case 1. if the build occurs on the "feature" branch:
+        </td>
+      </tr>
+      <tr>
+        <td align="left">it will be merged to "develop" by travis if the build result is "OK".
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+      <tr>
+        <td align="left">case 2. If the build occurs on the "develop" branch:
+        </td>
+      </tr>
+      <tr>
+        <td align="left">It will deploy to the "staging" site if the build is "OK"
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+      <tr>
+        <td align="left">case 3. If the build occurs on the "master" branch:
+        </td>
+      </tr>
+      <tr>
+        <td align="left">It will deploy to the "production" site if the build is "OK"
+        </td>
+      </tr>
+
+      <tr>
+        <td align="left"><font color="darkgreen">Deploy</font>
+        </td>
+      </tr>
+    </table>
+  >];
+
+  firebase_production[ label=<
+    <table border="1" cellborder="0" cellspacing="1">
+      <tr>
+        <td align="left"><b>Step 4</b></td>
+      </tr>
+      <tr>
+        <td align="left">firebase hosting</td>
+      </tr>
+      <tr>
+        <td align="left">production : production-portfolio.web.app</td>
+      </tr>
+
+      <tr>
+        <td align="left"><font color="darkgreen">Done</font>
+        </td>
+      </tr>
+    </table>
+  >];
+
+  firebase_staging[ label=<
+    <table border="1" cellborder="0" cellspacing="1">
+      <tr>
+        <td align="left"><b>Step 4</b></td>
+      </tr>
+      <tr>
+        <td align="left">firebase hosting</td>
+      </tr>
+      <tr>
+        <td align="left">staging : staging-portfolio-c7cb5.web.app</td>
+      </tr>
+      <tr>
+        <td align="left"><font color="darkgreen">Done</font>
+        </td>
+      </tr>
+    </table>
+  >];
+
+  merge_develop_to_feature[ label=<
+    <table border="1" cellborder="0" cellspacing="1">
+      <tr>
+        <td align="left"><b>Merge updated develop branch</b></td>
+      </tr>
+      <tr>
+        <td align="left"><b>to feature branch</b></td>
+      </tr>
+      <tr>
+        <td align="left">developer merge the updated develop branch</td>
+      </tr>
+      <tr>
+        <td align="left">its feature branch and test again</td>
+      </tr>
+      <tr>
+        <td align="left"><font color="darkgreen">Done</font>
+        </td>
+      </tr>
+    </table>
+  >]
+
+  step_1        -> step_2 [label="Commit & push"];
+  step_2 -> step_3 [label="Trigger build"];
+  step_3        -> firebase_production [label="Build and merge OK\lbranch==\"master\""];
+  step_3        -> firebase_staging [label="Build and merge OK\lbranch==\"develop\""];
+
+  step_3   -> merge_develop_to_feature [label="Merge to \"develop\" Fail"];
+  merge_develop_to_feature -> step_2  [label="Commit & push"];
+
+
+  firebase_staging -> step_1 [label="Fetch updated \l \"develop\" branch"];
+
+  subgraph fix_subgraph {
+    rank="same"
+    merge_develop_to_feature
+    step_1
+  }
+
+}

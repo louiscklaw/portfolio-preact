@@ -25,6 +25,7 @@ import HeaderFigure from './HeaderFigure/index';
 //   HighlightBash
 // } from './containers/Highlightjs/index'
 import {PrismHelloworld, PrismBash} from './containers/prismjs/index';
+import FigureContainer from './containers/Figure/index'
 
 
 // Helmets
@@ -67,9 +68,11 @@ export {
   ProjectDetailHelmets,
 
   PrismHelloworld,
-  PrismBash
+  PrismBash,
   // CodeHighlight,
   // HighlightJavascript,
   // HighlightPython,
   // HighlightBash,
+
+  FigureContainer
 }
