@@ -27,6 +27,7 @@ after_success:
   - pip3 install --user pipenv
   - pipenv sync
   - pipenv run python3 ./merge.py
+  - cd ..
 
 deploy:
   # production deploy
@@ -34,6 +35,7 @@ deploy:
     skip_cleanup: true
     script:
       - node ./scripts/update_build_info.js
+      - yarn build
       - firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive
     on:
       all_branches: true
@@ -44,6 +46,7 @@ deploy:
     skip_cleanup: true
     script:
       - node ./scripts/update_build_info.js
+      - yarn build
       - firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
     on:
       all_branches: true
