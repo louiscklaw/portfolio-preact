@@ -13,7 +13,7 @@ var nav_middle_li = {
 }
 
 var a = {
-  color: '#fff',
+  color: theme.THEME_COLOR_LIGHTEST,
   fontWeight: 'bold'
 }
 
@@ -51,7 +51,7 @@ var source_code_link = {
 
 var credit_container = {
   paddingTop: '30px',
-  color: '#fff',
+  color: theme.THEME_COLOR_LIGHTEST,
   fontSize: '0.8em',
   textAlign: 'center'
 }
@@ -67,7 +67,7 @@ var social_links = {
 }
 
 var social_link_a = {
-  color: '#fff',
+  color: theme.THEME_COLOR_LIGHTEST,
   fontSize: '1.5em',
   fontWeight: 'normal',
   paddingLeft: '3px',
