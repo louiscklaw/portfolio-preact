@@ -2,7 +2,10 @@ import { Component } from 'preact';
 
 import theme from '../../style/theme'
 
-import { faFileExcel } from '@fortawesome/free-regular-svg-icons';
+// import { faFileExcel } from '@fortawesome/free-regular-svg-icons';
+import {
+  SocialLink
+} from '../index'
 
 import {avatar} from './res';
 
@@ -49,13 +52,13 @@ export default class TopBar extends Component{
         // color: theme.THEME_COLOR_LIGHTEST,
         // textAlign: 'center'
 
-        fontSize: '2em',
+        fontSize: '1.2em',
         display:'flex',
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems:'center',
-        paddingTop: '1em'
-
+        paddingTop: '1em',
+        height: '33%'
       },
       narrow_menu:{
         paddingTop: '2em',
@@ -67,10 +70,10 @@ export default class TopBar extends Component{
         color: theme.THEME_COLOR_LIGHTEST
       },
       greeting_container:{
-
+        // backgroundColor: 'red'
       },
       narrow_menu_container:{
-        height: '10vh',
+        height: '34%',
         width: '100%',
         zIndex: '2'
       },
@@ -90,6 +93,19 @@ export default class TopBar extends Component{
       hello_text:{
         color:theme.THEME_COLOR_LIGHTEST,
         paddingLeft: '5px'
+      },
+      social_link:{
+        padding: '0em 1em',
+      },
+      social_links:{
+        display: 'inline-flex',
+        listStyle: 'none',
+        padding: '0em 0.5em'
+      },
+      social_link_container:{
+        height: '33%',
+        textAlign: 'center',
+        paddingTop: '1em'
       }
     }
 
@@ -102,23 +118,46 @@ export default class TopBar extends Component{
           </div>
         </div>
 
-        <div style={style.narrow_menu_container} className="top-menu-body">
+        <div style={style.social_link_container}>
+          <ul style={style.social_links}>
+            <li style={style.social_link}>
+              <SocialLink href="https://www.facebook.com/louiscklaw" icon={['fab', 'facebook' ]} />
+            </li>
+            <li style={style.social_link}>
+              <SocialLink href="https://github.com/louiscklaw" icon={['fab', 'github' ]} />
+            </li>
+            <li style={style.social_link}>
+              <SocialLink href="https://keybase.io/louiscklaw" icon={['fab', 'keybase' ]} />
+            </li>
+            <li  style={style.social_link}>
+              <SocialLink href="https://www.linkedin.com/in/louiscklaw" icon={['fab', 'linkedin' ]}/>
+            </li>
+            <li style={style.social_link}>
+              <SocialLink href="https://louislabs.slack.com" icon={['fab', 'slack' ]} />
+            </li>
+            <li style={style.social_link}>
+              <SocialLink href="https://t.me/louislabs" icon={['fab', 'telegram' ]} />
 
-            <ul style={style.narrow_menu}>
-              <li>
-                <a style={style.a} href="/project_catalogue" >Projects</a>
-              </li>
-
-              <li>
-                <a style={style.a} href="/about" >About</a>
-              </li>
-
-              <li>
-                <a style={style.a} href="/credits">Credits</a>
-              </li>
-            </ul>
-
+            </li>
+          </ul>
         </div>
+
+        <div style={style.narrow_menu_container} className="top-menu-body">
+          <ul style={style.narrow_menu}>
+            <li>
+              <a style={style.a} href="/project_catalogue" >Projects</a>
+            </li>
+
+            <li>
+              <a style={style.a} href="/about" >About</a>
+            </li>
+
+            <li>
+              <a style={style.a} href="/credits">Credits</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
     )
   }

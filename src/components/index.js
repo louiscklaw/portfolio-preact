@@ -6,6 +6,7 @@ import YoutubeContainer from './containers/youtube'
 
 import GithubLink from './Links/GithubLink'
 import GistLink from './Links/GistLink'
+import SocialLink from './Links/SocialLink'
 
 // import MetaProjectDetail from './meta/ProjectDetail'
 // import MetaTitle from './MetaTitle/MetaTitle'
@@ -47,6 +48,8 @@ export {
   YoutubeContainer,
   GithubLink,
   GistLink,
+  SocialLink,
+
   // MetaProjectDetail,
   // MetaTitle,
   SideMenu,
