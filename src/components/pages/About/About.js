@@ -2,6 +2,7 @@ import { Component } from 'preact';
 import { useContext } from 'preact/hooks';
 
 import { Theme } from '../../../context/index'
+import theme_setting from '../../../style/theme'
 
 // import theme from '../../../style/theme'
 

@@ -2,6 +2,7 @@ import { Component } from 'preact';
 import { useContext } from 'preact/hooks';
 
 import { Theme } from '../../../context/index'
+import theme_setting from '../../../style/theme'
 // import style from './style.js';
 
 export default class Credits extends Component {
@@ -34,9 +35,9 @@ export default class Credits extends Component {
       paragraph_body: {
         /* this one should be left */
         /* TODO: remove me */
-        borderWidth: '1px',
-        borderStyle: 'dotted',
-        borderColor: 'yellow',
+        // borderWidth: '1px',
+        // borderStyle: 'dotted',
+        // borderColor: 'yellow',
         width: '100%',
       },
 
@@ -57,9 +58,8 @@ export default class Credits extends Component {
 
     return(
       <div style={style.page_credit}>
-
         <div style={style.page_header}>
-          Credits
+          Credit
         </div>
 
         <div style={style.paragraph_body}>

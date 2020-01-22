@@ -64,7 +64,8 @@ export default class Main extends Component{
         // TODO: remove me
         // top: styles.showSidebar? 'unset': '0vh',
 
-        backgroundColor: theme_settings.THEME_COLOR_LIGHTER,
+        backgroundColor: theme_settings.THEME_COLOR_LIGHTEST,
+        minHeight: '80vh'
       },
 
       nav_container: {

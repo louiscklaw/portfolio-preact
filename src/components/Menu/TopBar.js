@@ -73,9 +73,9 @@ export default class TopBar extends Component{
         // backgroundColor: 'red'
       },
       narrow_menu_container:{
-        height: '10vh',
+        height: '34%',
         width: '100%',
-        zIndex: '2'
+        zIndex: '2',
       },
       nav_avatar :{
         display: 'block',
