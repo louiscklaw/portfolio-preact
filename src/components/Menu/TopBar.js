@@ -4,6 +4,8 @@ import theme from '../../style/theme'
 
 import { faFileExcel } from '@fortawesome/free-regular-svg-icons';
 
+import {avatar} from './res';
+
 export default class TopBar extends Component{
 
   handleOnScroll(sticky_menu_trigger_px){
@@ -42,11 +44,18 @@ export default class TopBar extends Component{
   render(){
     const style = {
       hello_greeting:{
-        paddingTop: '1em',
-        height: '10vh',
-        color: theme.THEME_COLOR_LIGHTEST,
+        // paddingTop: '1em',
+        // height: '10vh',
+        // color: theme.THEME_COLOR_LIGHTEST,
+        // textAlign: 'center'
+
         fontSize: '2em',
-        textAlign: 'center'
+        display:'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems:'center',
+        paddingTop: '1em'
+
       },
       narrow_menu:{
         paddingTop: '2em',
@@ -65,15 +74,32 @@ export default class TopBar extends Component{
         width: '100%',
         zIndex: '2'
       },
+      nav_avatar :{
+        display: 'block',
+      },
+      nav_top_avatar_img : {
+        width: '50px',
+        height: '50px',
+        // marginTop: '50px',
+        borderRadius: '50%',
+        paddingRight: '5px',
+      },
       a :{
         color: theme.THEME_COLOR_LIGHTEST
+      },
+      hello_text:{
+        color:theme.THEME_COLOR_LIGHTEST,
+        paddingLeft: '5px'
       }
     }
 
     return(
       <div style={style.greeting_container}>
         <div style={style.hello_greeting}>
-          Hi, I am louis
+          <img src={avatar} style={style.nav_top_avatar_img} alt="avatar image"/>
+          <div style={style.hello_text}>
+            Hi, I am louis
+          </div>
         </div>
 
         <div style={style.narrow_menu_container} className="top-menu-body">

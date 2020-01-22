@@ -3,7 +3,7 @@ import {Component} from 'preact';
 // import style from '../../style/index.js';
 // import style from './style';
 
-import avatar from './avatar.jpeg';
+import {avatar} from './res';
 
 
 
