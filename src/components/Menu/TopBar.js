@@ -73,7 +73,7 @@ export default class TopBar extends Component{
         // backgroundColor: 'red'
       },
       narrow_menu_container:{
-        height: '34%',
+        height: '10vh',
         width: '100%',
         zIndex: '2'
       },
