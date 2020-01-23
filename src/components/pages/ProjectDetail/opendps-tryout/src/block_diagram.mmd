@@ -1,0 +1,17 @@
+graph LR
+  subgraph my power supply
+    power_src[sfx power source]
+    PiNano[LicheePi Nano]
+    wifi[wifi]
+    DPS3003_1[DPS3003]
+    DPS3003_2[DPS3003]
+    out_ch1[output channel1]
+    out_ch2[output channel2]
+    PiNano --comm--- wifi
+    PiNano --control--> DPS3003_1
+    DPS3003_1 --> out_ch1
+    PiNano --control--> DPS3003_2
+    DPS3003_2 --> out_ch2
+    power_src --supply power--> DPS3003_1
+    power_src --supply power--> DPS3003_2
+    end
