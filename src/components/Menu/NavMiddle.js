@@ -47,6 +47,18 @@ function getFirebaseConsole(){
   }
 }
 
+function getFacebookMarketLinks(){
+  if(CHECK_DEV_ENV()){
+    return(
+      <li style={style.nav_middle_li}>
+        <a style={style.a} href='/facebook_market_links' target="_blank">
+          facebook_market_links
+        </a>
+      </li>
+    )
+  }
+}
+
 function checkIfSmallScreen(){
 
   console.log('checkIfSmallScreen', windowWidth);
@@ -102,6 +114,7 @@ export default class NavMiddle extends Component {
           {getStagingSite()}
           {getTravisBuildSite()}
           {getFirebaseConsole()}
+          {getFacebookMarketLinks()}
         </ul>
       </div>
     )

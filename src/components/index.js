@@ -40,6 +40,7 @@ import Logs from './pages/Logs/Logs'
 import PagesHelloworld from './pages/Helloworld/index'
 import PageProjectCatalogue from './pages/ProjectDetail/catalogue'
 import PageProjectDetail from './pages/ProjectDetail/index'
+import FacebookMarketLinks from './pages/FacebookMarketLinks/index'
 
 export {
   ProjectTitle,
@@ -65,6 +66,7 @@ export {
   PagesHelloworld,
   PageProjectCatalogue,
   PageProjectDetail,
+  FacebookMarketLinks,
 
   // Helmets
   TestHelmet,
