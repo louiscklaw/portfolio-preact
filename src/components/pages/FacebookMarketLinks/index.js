@@ -42,6 +42,13 @@ export default class About extends Component {
         {getFacebookMarketLink('dell')}
         {getFacebookMarketLink('lenovo')}
         {getFacebookMarketLink('3d%20printer%20打%E2%80%8B印')}
+        {getFacebookMarketLink('android')}
+        {getFacebookMarketLink('火牛%20電源')}
+        {getFacebookMarketLink('itx%20sfx')}
+        {getFacebookMarketLink('nas')}
+        {getFacebookMarketLink('顯示屏')}
+        {getFacebookMarketLink('olympus')}
+        {getFacebookMarketLink('netbook')}
 
       </div>
 		)
