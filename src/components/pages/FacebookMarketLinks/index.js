@@ -10,7 +10,7 @@ import { NewWindowLink } from '../..';
 function getFacebookMarketLink(item_name){
   return (
     <div>
-      <NewWindowLink link={`https://www.facebook.com/marketplace/hongkong/search/?query=${item_name}`} />
+      <NewWindowLink link={`https://www.facebook.com/marketplace/hongkong/search/?query=${item_name}&vertical=C2C&sort=CREATION_TIME_DESCEND`} text={'facebook selling: '+item_name}/>
       <br />
     </div>
   )
