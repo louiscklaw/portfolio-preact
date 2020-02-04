@@ -70,8 +70,8 @@ export default class NavBottom extends Component{
           </a>
         </div>
 
-        <div style={style.source_code_link}>
-          <NewWindowLink link="//github.com/louiscklaw/portfolio-preact" text="source code" />
+        <div style={style.source_code_link_container}>
+          <a style={style.source_code_link} href="//github.com/louiscklaw/portfolio-preact">source code</a>
         </div>
 
         <div style={style.credit_container}>

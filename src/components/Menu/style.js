@@ -34,7 +34,7 @@ var credits_link = {
   textDecoration: 'underline',
   marginTop: '20px',
   fontWeight: 'bold',
-  color: theme.DEFAULT_LINK_COLOR
+  color: theme.THEME_COLOR_LIGHTEST
 }
 
 var build_status = {
@@ -43,10 +43,14 @@ var build_status = {
   textAlign: 'center'
 }
 
-var source_code_link = {
-  width: '100%',
+var source_code_link_container = {
   textAlign: 'center',
-  fontSize: '0.9em'
+  width: '100%',
+  fontSize: '0.9em',
+}
+
+var source_code_link = {
+  color: theme.THEME_COLOR_LIGHTEST
 }
 
 var credit_container = {
@@ -117,6 +121,7 @@ export default {
   nav_bottom,
   credits_link,
   build_status,
+  source_code_link_container,
   source_code_link,
   credit_container,
   credit_container_a,
