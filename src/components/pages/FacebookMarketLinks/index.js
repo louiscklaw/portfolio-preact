@@ -38,7 +38,7 @@ export default class About extends Component {
 
     return(
       <div style={style.page}>
-        facebook market links helloworld
+        facebook market links
         {getFacebookMarketLink('dell')}
         {getFacebookMarketLink('lenovo')}
         {getFacebookMarketLink('3d%20printer%20打%E2%80%8B印')}
@@ -49,7 +49,6 @@ export default class About extends Component {
         {getFacebookMarketLink('顯示屏')}
         {getFacebookMarketLink('olympus')}
         {getFacebookMarketLink('netbook')}
-
       </div>
 		)
 	}
