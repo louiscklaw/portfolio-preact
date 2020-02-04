@@ -6,15 +6,20 @@ import style from './NewWindowLinkStyle.js';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default ({ link, text }) => {
-  return (
-    <div >
-      <a href={link} target="_blank" style={style.WindowLink} rel="noopener noreferrer" >
-        {text || link}
-        <div style={style.FaNewWinIcon}>
-          <FontAwesomeIcon icon={['fas', 'external-link-alt' ]}/>
-        </div>
-      </a>
-    </div>
-  )
+export default class NewWindowLink extends Component{
+  render(){
+    console.log(this.props);
+    console.log('findme')
+    var {link, text} = this.props;
+    return (
+      <div >
+        <a href={link} target="_blank" style={{...style.WindowLink, ...this.props.link_style}} rel="noopener noreferrer" >
+          {text || link}
+          <div style={style.FaNewWinIcon}>
+            <FontAwesomeIcon icon={['fas', 'external-link-alt' ]}/>
+          </div>
+        </a>
+      </div>
+    )
+  }
 }

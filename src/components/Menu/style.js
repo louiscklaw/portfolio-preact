@@ -47,9 +47,14 @@ var source_code_link_container = {
   textAlign: 'center',
   width: '100%',
   fontSize: '0.9em',
+  color: theme.THEME_COLOR_LIGHTEST
 }
 
 var source_code_link = {
+  textDecoration: 'underline',
+  marginTop: '20px',
+  fontSize:'0.8em',
+  fontWeight: 'bold',
   color: theme.THEME_COLOR_LIGHTEST
 }
 
