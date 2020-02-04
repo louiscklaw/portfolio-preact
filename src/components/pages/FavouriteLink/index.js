@@ -16,7 +16,7 @@ function getFacebookMarketLink(item_name){
   )
 }
 
-export default class About extends Component {
+export default class FavouriteLink extends Component {
 	render(){
     const theme = useContext(Theme);
     const is_mobile = theme.isMobile;
@@ -38,7 +38,7 @@ export default class About extends Component {
 
     return(
       <div style={style.page}>
-        facebook market links helloworld
+        facebook market links:
         {getFacebookMarketLink('dell')}
         {getFacebookMarketLink('lenovo')}
         {getFacebookMarketLink('3d%20printer%20打%E2%80%8B印')}

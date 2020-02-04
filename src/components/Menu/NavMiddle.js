@@ -47,12 +47,12 @@ function getFirebaseConsole(){
   }
 }
 
-function getFacebookMarketLinks(){
+function getFavouriteLink(){
   if(CHECK_DEV_ENV()){
     return(
       <li style={style.nav_middle_li}>
-        <a style={style.a} href='/facebook_market_links' target="_blank">
-          facebook_market_links
+        <a style={style.a} href='/favourite_link' target="_blank">
+          favourite_link
         </a>
       </li>
     )
@@ -114,7 +114,7 @@ export default class NavMiddle extends Component {
           {getStagingSite()}
           {getTravisBuildSite()}
           {getFirebaseConsole()}
-          {getFacebookMarketLinks()}
+          {getFavouriteLink()}
         </ul>
       </div>
     )
