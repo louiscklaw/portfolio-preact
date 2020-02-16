@@ -70,15 +70,15 @@ export default class NavBottom extends Component{
           </a>
         </div>
 
-        <div style={style.source_code_link}>
-          <NewWindowLink link="//github.com/louiscklaw/portfolio-preact" text="source code" />
+        <div style={style.source_code_link_container}>
+          <NewWindowLink link="//github.com/louiscklaw/portfolio-preact" text="source code" link_style={{color:theme.THEME_COLOR_LIGHTEST}}/>
         </div>
 
         <div style={style.credit_container}>
           <span role="img" aria-label="heart">❤️</span> coded by louiscklaw.<br />
           Built on the solder of <br />
           <div style={style.credits_link_container}>
-            <a style={style.credits_link} href="/credits">THESE GIANTS</a>
+            <NewWindowLink link="/credits" text="THESE GIANTS" link_style={style.credits_link} />
           </div>
         </div>
 

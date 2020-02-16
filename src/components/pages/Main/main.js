@@ -19,8 +19,8 @@ import {
   pagesHelloworld,
   PageProjectCatalogue,
   PageProjectDetail,
+  FavouriteLink,
   CommonHelmet,
-  FacebookMarketLinks,
 } from '../../index';
 
 // import style from './main.scss';
@@ -98,7 +98,7 @@ export default class Main extends Component{
             <AsyncRoute path="/logs" component={Logs} />
             <AsyncRoute path="/about" component={About} style={'helloworld_style'}/>
             <AsyncRoute path="/credits" component={Credits} />
-            <AsyncRoute path="/facebook_market_links" component={FacebookMarketLinks} />
+            <AsyncRoute path="/favourite_link" component={FavouriteLink} />
 
             {/* // default page */}
             <AsyncRoute path="/" component={PageProjectCatalogue} />
