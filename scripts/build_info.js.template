@@ -1,5 +1,5 @@
-const BUILD_VER = '';
-const BUILD_DATE = '2020-Jan-21';
+const BUILD_VER = '<<BUILD_VER>>';
+const BUILD_DATE = '<<BUILD_DATE>>';
 
 export {
   BUILD_VER,
