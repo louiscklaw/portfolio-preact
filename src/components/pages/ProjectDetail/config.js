@@ -22,6 +22,8 @@ import {ZTransferDemoContent, ZTransferDemoThumbnail} from './ZTransferDemo/ZTra
 
 import {SFXPowerSupplyContent, SFXPowerSupplyThumbnail} from './sfx-power-supply-study/index'
 
+import {AliWangwangThumbnail, AliWangwangContent} from './Aliwangwang-ubuntu'
+
 import { h } from 'preact'
 
 
@@ -44,7 +46,8 @@ let project_list = {
   'VoronTryout' : ['VoronTryout', VoronTryoutContent, VoronTryoutThumbnail],
   'YoutubeSplitViewTryout' : ['YoutubeSplitViewTryout', YoutubeSplitContent, YoutubeSplitThumbnail],
   'ZTransferDemo' : ['ZTransferDemo', ZTransferDemoContent, ZTransferDemoThumbnail],
-  'SFXPowerSupplyStudy': ['SFXPowerSupplyStudy', SFXPowerSupplyContent, SFXPowerSupplyThumbnail]
+  'SFXPowerSupplyStudy': ['SFXPowerSupplyStudy', SFXPowerSupplyContent, SFXPowerSupplyThumbnail],
+  'AliWangwangUbuntu': ['AliWangwangUbuntu', AliWangwangContent, AliWangwangThumbnail]
 }
 
 function showProject(proj_name){
