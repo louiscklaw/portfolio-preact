@@ -11,8 +11,16 @@ const CHECK_DEV_ENV = () => {
   return check_result;
 }
 
+const CHECK_STAGING_SITE = () => {
+  return window.location.href.search('staging-portfolio-c7cb5') > -1
+}
+
+const SHOW_HIDDEN_LINK = () => {
+  return CHECK_DEV_ENV() || CHECK_STAGING_SITE
+}
+
 function getStagingSite(){
-  if (CHECK_DEV_ENV()){
+  if (SHOW_HIDDEN_LINK()){
     return(
       <li style={style.nav_middle_li}>
         <a style={style.a} href="//staging-portfolio-c7cb5.firebaseapp.com" target="_blank">
@@ -24,7 +32,7 @@ function getStagingSite(){
 }
 
 function getTravisBuildSite(){
-  if (CHECK_DEV_ENV()){
+  if (SHOW_HIDDEN_LINK()){
     return(
       <li style={style.nav_middle_li}>
         <a style={style.a} href="//travis-ci.com/louiscklaw/portfolio-preact/branches" target="_blank">
@@ -36,7 +44,7 @@ function getTravisBuildSite(){
 }
 
 function getFirebaseConsole(){
-  if(CHECK_DEV_ENV()){
+  if(SHOW_HIDDEN_LINK()){
     return(
       <li style={style.nav_middle_li}>
         <a style={style.a} href='//console.firebase.google.com/u/1/project/preactjs-projects/overview' target="_blank">
@@ -48,7 +56,7 @@ function getFirebaseConsole(){
 }
 
 function getFacebookMarketLinks(){
-  if(CHECK_DEV_ENV()){
+  if(SHOW_HIDDEN_LINK()){
     return(
       <li style={style.nav_middle_li}>
         <a style={style.a} href='/facebook_market_links' target="_blank">
