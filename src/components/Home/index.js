@@ -1,11 +1,9 @@
-import { Component } from 'preact';
+import { Component } from "preact";
 
 class Home extends Component {
-	render(){
-		return(
-			<h1>Home</h1>
-		)
-	}
+  render() {
+    return <h1>Home</h1>;
+  }
 }
 
 export default Home;

@@ -1,11 +1,7 @@
-import { Component } from 'preact';
+import { Component } from "preact";
 
 export default class Helloworld extends Component {
-  render(){
-    return(
-      <div>
-        Helloworld
-      </div>
-    )
+  render() {
+    return <div>Helloworld</div>;
   }
 }

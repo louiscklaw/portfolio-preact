@@ -1,108 +1,107 @@
-import theme from '../../style/theme.js'
+import theme from "../../style/theme.js";
 
 var nav_middle = {
-  paddingTop: '1em',
-  height: '33vh'
-}
+  paddingTop: "1em",
+  height: "33vh"
+};
 
 var nav_middle_li = {
-  textTransform: 'uppercase',
-  paddingTop: '10px',
-  paddingBottom: '10px',
-  textAlign: 'center',
-}
+  textTransform: "uppercase",
+  paddingTop: "10px",
+  paddingBottom: "10px",
+  textAlign: "center"
+};
 
 var a = {
   color: theme.THEME_COLOR_LIGHTEST,
-  fontWeight: 'bold'
-}
+  fontWeight: "bold"
+};
 
 var ul = {
-  listStyle: 'none'
-}
+  listStyle: "none"
+};
 
 var nav_bottom = {
-  paddingTop: '2em',
-  height: '34vh'
-}
+  paddingTop: "2em",
+  height: "34vh"
+};
 
 var credits_link_container = {
-  paddingTop: '30px'
-}
+  paddingTop: "30px"
+};
 
 var credits_link = {
-  textDecoration: 'underline',
-  marginTop: '20px',
-  fontWeight: 'bold',
+  textDecoration: "underline",
+  marginTop: "20px",
+  fontWeight: "bold",
   color: theme.THEME_COLOR_LIGHTEST
-}
+};
 
 var build_status = {
-  paddingTop: '10px',
-  paddingBottom: '10px',
-  textAlign: 'center'
-}
+  paddingTop: "10px",
+  paddingBottom: "10px",
+  textAlign: "center"
+};
 
 var source_code_link_container = {
-  textAlign: 'center',
-  width: '100%',
-  fontSize: '0.9em',
+  textAlign: "center",
+  width: "100%",
+  fontSize: "0.9em",
   color: theme.THEME_COLOR_LIGHTEST
-}
+};
 
 var source_code_link = {
-  textDecoration: 'underline',
-  marginTop: '20px',
-  fontSize:'0.8em',
-  fontWeight: 'bold',
+  textDecoration: "underline",
+  marginTop: "20px",
+  fontSize: "0.8em",
+  fontWeight: "bold",
   color: theme.THEME_COLOR_LIGHTEST
-}
+};
 
 var credit_container = {
-  paddingTop: '30px',
+  paddingTop: "30px",
   color: theme.THEME_COLOR_LIGHTEST,
-  fontSize: '0.8em',
-  textAlign: 'center'
-}
+  fontSize: "0.8em",
+  textAlign: "center"
+};
 
 var credit_container_a = {
-  position: 'relative',
-  listStyle: 'none'
-}
+  position: "relative",
+  listStyle: "none"
+};
 
 var social_links = {
-  display: 'inline-flex',
-  listStyle: 'none'
-}
+  display: "inline-flex",
+  listStyle: "none"
+};
 
 var social_link_a = {
   color: theme.THEME_COLOR_LIGHTEST,
-  fontSize: '1.5em',
-  fontWeight: 'normal',
-  paddingLeft: '3px',
-  paddingRight: '3px',
-  paddingBottom: '10px'
-}
+  fontSize: "1.5em",
+  fontWeight: "normal",
+  paddingLeft: "3px",
+  paddingRight: "3px",
+  paddingBottom: "10px"
+};
 
 var social_links_container = {
-  width: '100%',
-  textAlign: 'center'
-}
+  width: "100%",
+  textAlign: "center"
+};
 
 var nav_container = {
   backgroundColor: theme.THEME_COLOR
-}
-
+};
 
 var mobile_menu = {
-  display: 'none',
+  display: "none",
   backgroundColor: theme.THEME_COLOR
-}
+};
 
 var menu_body = {
-  display: 'block',
+  display: "block"
   // backgroundColor: 'red'
-}
+};
 
 export default {
   // all nav
@@ -134,4 +133,4 @@ export default {
   social_link_a,
   social_links_container,
   credits_link_container
-}
+};

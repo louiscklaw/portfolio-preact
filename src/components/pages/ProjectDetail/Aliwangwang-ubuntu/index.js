@@ -1,6 +1,6 @@
-import projectDetailStyle from '../projectdetail.scss';
+import projectDetailStyle from "../projectdetail.scss";
 
-import {Component} from 'preact';
+import { Component } from "preact";
 
 import {
   ProjectTitle,
@@ -15,31 +15,22 @@ import {
   ProjectDetailHelmets,
   PrismHelloworld,
   PrismBash
-} from '../../../../components/index'
+} from "../../../../components/index";
 
-import AliWangwangThumbnail from './thumbnail.png'
+import AliWangwangThumbnail from "./thumbnail.png";
 
-class AliWangwangContent extends Component{
-  render(){
-    return(
+class AliWangwangContent extends Component {
+  render() {
+    return (
       <>
-        <p>
-          aliwangwang helloworld
-        </p>
-        <h3>
-          References:
-        </h3>
+        <p>aliwangwang helloworld</p>
+        <h3>References:</h3>
         <ul>
-          <li>
-            https://github.com/wszqkzqk/deepin-wine-ubuntu
-          </li>
+          <li>https://github.com/wszqkzqk/deepin-wine-ubuntu</li>
         </ul>
       </>
-    )
+    );
   }
 }
 
-export {
-  AliWangwangContent,
-  AliWangwangThumbnail
-}
+export { AliWangwangContent, AliWangwangThumbnail };

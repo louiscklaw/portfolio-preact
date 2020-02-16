@@ -1,10 +1,6 @@
-import { Component, createContext } from 'preact';
+import { Component, createContext } from "preact";
 
-const Theme = createContext('light');
-const BuildInfo = createContext('test');
+const Theme = createContext("light");
+const BuildInfo = createContext("test");
 
-
-export {
-  Theme,
-  BuildInfo
-}
+export { Theme, BuildInfo };

@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import { Graphviz } from 'graphviz-react';
+import { Graphviz } from "graphviz-react";
 
-import './graphviz.css';
+import "./graphviz.css";
 
-export default ({dot}) => {
+export default ({ dot }) => {
   return (
     <div>
       <Graphviz dot={dot} />
     </div>
-  )
-}
+  );
+};

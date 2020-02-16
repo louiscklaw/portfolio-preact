@@ -1,7 +1,7 @@
-import projectDetailStyle from '../projectdetail.scss';
-import style from './TradingviewDashboard.scss';
+import projectDetailStyle from "../projectdetail.scss";
+import style from "./TradingviewDashboard.scss";
 
-import {Component} from 'preact';
+import { Component } from "preact";
 
 import {
   ProjectTitle,
@@ -14,19 +14,16 @@ import {
   HeaderFigure,
   Spare,
   ProjectDetailHelmets
-} from '../../../../components/index'
+} from "../../../../components/index";
 
-import head_pic from './tradingview-dashboard.png';
+import head_pic from "./tradingview-dashboard.png";
 
-import TradThumbnail from './thumbnail.png';
+import TradThumbnail from "./thumbnail.png";
 
-
-
-class TradContent extends Component{
+class TradContent extends Component {
   render() {
-    return(
+    return (
       <div className={projectDetailStyle.Container}>
-
         <ProjectDetailHelmets
           title="Tradingview Dashboard"
           description="A tradingview dashboard"
@@ -34,55 +31,36 @@ class TradContent extends Component{
         />
 
         <div className={projectDetailStyle.ProjectDescription}>
-
           <div className={projectDetailStyle.ProjectHead}>
             <BackToProjects />
-            <ProjectTitle
-              project_title="Tradingview Dashboard"
-            />
+            <ProjectTitle project_title="Tradingview Dashboard" />
             <Spare />
           </div>
 
-          <HeaderFigure
-            img_src={head_pic}
-            caption="trading view dashboard"
-          />
+          <HeaderFigure img_src={head_pic} caption="trading view dashboard" />
 
           <div className={projectDetailStyle.DescBody}>
-            <h3 className={projectDetailStyle.DescTopic}>
-              Purpose:
-            </h3>
+            <h3 className={projectDetailStyle.DescTopic}>Purpose:</h3>
             <p>
               a simple page to monitor stock, while data provided by tradingview
             </p>
 
-            <h3 className={projectDetailStyle.DescTopic}>
-              Demo:
-            </h3>
+            <h3 className={projectDetailStyle.DescTopic}>Demo:</h3>
             <NewWindowLink link="https://louiscklaw.github.io/tradingview-tile-tryout" />
 
-            <h3 className={projectDetailStyle.DescTopic}>
-              ref/repo:
-            </h3>
+            <h3 className={projectDetailStyle.DescTopic}>ref/repo:</h3>
             <NewWindowLink link="https://github.com/louiscklaw/tradingview-tile-tryout" />
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-class TradContent1 extends Component{
-  render(){
-    return(
-      <div>
-        test trad content
-      </div>
-    )
+class TradContent1 extends Component {
+  render() {
+    return <div>test trad content</div>;
   }
 }
 
-export {
-  TradContent,
-  TradThumbnail
-}
+export { TradContent, TradThumbnail };

@@ -1,12 +1,12 @@
-import theme from './theme.js';
+import theme from "./theme.js";
 // import nav from './nav.js';
-import main from './main.js';
+import main from "./main.js";
 
-const helloworld_style_js='helloworld-style-js';
+const helloworld_style_js = "helloworld-style-js";
 
-const hello_red={
-  color: 'red'
-}
+const hello_red = {
+  color: "red"
+};
 
 export default {
   // nav,
@@ -15,6 +15,5 @@ export default {
   theme,
 
   helloworld_style_js,
-  hello_red,
-
-}
+  hello_red
+};

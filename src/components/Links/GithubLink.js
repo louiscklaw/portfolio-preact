@@ -1,27 +1,30 @@
-import {Component} from 'preact';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Component } from "preact";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import style from './GithubLink.scss';
+import style from "./GithubLink.scss";
 
-export default ({link, text}) => {
+export default ({ link, text }) => {
   return (
     <div className={style.GithubLinkContainer}>
-      <a href={link} target="_blank" className={style.GithubLink} rel="noopener noreferrer">
+      <a
+        href={link}
+        target="_blank"
+        className={style.GithubLink}
+        rel="noopener noreferrer"
+      >
         {text || link}
         <div className={style.fa_icon}>
-          <FontAwesomeIcon icon={['fab', 'github' ]} />
+          <FontAwesomeIcon icon={["fab", "github"]} />
         </div>
         <div className={style.fa_icon}>
-          <FontAwesomeIcon icon={['fas', 'external-link-alt' ]} />
+          <FontAwesomeIcon icon={["fas", "external-link-alt"]} />
         </div>
       </a>
     </div>
-  )
-}
-
+  );
+};
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 
 // export default ({link, text}) => {
 //   return (

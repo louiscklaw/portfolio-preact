@@ -1,7 +1,6 @@
-import theme from '../../style/theme.js';
+import theme from "../../style/theme.js";
 
 // .NewWindowLink {
-
 
 //   .FaNewWinIcon {
 //     padding-left: 5px;
@@ -16,13 +15,13 @@ import theme from '../../style/theme.js';
 // }
 
 export default {
-  FaNewWinIcon:{
-    paddingLeft: '5px'
+  FaNewWinIcon: {
+    paddingLeft: "5px"
   },
-  WindowLink:{
-    display: 'inline-flex',
-    textDecoration: 'underline',
-    fontWeight: 'bold',
+  WindowLink: {
+    display: "inline-flex",
+    textDecoration: "underline",
+    fontWeight: "bold",
     color: theme.DEFAULT_LINK_COLOR
   }
-}
+};

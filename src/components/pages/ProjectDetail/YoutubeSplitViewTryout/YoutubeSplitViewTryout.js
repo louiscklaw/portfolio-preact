@@ -1,6 +1,6 @@
-import projectDetailStyle from '../projectdetail.scss';
+import projectDetailStyle from "../projectdetail.scss";
 
-import {Component} from 'preact';
+import { Component } from "preact";
 
 import {
   ProjectTitle,
@@ -13,17 +13,16 @@ import {
   HeaderFigure,
   Spare,
   ProjectDetailHelmets
-} from '../../../../components/index'
+} from "../../../../components/index";
 
-import head_pic from './youtube_split_view_tryout.png';
+import head_pic from "./youtube_split_view_tryout.png";
 
-import YoutubeSplitThumbnail from './thumbnail.png';
+import YoutubeSplitThumbnail from "./thumbnail.png";
 
-class YoutubeSplitContent extends Component{
-  render(){
-    return(
+class YoutubeSplitContent extends Component {
+  render() {
+    return (
       <div className={projectDetailStyle.Container}>
-
         <ProjectDetailHelmets
           title="youtube split view tryout"
           description="A youtube split view tryout"
@@ -31,12 +30,9 @@ class YoutubeSplitContent extends Component{
         />
 
         <div className={projectDetailStyle.ProjectDescription}>
-
           <div className={projectDetailStyle.ProjectHead}>
             <BackToProjects />
-            <ProjectTitle
-              project_title="youtube split view tryout"
-            />
+            <ProjectTitle project_title="youtube split view tryout" />
             <Spare />
           </div>
 
@@ -46,30 +42,19 @@ class YoutubeSplitContent extends Component{
           />
 
           <div className={projectDetailStyle.DescBody}>
-            <h3 className={projectDetailStyle.DescTopic}>
-              Purpose:
-            </h3>
-            <p>
-              This is a page to monitor multiple channels in youtube.
-            </p>
+            <h3 className={projectDetailStyle.DescTopic}>Purpose:</h3>
+            <p>This is a page to monitor multiple channels in youtube.</p>
 
-            <h3 className={projectDetailStyle.DescTopic}>
-              Demo:
-            </h3>
+            <h3 className={projectDetailStyle.DescTopic}>Demo:</h3>
             <NewWindowLink link="https://louiscklaw.github.io/youtube-split-view-tryout/" />
 
-            <h3 className={projectDetailStyle.DescTopic}>
-              ref/repo:
-            </h3>
+            <h3 className={projectDetailStyle.DescTopic}>ref/repo:</h3>
             <NewWindowLink link="https://github.com/louiscklaw/youtube-split-view-tryout" />
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export {
-  YoutubeSplitContent,
-  YoutubeSplitThumbnail
-}
+export { YoutubeSplitContent, YoutubeSplitThumbnail };

@@ -1,23 +1,22 @@
+import ProjectTitle from "./ProjectTitle/ProjectTitle";
+import NewWindowLink from "./Links/NewWindowLink";
+import BackToProjects from "./Links/BackToProjects";
+import YoutubeContainer from "./containers/youtube";
 
-import ProjectTitle from './ProjectTitle/ProjectTitle'
-import NewWindowLink from './Links/NewWindowLink'
-import BackToProjects from './Links/BackToProjects'
-import YoutubeContainer from './containers/youtube'
-
-import GithubLink from './Links/GithubLink'
-import GistLink from './Links/GistLink'
-import SocialLink from './Links/SocialLink'
+import GithubLink from "./Links/GithubLink";
+import GistLink from "./Links/GistLink";
+import SocialLink from "./Links/SocialLink";
 
 // import MetaProjectDetail from './meta/ProjectDetail'
 // import MetaTitle from './MetaTitle/MetaTitle'
-import Home from './Home/index'
-import Spare from './Spare/index'
+import Home from "./Home/index";
+import Spare from "./Spare/index";
 
-import SideMenu from './Menu/SideMenu'
-import TopBar from './Menu/TopBar'
+import SideMenu from "./Menu/SideMenu";
+import TopBar from "./Menu/TopBar";
 
 // ProjectDetail
-import HeaderFigure from './HeaderFigure/index';
+import HeaderFigure from "./HeaderFigure/index";
 
 // import {
 //   CodeHighlight,
@@ -25,22 +24,21 @@ import HeaderFigure from './HeaderFigure/index';
 //   HighlightPython,
 //   HighlightBash
 // } from './containers/Highlightjs/index'
-import {PrismHelloworld, PrismBash} from './containers/prismjs/index';
-import FigureContainer from './containers/Figure/index'
-
+import { PrismHelloworld, PrismBash } from "./containers/prismjs/index";
+import FigureContainer from "./containers/Figure/index";
 
 // Helmets
-import ProjectDetailHelmets from './Helmets/ProjectDetail'
-import TestHelmet from './Helmets/index'
+import ProjectDetailHelmets from "./Helmets/ProjectDetail";
+import TestHelmet from "./Helmets/index";
 
 // pages
-import About from './pages/About/About'
-import Credits from './pages/Credits/Credits'
-import Logs from './pages/Logs/Logs'
-import PagesHelloworld from './pages/Helloworld/index'
-import PageProjectCatalogue from './pages/ProjectDetail/catalogue'
-import PageProjectDetail from './pages/ProjectDetail/index'
-import FavouriteLink from './pages/FavouriteLink/index'
+import About from "./pages/About/About";
+import Credits from "./pages/Credits/Credits";
+import Logs from "./pages/Logs/Logs";
+import PagesHelloworld from "./pages/Helloworld/index";
+import PageProjectCatalogue from "./pages/ProjectDetail/catalogue";
+import PageProjectDetail from "./pages/ProjectDetail/index";
+import FavouriteLink from "./pages/FavouriteLink/index";
 
 export {
   ProjectTitle,
@@ -50,7 +48,6 @@ export {
   GithubLink,
   GistLink,
   SocialLink,
-
   // MetaProjectDetail,
   // MetaTitle,
   SideMenu,
@@ -58,7 +55,6 @@ export {
   Spare,
   HeaderFigure,
   TopBar,
-
   // pages
   About,
   Credits,
@@ -67,11 +63,9 @@ export {
   PageProjectCatalogue,
   PageProjectDetail,
   FavouriteLink,
-
   // Helmets
   TestHelmet,
   ProjectDetailHelmets,
-
   PrismHelloworld,
   PrismBash,
   // CodeHighlight,
@@ -80,4 +74,4 @@ export {
   // HighlightBash,
 
   FigureContainer
-}
+};

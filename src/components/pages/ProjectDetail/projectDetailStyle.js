@@ -1,20 +1,19 @@
-import theme from '../../../style/theme'
+import theme from "../../../style/theme";
 
 var Container = {
   color: theme.THEME_COLOR,
-  minHeight: '100vh'
-}
+  minHeight: "100vh"
+};
 
-
-var ProjectHead ={
+var ProjectHead = {
   display: "flex",
   flexDirection: "row",
-  justifyContent: "spaceBetween",
-}
+  justifyContent: "spaceBetween"
+};
 
 var a = {
-  color: "rgba(52, 73, 94, 1.0)",
-}
+  color: "rgba(52, 73, 94, 1.0)"
+};
 
 var ProjectDescription = {
   marginTop: "4em",
@@ -22,24 +21,23 @@ var ProjectDescription = {
   marginLeft: "auto",
   marginRight: "auto",
   width: "75%",
-  textAlign: "left",
-}
+  textAlign: "left"
+};
 var DescBody = {
   paddingTop: "1.1em",
-  paddingBottom: "1.3em",
-}
+  paddingBottom: "1.3em"
+};
 var DescTopic = {
   fontWeight: "700",
   paddingTop: "2em",
   paddingBottom: "0.5em",
 
-  textDecoration: "underline",
-}
+  textDecoration: "underline"
+};
 
 var ul = {
-  listStyle: "none",
-}
-
+  listStyle: "none"
+};
 
 export default {
   Container,
@@ -49,4 +47,4 @@ export default {
   DescTopic,
   ul,
   ProjectHead
-}
+};
