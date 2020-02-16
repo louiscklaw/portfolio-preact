@@ -27,12 +27,13 @@ var nav_bottom = {
 };
 
 var credits_link_container = {
-  paddingTop: "30px"
+  paddingTop: "1px",
+  paddingBottom: "20px"
 };
 
 var credits_link = {
   textDecoration: "underline",
-  marginTop: "20px",
+  marginTop: "1px",
   fontWeight: "bold",
   color: theme.THEME_COLOR_LIGHTEST
 };
