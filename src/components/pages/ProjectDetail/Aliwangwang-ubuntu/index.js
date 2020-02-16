@@ -22,9 +22,19 @@ import AliWangwangThumbnail from './thumbnail.png'
 class AliWangwangContent extends Component{
   render(){
     return(
-      <p>
-        aliwangwang helloworld
-      </p>
+      <>
+        <p>
+          aliwangwang helloworld
+        </p>
+        <h3>
+          References:
+        </h3>
+        <ul>
+          <li>
+            https://github.com/wszqkzqk/deepin-wine-ubuntu
+          </li>
+        </ul>
+      </>
     )
   }
 }
