@@ -22,7 +22,9 @@
     "eslint": "^6.0.1",
     "eslint-config-synacor": "^3.0.4",
     "if-env": "^1.0.0",
-    "preact-cli": "^3.0.0-rc.6"
+    "preact-cli": "^3.0.0-rc.6",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
   },
   "dependencies": {
     "@commitlint/cli": "^8.3.5",
@@ -48,7 +50,9 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -e $GIT_PARAMS"
+      "commit-msg": "commitlint -e $GIT_PARAMS",
+      "pre-commit": "pretty-quick --staged",
+      "pre-push": "yarn build"
     }
   }
 }
