@@ -1,6 +1,6 @@
-import projectDetailStyle from '../projectdetail.scss';
+import projectDetailStyle from "../projectdetail.scss";
 
-import {Component} from 'preact';
+import { Component } from "preact";
 
 import {
   ProjectTitle,
@@ -13,15 +13,15 @@ import {
   HeaderFigure,
   Spare,
   ProjectDetailHelmets
-} from '../../../../components/index'
+} from "../../../../components/index";
 
-import head_pic from './IMG_20190325_115322.jpg';
+import head_pic from "./IMG_20190325_115322.jpg";
 
-import VoronTryoutThumbnail from './thumbnail.png';
+import VoronTryoutThumbnail from "./thumbnail.png";
 
-class VoronTryoutContent extends Component{
-  render(){
-    return(
+class VoronTryoutContent extends Component {
+  render() {
+    return (
       <div className={projectDetailStyle.Container}>
         <ProjectDetailHelmets
           title="VORON 3D printer"
@@ -30,47 +30,28 @@ class VoronTryoutContent extends Component{
         />
 
         <div className={projectDetailStyle.ProjectDescription}>
-
           <div className={projectDetailStyle.ProjectHead}>
             <BackToProjects />
-            <ProjectTitle
-              project_title="VORON 3D printer"
-            />
+            <ProjectTitle project_title="VORON 3D printer" />
             <Spare />
           </div>
 
-          <HeaderFigure
-            img_src={head_pic}
-            caption="voron printer frame"
-          />
+          <HeaderFigure img_src={head_pic} caption="voron printer frame" />
 
           <div className={projectDetailStyle.DescBody}>
-            <h3 className={projectDetailStyle.DescTopic}>
-              Purpose:
-            </h3>
-            <p>
-              to build a opensource 3d printer named voron
-            </p>
-
+            <h3 className={projectDetailStyle.DescTopic}>Purpose:</h3>
+            <p>to build a opensource 3d printer named voron</p>
           </div>
 
-          <h3 className={projectDetailStyle.DescTopic}>
-            Demo:
-          </h3>
-          <YoutubeContainer vid="YNCB23V38x0" video_title="passing example"/>
+          <h3 className={projectDetailStyle.DescTopic}>Demo:</h3>
+          <YoutubeContainer vid="YNCB23V38x0" video_title="passing example" />
 
-          <h3 className={projectDetailStyle.DescTopic}>
-            ref/repo:
-          </h3>
+          <h3 className={projectDetailStyle.DescTopic}>ref/repo:</h3>
           <NewWindowLink link="https://www.reddit.com/r/voroncorexy" />
-
         </div>
       </div>
-    )
+    );
   }
 }
 
-export {
-  VoronTryoutContent,
-  VoronTryoutThumbnail
-}
+export { VoronTryoutContent, VoronTryoutThumbnail };

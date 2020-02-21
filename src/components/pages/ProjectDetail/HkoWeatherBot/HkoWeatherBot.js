@@ -1,4 +1,4 @@
-import {Component} from 'preact';
+import { Component } from "preact";
 
 import {
   ProjectTitle,
@@ -8,26 +8,19 @@ import {
   MetaTitle,
   GithubLink,
   MetaProjectDetail
-} from '../../../../components/index'
+} from "../../../../components/index";
 
 // import './ProjectDescription.css';
 // import './TradingviewDashboard.css';
 
 // import head_pic from './appium-behave-notes.png'
 
-import HKOWeatherBotThumbnail from './thumbnail.png';
+import HKOWeatherBotThumbnail from "./thumbnail.png";
 
-class HKOWeatherBotContent extends Component{
-  render(){
-    return(
-      <div>
-        HKOWeatherBot behave notes
-      </div>
-    )
+class HKOWeatherBotContent extends Component {
+  render() {
+    return <div>HKOWeatherBot behave notes</div>;
   }
 }
 
-export {
-  HKOWeatherBotContent,
-  HKOWeatherBotThumbnail
-}
+export { HKOWeatherBotContent, HKOWeatherBotThumbnail };

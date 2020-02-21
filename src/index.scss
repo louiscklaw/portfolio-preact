@@ -1,22 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 .back_to_proj_home {
   display: block;
   width: 100%;
-  padding-top: 50px
+  padding-top: 50px;
 }
 
 .post-body {
-  padding: 50px
+  padding: 50px;
 }
 
 .lang_link i {
-  padding: 2px
+  padding: 2px;
 }
 
 .lang_link a {
-  padding: 3px
+  padding: 3px;
 }
 
 .video-container {
@@ -24,7 +23,7 @@
   padding-bottom: 56.25%;
   padding-top: 30px;
   height: 0;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .video-container embed,
@@ -34,24 +33,24 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
 .video-list {
   width: 100%;
   display: flex;
   flex-flow: row;
-  justify-content: center
+  justify-content: center;
 }
 
 .gist_link {
-  font-size: .8em
+  font-size: 0.8em;
 }
 
 button {
   outline: 0;
   background: 0 0;
-  border: 0
+  border: 0;
 }
 
 p {
@@ -70,5 +69,5 @@ a {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }

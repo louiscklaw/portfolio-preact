@@ -1,18 +1,30 @@
-import style from './NewWindowLink.scss'
+import { Component } from "preact";
 
-import { Component } from 'preact';
+import style from "./NewWindowLinkStyle.js";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import style from './NewWindowLink.scss'
 
-export default ({ link, text }) => {
-  return (
-    <div className={style.NewWindowLink}>
-      <a href={link} target="_blank" className={style.WindowLink} rel="noopener noreferrer" >
-        {text || link}
-        <div className={style.FaNewWinIcon}>
-          <FontAwesomeIcon icon={['fas', 'external-link-alt' ]}/>
-        </div>
-      </a>
-    </div>
-  )
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+export default class NewWindowLink extends Component {
+  render() {
+    console.log(this.props);
+    console.log("findme");
+    var { link, text } = this.props;
+    return (
+      <div>
+        <a
+          href={link}
+          target="_blank"
+          style={{ ...style.WindowLink, ...this.props.link_style }}
+          rel="noopener noreferrer"
+        >
+          {text || link}
+          <div style={style.FaNewWinIcon}>
+            <FontAwesomeIcon icon={["fas", "external-link-alt"]} />
+          </div>
+        </a>
+      </div>
+    );
+  }
 }

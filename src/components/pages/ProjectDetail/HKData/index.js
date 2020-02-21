@@ -1,4 +1,4 @@
-import {Component} from 'preact';
+import { Component } from "preact";
 
 import {
   ProjectTitle,
@@ -8,26 +8,19 @@ import {
   MetaTitle,
   GithubLink,
   MetaProjectDetail
-} from '../../../../components/index'
+} from "../../../../components/index";
 
 // import './ProjectDescription.css';
 // import './TradingviewDashboard.css';
 
 // import head_pic from './HKData-behave-notes.png'
 
-import HKDataThumbnail from './thumbnail.png';
+import HKDataThumbnail from "./thumbnail.png";
 
-class HKDataContent extends Component{
-  render(){
-    return(
-      <div>
-        HKData behave notes
-      </div>
-    )
+class HKDataContent extends Component {
+  render() {
+    return <div>HKData behave notes</div>;
   }
 }
 
-export {
-  HKDataContent,
-  HKDataThumbnail
-}
+export { HKDataContent, HKDataThumbnail };

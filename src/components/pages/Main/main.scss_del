@@ -1,0 +1,70 @@
+@import '../../../var.scss';
+
+@media only screen and (min-width: 320px) {
+  body {
+    // color: lightblue;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 500px) {
+
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  body {
+    // color: cyan;
+  }
+
+  .content {
+    /* background-color: red; */
+
+    position: relative;
+    left: 20vw;
+
+    width: calc(100vw - 20vw);
+    background-color: #ecf0f1;
+  }
+
+
+  .App {
+    display: flex;
+    flex-direction: row;
+
+
+    width: 100%;
+  }
+
+  #root {
+    background-color: #ecf0f1;
+
+    display: blcok;
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+
+  }
+
+  .helloworld {
+    background-color: red;
+  }
+}

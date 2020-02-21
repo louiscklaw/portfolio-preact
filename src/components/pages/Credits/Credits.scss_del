@@ -1,0 +1,39 @@
+.page_credit{
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+
+  padding-left: 10em;
+  padding-right: 10em;
+  padding-top: 5em;
+  padding-bottom: 10em;
+
+  min-height: 100vh;
+
+  .page_header{
+    font-size: 2em;
+    padding-bottom: 1.5em;
+
+    width:100%;
+  }
+
+  .paragraph_body{
+    section{
+      padding-top: 1em;
+      padding-bottom: 1em;
+
+      h4 {
+        padding-top: 1em;
+        padding-bottom: 1em;
+      }
+
+      ul{
+        list-style: none;
+      }
+    }
+  }
+}
+
+.helloworld{
+  background-color:gold;
+}

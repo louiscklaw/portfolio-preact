@@ -1,8 +1,5 @@
-import {Component} from 'preact'
+import { Component } from "preact";
 
 export default () => {
-  return(
-    <div>
-    </div>
-  )
-}
+  return <div></div>;
+};
