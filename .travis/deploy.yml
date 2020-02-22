@@ -1,21 +1,26 @@
-before_deploy:
-  - npm install -g firebase-tools firebase-functions firebase-admin
-  - node ./scripts/update_build_info.js
-  - yarn build
+jobs:
+  include:
+    - stage: Deploy
+      name: "Deploy to firebase"
 
-deploy:
-  # production deploy
-  - provider: script
-    cleanup: false
-    script: firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive
-    on:
-      all_branches: true
-      condition: $TRAVIS_BRANCH = "master"
+      before_deploy:
+        - npm install -g firebase-tools firebase-functions firebase-admin
+        - node ./scripts/update_build_info.js
+        - yarn build
 
-  # staging deploy
-  - provider: script
-    cleanup: false
-    script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
-    on:
-      all_branches: true
-      condition: $TRAVIS_BRANCH = "develop"
+      deploy:
+        # production deploy
+        - provider: script
+          cleanup: false
+          script: firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive
+          on:
+            all_branches: true
+            condition: $TRAVIS_BRANCH = "master"
+
+        # staging deploy
+        - provider: script
+          cleanup: false
+          script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
+          on:
+            all_branches: true
+            condition: $TRAVIS_BRANCH = "develop"
