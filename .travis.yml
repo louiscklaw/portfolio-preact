@@ -15,7 +15,7 @@ import:
   - .travis/env.yml
   - .travis/build.yml
   - .travis/merge.yml
-  # - .travis/deploy.yml
+  - .travis/deploy.yml
 # after_success:
 #   - cd _util
 #   - id
