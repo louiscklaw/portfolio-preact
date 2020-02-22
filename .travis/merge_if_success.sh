@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 pwd
-cd _util
+cd .travis
 
 id
 sudo apt update
