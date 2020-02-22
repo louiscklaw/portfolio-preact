@@ -11,14 +11,14 @@ jobs:
       deploy:
         # production deploy
         - provider: script
-          cleanup: false
+          skip_cleanup: true
           script: firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive
           on:
             all_branches: true
             condition: $TRAVIS_BRANCH = "master"
         # staging deploy
         - provider: script
-          cleanup: false
+          skip_cleanup: true
           script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
           on:
             all_branches: true
