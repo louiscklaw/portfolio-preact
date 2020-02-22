@@ -1,3 +1,5 @@
+import { h } from "preact";
+
 import {
   TradContent,
   TradThumbnail
@@ -68,7 +70,10 @@ import {
 
 import { AliWangwangThumbnail, AliWangwangContent } from "./Aliwangwang-ubuntu";
 
-import { h } from "preact";
+import {
+  DriverTrainingThumbnail,
+  DriverTrainingContent
+} from "./DriverTraining";
 
 let project_list = {
   tradingview_dashboard: ["tradingview dashboard", TradContent, TradThumbnail],
@@ -129,6 +134,11 @@ let project_list = {
     "AliWangwangUbuntu",
     AliWangwangContent,
     AliWangwangThumbnail
+  ],
+  DriverTraining: [
+    "DriverTraining",
+    DriverTrainingContent,
+    DriverTrainingThumbnail
   ]
 };
 
