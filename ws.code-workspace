@@ -20,6 +20,7 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "portfolio-preact"
+		"liveServer.settings.multiRootWorkspaceName": "portfolio-preact",
+		"git.ignoreLimitWarning": true
 	}
 }
