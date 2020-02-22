@@ -8,15 +8,14 @@ jobs:
         - node ./scripts/update_build_info.js
         - yarn build
         - ls -l build
-      # deploy:
-      #   # production deploy
-      #   - provider: script
-      #     cleanup: false
-      #     script: firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive
-      #     on:
-      #       all_branches: true
-      #       condition: $TRAVIS_BRANCH = "master"
-
+      deploy:
+        # production deploy
+        - provider: script
+          cleanup: false
+          script: firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive
+          on:
+            all_branches: true
+            condition: $TRAVIS_BRANCH = "master"
       #   # staging deploy
       #   - provider: script
       #     cleanup: false
