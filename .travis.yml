@@ -32,7 +32,7 @@ after_success:
 deploy:
   # production deploy
   - provider: script
-    cleanup: true
+    cleanup: false
     script: firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive
     on:
       all_branches: true
@@ -40,7 +40,7 @@ deploy:
 
   # staging deploy
   - provider: script
-    cleanup: true
+    cleanup: false
     script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
     on:
       all_branches: true
