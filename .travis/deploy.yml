@@ -16,10 +16,10 @@ jobs:
           on:
             all_branches: true
             condition: $TRAVIS_BRANCH = "master"
-      #   # staging deploy
-      #   - provider: script
-      #     cleanup: false
-      #     script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
-      #     on:
-      #       all_branches: true
-      #       condition: $TRAVIS_BRANCH = "develop"
+        # staging deploy
+        - provider: script
+          cleanup: false
+          script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
+          on:
+            all_branches: true
+            condition: $TRAVIS_BRANCH = "develop"
