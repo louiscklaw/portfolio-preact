@@ -26,7 +26,12 @@ import DriverTrainingThumbnail from "./thumbnail.png";
 
 class DriverTrainingContent extends Component {
   render() {
-    return <div>DriverTraining Page</div>;
+    return (
+      <div>
+        DriverTraining Page
+        https://www.facebook.com/246219535800679/videos/501986076890689/
+      </div>
+    );
   }
 }
 
