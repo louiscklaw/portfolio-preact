@@ -12,3 +12,7 @@ https://louiscklaw.github.io
 ### develop
 
 ![Travis (.org) branch](https://img.shields.io/travis/louiscklaw/portfolio-preact/develop)
+
+### travis build
+
+http://travis-ci.com/louiscklaw/portfolio-preact
