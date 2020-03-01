@@ -15,8 +15,8 @@ module.exports = {
       "always",
       [
         "build",
-        "chore",
         "ci",
+        "chore",
         "docs",
         "feat",
         "fix",
@@ -25,7 +25,7 @@ module.exports = {
         "revert",
         "style",
         "test",
-        "content"
+        "contents"
       ]
     ]
   }
