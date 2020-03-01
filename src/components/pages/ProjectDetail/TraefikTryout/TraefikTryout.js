@@ -21,6 +21,7 @@ import {
 import head_pic from "./thumbnail.png";
 
 import TraefikTryoutThumbnail from "./thumbnail.png";
+import TraefikBlockDiagram from "./traefik_block_diagram.svg";
 
 class TraefikTryoutContent extends Component {
   render() {
@@ -39,17 +40,23 @@ class TraefikTryoutContent extends Component {
             <Spare />
           </div>
 
-          <HeaderFigure img_src={head_pic} caption="traefik api router" />
+          <HeaderFigure
+            img_src={TraefikBlockDiagram}
+            caption="traefik api router"
+            figure_style={{ maxWidth: "600px" }}
+          />
 
           <div className={projectDetailStyle.DescBody}>
             <h3 className={projectDetailStyle.DescTopic}>Purpose:</h3>
-            <p>This is a page to monitor multiple channels in youtube.</p>
-
-            <h3 className={projectDetailStyle.DescTopic}>Demo:</h3>
-            <NewWindowLink link="https://louiscklaw.github.io/youtube-split-view-tryout/" />
+            <p>My personal tryout for traefik API router.</p>
 
             <h3 className={projectDetailStyle.DescTopic}>ref/repo:</h3>
-            <NewWindowLink link="https://github.com/louiscklaw/youtube-split-view-tryout" />
+
+            <ul>
+              <li>
+                <GithubLink link="https://github.com/louiscklaw/traefik-tryout" />
+              </li>
+            </ul>
           </div>
         </div>
       </div>
