@@ -25,6 +25,7 @@ import head_pic from "./screen_capture.jpeg";
 import PortfolioThumbnail from "./thumbnail.png";
 
 import build_flow from "./build_flow.svg";
+import git_flow from "./my_git_flow.svg";
 
 class PortfolioContent extends Component {
   render() {
@@ -55,12 +56,21 @@ class PortfolioContent extends Component {
             <p>This website contains my project information.</p>
           </div>
           <div style={projectDetailStyle.DescBody}>
+            <h3 style={projectDetailStyle.DescTopic}>Git flow:</h3>
+            <FigureContainer
+              img_src={git_flow}
+              caption="This is my git flow for my projects"
+            />
+          </div>
+
+          <div style={projectDetailStyle.DescBody}>
             <h3 style={projectDetailStyle.DescTopic}>Build flow:</h3>
             <FigureContainer
               img_src={build_flow}
               caption="current build flow of my portfolio"
             />
           </div>
+
           <div style={projectDetailStyle.DescBody}>
             <h3 style={projectDetailStyle.DescTopic}>Some information:</h3>
             <ul style={projectDetailStyle.ul}>
