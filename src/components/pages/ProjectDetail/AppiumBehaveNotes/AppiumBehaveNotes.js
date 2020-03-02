@@ -111,13 +111,13 @@ class AppiumContent extends Component {
                 <td>Passing example</td>
               </tr>
               <tr>
-                <td>
+                <td style={{ width: "50%" }}>
                   <YoutubeContainer
                     vid="uR8VLSwvf9Q"
                     video_title="failing example"
                   />
                 </td>
-                <td>
+                <td style={{ width: "50%" }}>
                   <YoutubeContainer
                     vid="Ce-v1zTHhwU"
                     video_title="passing example"
