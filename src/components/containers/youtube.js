@@ -1,24 +1,53 @@
 import { Component } from "preact";
 
-import style from "./YoutubeContainer.scss";
+// import style from "./YoutubeContainer.scss";
+
+const container_style = {
+  position: "relative",
+  paddingBottom: "56.25%",
+  paddingTop: "30px",
+  height: "0",
+  overflow: "hidden",
+  boxShadow: "0px 0px 5px 0px rgba(64, 64, 64, 0.5)",
+  maxWidth: "500px"
+};
+
+const container_title_style = {
+  color: "black",
+  fontWeight: "700",
+  textDecoration: "underline"
+};
+
+const videoWrapper = {
+  position: "relative",
+  paddingBottom: "56.25%",
+  paddingTop: "25px",
+  height: "0"
+};
+
+const videoWrapper_iframe = {
+  position: "absolute",
+  top: "0",
+  left: "0",
+  width: "100%",
+  height: "100%"
+};
 
 class YoutubeContainer extends Component {
   state = {};
   render() {
     return (
-      <div className={style.youtubeVideoContainer}>
-        <div className={style.videoContainer}>
+      <div style={{ maxWidth: "500px" }}>
+        <div style={videoWrapper}>
           <iframe
-            title="youtube-iframe"
-            width="853"
-            height="480"
+            style={videoWrapper_iframe}
+            width="560"
+            height="349"
             src={"https://www.youtube.com/embed/" + this.props.vid}
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen="allowfullscreen"
-          />
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
-        <div className={style.videoTitle}>{this.props.video_title}</div>
       </div>
     );
   }

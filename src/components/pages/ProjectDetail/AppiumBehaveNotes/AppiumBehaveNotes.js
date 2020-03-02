@@ -105,28 +105,44 @@ class AppiumContent extends Component {
             <PrismBash source_code={source_mac_install} />
 
             <h3 className={projectDetailStyle.DescTopic}>demo:</h3>
-            <ul>
-              <li>
-                passing example
-                <YoutubeContainer
-                  vid="Ce-v1zTHhwU"
-                  video_title="passing example"
-                />
-              </li>
-              <li>
-                failing example
-                <YoutubeContainer
-                  vid="uR8VLSwvf9Q"
-                  video_title="failing example"
-                />
-              </li>
-            </ul>
+            <table style={{ width: "100%" }}>
+              <tr>
+                <td>Failing example</td>
+                <td>Passing example</td>
+              </tr>
+              <tr>
+                <td>
+                  <YoutubeContainer
+                    vid="uR8VLSwvf9Q"
+                    video_title="failing example"
+                  />
+                </td>
+                <td>
+                  <YoutubeContainer
+                    vid="Ce-v1zTHhwU"
+                    video_title="passing example"
+                  />
+                </td>
+              </tr>
+            </table>
 
             <h3 className={projectDetailStyle.DescTopic}>system structure:</h3>
             <img src={system_structure_svg} />
 
             <h3 className={projectDetailStyle.DescTopic}>Behave grammer:</h3>
             <img src={behave_grammer_svg} />
+
+            <h3 className={projectDetailStyle.DescTopic}>
+              Repoistories/References:
+            </h3>
+            <ul>
+              <li>
+                <NewWindowLink
+                  link="https://travis-ci.com/louiscklaw/appium-playlist"
+                  text="Travis build link"
+                />
+              </li>
+            </ul>
           </div>
         </div>
       </div>
