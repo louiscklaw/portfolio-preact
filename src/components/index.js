@@ -17,6 +17,7 @@ import TopBar from "./Menu/TopBar";
 
 // ProjectDetail
 import HeaderFigure from "./HeaderFigure/index";
+import ProjectDetailTitle from "./ProjectDetailTitle";
 
 // import {
 //   CodeHighlight,
@@ -54,6 +55,7 @@ export {
   Home,
   Spare,
   HeaderFigure,
+  ProjectDetailTitle,
   TopBar,
   // pages
   About,

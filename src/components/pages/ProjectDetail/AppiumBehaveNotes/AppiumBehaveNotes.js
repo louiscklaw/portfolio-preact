@@ -14,7 +14,8 @@ import {
   Spare,
   ProjectDetailHelmets,
   PrismHelloworld,
-  PrismBash
+  PrismBash,
+  ProjectDetailTitle
 } from "../../../../components/index";
 
 import head_pic from "./appium-behave.png";
@@ -127,6 +128,13 @@ class AppiumContent extends Component {
 
             <h3 className={projectDetailStyle.DescTopic}>Behave grammer:</h3>
             <img src={behave_grammer_svg} />
+
+            <ProjectDetailTitle text="References:" />
+            <ul>
+              <li>
+                <NewWindowLink link="https://desertbot.io/blog/headless-raspberry-pi-3-bplus-ssh-wifi-setup" />
+              </li>
+            </ul>
           </div>
         </div>
       </div>
