@@ -46,7 +46,9 @@ class VoronTryoutContent extends Component {
           <h3 className={projectDetailStyle.DescTopic}>Demo:</h3>
           <YoutubeContainer vid="YNCB23V38x0" video_title="passing example" />
 
-          <h3 className={projectDetailStyle.DescTopic}>ref/repo:</h3>
+          <h3 className={projectDetailStyle.DescTopic}>
+            References / Repositories:
+          </h3>
           <NewWindowLink link="https://www.reddit.com/r/voroncorexy" />
         </div>
       </div>

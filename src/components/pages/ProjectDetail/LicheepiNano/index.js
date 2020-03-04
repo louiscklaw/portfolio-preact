@@ -43,7 +43,9 @@ class LicheepiNanoContent extends Component {
               nano
             </p>
 
-            <h3 className={projectDetailStyle.DescTopic}>ref/repo:</h3>
+            <h3 className={projectDetailStyle.DescTopic}>
+              References / Repositories:
+            </h3>
             <NewWindowLink link="https://github.com:louiscklaw/lichee-nano-one-key-package" />
           </div>
         </div>
