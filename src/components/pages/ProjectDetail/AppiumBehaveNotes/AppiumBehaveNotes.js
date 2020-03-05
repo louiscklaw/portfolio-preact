@@ -134,6 +134,18 @@ class AppiumContent extends Component {
               <li>
                 <NewWindowLink link="https://desertbot.io/blog/headless-raspberry-pi-3-bplus-ssh-wifi-setup" />
               </li>
+              <li>
+                <NewWindowLink link="https://phoenixnap.com/kb/docker-on-raspberry-pi" />
+              </li>
+              <li>
+                <NewWindowLink link="https://www.raspberrypi.org/documentation/usage/gpio/" />
+              </li>
+              <li>
+                <GithubLink link="https://louiscklaw.github.io/opendps-tryout/" />
+              </li>
+              <li>
+                <GithubLink link="https://github.com/louiscklaw/opendps-tryout" />
+              </li>
             </ul>
           </div>
         </div>
