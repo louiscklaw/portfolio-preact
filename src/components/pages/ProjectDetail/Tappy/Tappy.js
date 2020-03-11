@@ -48,7 +48,9 @@ class TappyContent extends Component {
               try to make a sample of non-intrusive mobile application testing.
             </p>
 
-            <h3 className={projectDetailStyle.DescTopic}>References:</h3>
+            <h3 className={projectDetailStyle.DescTopic}>
+              References / Repositories:
+            </h3>
             <a href="https://github.com/hugs/tapsterbot">tapsterbot</a>
           </div>
         </div>

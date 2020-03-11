@@ -24,7 +24,7 @@ class AliWangwangContent extends Component {
     return (
       <>
         <p>aliwangwang helloworld</p>
-        <h3>References:</h3>
+        <h3>References / Repositories:</h3>
         <ul>
           <li>https://github.com/wszqkzqk/deepin-wine-ubuntu</li>
         </ul>

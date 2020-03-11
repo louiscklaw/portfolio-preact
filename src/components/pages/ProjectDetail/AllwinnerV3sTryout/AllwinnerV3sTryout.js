@@ -80,7 +80,9 @@ class AllwinnerContent extends Component {
               </li>
             </ul>
 
-            <h3 className={projectDetailStyle.DescTopic}>References:</h3>
+            <h3 className={projectDetailStyle.DescTopic}>
+              References / Repositories:
+            </h3>
             <ul>
               <li>
                 <NewWindowLink link="https://github.com/louiscklaw/allwinner-v3s-tryout" />
