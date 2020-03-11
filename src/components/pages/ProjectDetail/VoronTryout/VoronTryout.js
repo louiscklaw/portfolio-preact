@@ -48,6 +48,13 @@ class VoronTryoutContent extends Component {
 
           <h3 className={projectDetailStyle.DescTopic}>ref/repo:</h3>
           <NewWindowLink link="https://www.reddit.com/r/voroncorexy" />
+
+          <h3 className={projectDetailStyle.DescTopic}>Parts library:</h3>
+          <ul>
+            <li>
+              <NewWindowLink link="https://www.traceparts.com/" />
+            </li>
+          </ul>
         </div>
       </div>
     );
