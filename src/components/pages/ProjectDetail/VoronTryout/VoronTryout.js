@@ -49,7 +49,14 @@ class VoronTryoutContent extends Component {
           <h3 className={projectDetailStyle.DescTopic}>
             References / Repositories:
           </h3>
-          <NewWindowLink link="https://www.reddit.com/r/voroncorexy" />
+          <ul>
+            <li>
+              <NewWindowLink link="https://www.reddit.com/r/voroncorexy" />
+            </li>
+            <li>
+              <GithubLink link="https://travis-ci.com/github/louiscklaw/Slic3r-settings" />
+            </li>
+          </ul>
         </div>
       </div>
     );
