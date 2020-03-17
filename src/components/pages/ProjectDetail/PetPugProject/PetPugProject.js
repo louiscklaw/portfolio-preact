@@ -55,6 +55,16 @@ class PetPugProjectContent extends Component {
               </li>
             </ul>
           </div>
+
+          <div className={projectDetailStyle.DescBody}>
+            <h3 className={projectDetailStyle.DescTopic}>Freecad projects:</h3>
+
+            <ul>
+              <li>
+                <GithubLink link="https://github.com/louiscklaw/freecad-playlist" />
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     );
