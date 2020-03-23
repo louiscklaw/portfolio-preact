@@ -54,6 +54,9 @@ class VoronTryoutContent extends Component {
               <NewWindowLink link="https://www.reddit.com/r/voroncorexy" />
             </li>
             <li>
+              <NewWindowLink link="https://github.com/KevinOConnor/klipper/blob/master/docs/G-Codes.md" />
+            </li>
+            <li>
               <GithubLink link="https://travis-ci.com/github/louiscklaw/Slic3r-settings" />
             </li>
           </ul>
