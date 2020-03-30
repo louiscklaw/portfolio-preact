@@ -49,6 +49,7 @@ class VoronTryoutContent extends Component {
           <h3 className={projectDetailStyle.DescTopic}>
             References / Repositories:
           </h3>
+
           <ul>
             <li>
               <NewWindowLink link="https://www.reddit.com/r/voroncorexy" />
@@ -58,6 +59,16 @@ class VoronTryoutContent extends Component {
             </li>
             <li>
               <GithubLink link="https://travis-ci.com/github/louiscklaw/Slic3r-settings" />
+            </li>
+            <li>
+              <GithubLink link="https://github.com/louiscklaw/3d-printer-head-pcb" />
+            </li>
+          </ul>
+
+          <h3 className={projectDetailStyle.DescTopic}>Parts library:</h3>
+          <ul>
+            <li>
+              <NewWindowLink link="https://www.traceparts.com/" />
             </li>
           </ul>
         </div>

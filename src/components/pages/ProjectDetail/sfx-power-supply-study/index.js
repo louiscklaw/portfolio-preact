@@ -50,9 +50,14 @@ class SFXPowerSupplyContent extends Component {
 
           <div className={projectDetailStyle.DescBody}>
             <h3 className={projectDetailStyle.DescTopic}>Repos:</h3>
-            <p>
-              <GithubLink link="https://github.com/louiscklaw/sfx-power-supply-playlist.git" />
-            </p>
+            <ul>
+              <li>
+                <GithubLink link="https://github.com/louiscklaw/sfx-power-supply-playlist.git" />
+              </li>
+              <li>
+                <GithubLink link="https://github.com/louiscklaw/lichee-nano-one-key-package" />
+              </li>
+            </ul>
           </div>
         </div>
       </div>
