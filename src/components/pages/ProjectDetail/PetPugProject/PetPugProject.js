@@ -14,7 +14,8 @@ import {
   Spare,
   ProjectDetailHelmets,
   PrismHelloworld,
-  PrismBash
+  PrismBash,
+  GithubLinkList
 } from "../../../../components/index";
 
 // import './ProjectDescription.css';
@@ -47,13 +48,12 @@ class PetPugProjectContent extends Component {
             <h3 className={projectDetailStyle.DescTopic}>Linux toolbox:</h3>
             <p>ack, entr, inotify-tools</p>
 
-            <h3 className={projectDetailStyle.DescTopic}>References:</h3>
-
-            <ul>
-              <li>
-                <GithubLink link="https://github.com/jenil/bulmaswatch" />
-              </li>
-            </ul>
+            <GithubLinkList
+              github_links={[
+                "https://github.com/jenil/bulmaswatch",
+                "https://github.com/louiscklaw/travis-playlist"
+              ]}
+            />
           </div>
         </div>
       </div>
