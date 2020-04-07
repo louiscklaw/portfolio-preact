@@ -3,4 +3,8 @@ jobs:
     - stage: Build
       name: "Build preact app"
       script:
-        - yarn build
+        - yarn build | tee yarn_build.log
+
+after_failure:
+  script:
+    - cat yarn_build.log
