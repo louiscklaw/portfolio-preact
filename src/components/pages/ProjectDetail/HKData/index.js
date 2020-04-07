@@ -7,7 +7,7 @@ import {
   YoutubeContainer,
   MetaTitle,
   GithubLink,
-  MetaProjectDetail
+  MetaProjectDetail,
 } from "../../../../components/index";
 
 // import './ProjectDescription.css';
@@ -19,7 +19,14 @@ import HKDataThumbnail from "./thumbnail.png";
 
 class HKDataContent extends Component {
   render() {
-    return <div>HKData behave notes</div>;
+    return (
+      <div>
+        HKData behave notes
+        <div>
+          working directory /home/logic/_workspace/vote-registration-statistic
+        </div>
+      </div>
+    );
   }
 }
 
