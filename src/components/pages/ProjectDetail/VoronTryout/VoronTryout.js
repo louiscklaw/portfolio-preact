@@ -12,7 +12,8 @@ import {
   MetaProjectDetail,
   HeaderFigure,
   Spare,
-  ProjectDetailHelmets
+  ProjectDetailHelmets,
+  GithubLinkList,
 } from "../../../../components/index";
 
 import head_pic from "./IMG_20190325_115322.jpg";
@@ -46,24 +47,16 @@ class VoronTryoutContent extends Component {
           <h3 className={projectDetailStyle.DescTopic}>Demo:</h3>
           <YoutubeContainer vid="YNCB23V38x0" video_title="passing example" />
 
-          <h3 className={projectDetailStyle.DescTopic}>
-            References / Repositories:
-          </h3>
-
-          <ul>
-            <li>
-              <NewWindowLink link="https://www.reddit.com/r/voroncorexy" />
-            </li>
-            <li>
-              <NewWindowLink link="https://github.com/KevinOConnor/klipper/blob/master/docs/G-Codes.md" />
-            </li>
-            <li>
-              <GithubLink link="https://travis-ci.com/github/louiscklaw/Slic3r-settings" />
-            </li>
-            <li>
-              <GithubLink link="https://github.com/louiscklaw/3d-printer-head-pcb" />
-            </li>
-          </ul>
+          <div className={projectDetailStyle.DescBody}>
+            <GithubLinkList
+              github_links={[
+                "https://www.reddit.com/r/voroncorexy",
+                "https://github.com/KevinOConnor/klipper/blob/master/docs/G-Codes.md",
+                "https://travis-ci.com/github/louiscklaw/Slic3r-settings",
+                "https://github.com/louiscklaw/3d-printer-head-pcb",
+              ]}
+            />
+          </div>
 
           <h3 className={projectDetailStyle.DescTopic}>Parts library:</h3>
           <ul>
