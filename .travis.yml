@@ -14,8 +14,12 @@ cache: yarn
 import:
   - .travis/env.yml
   - .travis/build.yml
-  - .travis/merge.yml
+  # - .travis/merge.yml
   - .travis/deploy.yml
+
+after_success:
+  - echo $TRAVIS_BUILD_STAGE_NAME
+  - if [ "$TRAVIS_BUILD_STAGE_NAME" = "Merge" ]; then ./.travis/merge_if_success.sh; fi
 # after_success:
 #   - cd _util
 #   - id
