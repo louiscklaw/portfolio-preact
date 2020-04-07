@@ -11,15 +11,48 @@ cache: yarn
 # install:
 #   - yarn build
 
+jobs:
+  include:
+    - stage: Build
+      name: "Build preact app"
+      script:
+        - yarn build | tee yarn_build.log
+
+    - stage: "Deploy"
+      name: "Deploy to firebase"
+
+      script:
+        - npm install -g firebase-tools firebase-functions firebase-admin
+        - node ./scripts/update_build_info.js
+        - yarn build
+        - ls -l build
+      deploy:
+        # production deploy
+        - provider: script
+          cleanup: false
+          script: firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive
+          on:
+            all_branches: true
+            condition: $TRAVIS_BRANCH = "master"
+        # staging deploy
+        - provider: script
+          cleanup: false
+          script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
+          on:
+            all_branches: true
+            condition: $TRAVIS_BRANCH = "develop"
+
 import:
   - .travis/env.yml
-  - .travis/build.yml
+  # - .travis/build.yml
   # - .travis/merge.yml
-  - .travis/deploy.yml
+  # - .travis/deploy.yml
 
 after_success:
-  - echo $TRAVIS_BUILD_STAGE_NAME
-  - if [ "$TRAVIS_BUILD_STAGE_NAME" = "Merge" ]; then ./.travis/merge_if_success.sh; fi
+  - ./.travis/merge_if_success.sh
+
+after_failure:
+  - cat yarn_build.log
 # after_success:
 #   - cd _util
 #   - id
