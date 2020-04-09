@@ -55,7 +55,7 @@ after_success:
 after_failure:
   - cat yarn_build.log
 
-  env:
+env:
   global:
     - FIREBASE_PROJECT: preactjs-projects
     # SLACK_TOKEN
