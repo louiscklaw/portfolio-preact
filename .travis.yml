@@ -27,7 +27,7 @@ script:
   - exit 1
 
 after_failure:
-  if: branch = master
+  if: branch = self-test/test-failed-message
     - mkdir -p .travis
     - cd .travis
     - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-broadcast/broadcast.sh
