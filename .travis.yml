@@ -11,6 +11,11 @@ cache: yarn
 # install:
 #   - yarn build
 
+stages:
+  - build
+  - merge
+  - deploy
+
 import:
   - .travis/env.yml
   - .travis/build.yml
