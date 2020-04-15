@@ -24,7 +24,7 @@ import:
 #   - .travis/merge.yml
 
 script:
-  - exit 1
+  - bash -c 'if [[ `git status --porcelain` ]]; then >&2 echo "Fail"; exit 1; fi'
 
 after_failure:
   - mkdir -p .travis
