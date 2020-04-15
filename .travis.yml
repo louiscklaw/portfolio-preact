@@ -27,11 +27,10 @@ script:
   - exit 1
 
 after_failure:
-  if: branch = self-test/test-failed-message
-    - mkdir -p .travis
-    - cd .travis
-    - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-broadcast/broadcast.sh
-    - bash broadcast.sh need_help "build failed when building portfolio-preact on master branch"
+  - mkdir -p .travis
+  - cd .travis
+  - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-broadcast/broadcast.sh
+  - bash broadcast.sh need_help "build failed when building portfolio-preact on master branch"
 # after_success:
 #   - cd _util
 #   - id
