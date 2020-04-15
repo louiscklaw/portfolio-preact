@@ -1,6 +1,6 @@
 jobs:
   include:
-    - stage: Merge
+    - stage: merge
       name: "Merge to branch"
       script:
         - echo "dummy job for merging"

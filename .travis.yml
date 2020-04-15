@@ -13,14 +13,14 @@ cache: yarn
 
 stages:
   - build
-  - merge
   - deploy
+  - merge
 
 import:
   - .travis/env.yml
   - .travis/build.yml
-  - .travis/merge.yml
   - .travis/deploy.yml
+  - .travis/merge.yml
 # after_success:
 #   - cd _util
 #   - id

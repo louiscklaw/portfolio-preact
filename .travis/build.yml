@@ -1,6 +1,6 @@
 jobs:
   include:
-    - stage: Build
+    - stage: build
       name: "Build preact app"
       script:
         - yarn build
