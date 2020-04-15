@@ -18,9 +18,20 @@ stages:
 
 import:
   - .travis/env.yml
-  - .travis/build.yml
-  - .travis/deploy.yml
-  - .travis/merge.yml
+# TODO: resume me before pushing to test branch
+#   - .travis/build.yml
+#   - .travis/deploy.yml
+#   - .travis/merge.yml
+
+script:
+  - exit 1
+
+after_failure:
+  if: branch = master
+    - mkdir -p .travis
+    - cd .travis
+    - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-broadcast/broadcast.sh
+    - bash broadcast.sh need_help "build failed when building portfolio-preact on master branch"
 # after_success:
 #   - cd _util
 #   - id
