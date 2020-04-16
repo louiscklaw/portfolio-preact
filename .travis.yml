@@ -39,7 +39,13 @@ jobs:
         - yarn build | tee yarn_build.log
         - npm install -g firebase-tools firebase-functions firebase-admin
         - node ./scripts/update_build_info.js
-        - if [ "$DRY_RUN" = "FALSE" ]; then ./.travis/merge_if_success.sh; fi
+
+        - cd .travis
+        - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-build-merger/merge_if_success_test.sh
+        - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-broadcast/broadcast.sh
+        - if [ "$DRY_RUN" = "FALSE" ]; then bash merge_if_success_test.sh ; fi
+        - bash ./.travis/broadcast.sh  travis-build-result "merge"
+        - cd -
 
       deploy:
         # production deploy
