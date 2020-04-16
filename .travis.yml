@@ -54,7 +54,7 @@ jobs:
           script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
 
 after_success:
-  - if [ "$DRY_RUN" = "FALSE" ]; then ./.travis/merge_if_success.sh; fi
+  - ./.travis/merge_if_success.sh
 
 after_failure:
   - cat yarn_build.log
