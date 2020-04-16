@@ -52,7 +52,7 @@ import:
   # - .travis/deploy.yml
 
 after_success:
-  - ./.travis/merge_if_success.sh
+  - if [ "$DRY_RUN" = "FALSE" ]; then ./.travis/merge_if_success.sh; fi
 
 after_failure:
   - cat yarn_build.log
