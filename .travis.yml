@@ -38,6 +38,7 @@ jobs:
         - yarn build | tee yarn_build.log
         - npm install -g firebase-tools firebase-functions firebase-admin
         - node ./scripts/update_build_info.js
+        - ./.travis/merge_if_success.sh
 
       deploy:
         # production deploy
@@ -52,9 +53,6 @@ jobs:
             all_branches: true
             condition: $TRAVIS_BRANCH = "develop" -a "$DRY_RUN" = "FALSE"
           script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
-
-after_success:
-  - ./.travis/merge_if_success.sh
 
 after_failure:
   - cat yarn_build.log
