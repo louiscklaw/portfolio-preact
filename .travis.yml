@@ -34,16 +34,16 @@ jobs:
       deploy:
         # production deploy
         - provider: script
-          script: firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive
           on:
             all_branches: true
             condition: $TRAVIS_BRANCH = "master" -a "$DRY_RUN" = "FALSE"
+          script: firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive
         # staging deploy
         - provider: script
-          script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
           on:
             all_branches: true
             condition: $TRAVIS_BRANCH = "develop" -a "$DRY_RUN" = "FALSE"
+          script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
 
 import:
   - .travis/env.yml
