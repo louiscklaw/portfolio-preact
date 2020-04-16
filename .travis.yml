@@ -11,6 +11,9 @@ cache: yarn
 # install:
 #   - yarn build
 
+env:
+  - DRY_RUN=FALSE
+
 jobs:
   include:
     - stage: Build
@@ -29,13 +32,14 @@ jobs:
       deploy:
         # production deploy
         - provider: script
-          script: firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive
+          script:
+          script: if [ "$DRY_RUN" != "FALSE" ]; then firebase deploy --project $FIREBASE_PROJECT --only hosting:production --token $FIREBASE_TOKEN --non-interactive ; fi
           on:
             all_branches: true
             condition: $TRAVIS_BRANCH = "master"
         # staging deploy
         - provider: script
-          script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
+          script: if [ "$DRY_RUN" != "FALSE" ]; then firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive ; fi
           on:
             all_branches: true
             condition: $TRAVIS_BRANCH = "develop"
