@@ -15,6 +15,7 @@ cache: yarn
 
 env:
   global:
+    - DRY_RUN: "FALSE"
     - FIREBASE_PROJECT: preactjs-projects
 
     # SLACK_TOKEN, build-bot
