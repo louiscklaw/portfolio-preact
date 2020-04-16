@@ -57,6 +57,11 @@ jobs:
 
 after_failure:
   - cat yarn_build.log
+  - cd .travis
+  - wget -O- https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-broadcast/test_failed_message.sh
+  - chmod +x test_failed_message.sh
+  - wget -O- https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-broadcast/broadcast.sh | bash - travis-need-help "$(./test_failed_message.sh)"| tee broadcast.log
+  - cd -
 # after_success:
 #   - cd _util
 #   - id
