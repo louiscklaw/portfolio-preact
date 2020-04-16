@@ -19,7 +19,7 @@ env:
     - FIREBASE_PROJECT: preactjs-projects
 
     # SLACK_TOKEN, build-bot
-    - secure: fCUX/n4Fg8/9YEpPfiq81lvJ4JA2sUWmDYDSyEs1rG+lyngdtc0mkRnTATXrHrc9xysdSbYTVwa4b902rVfqlI3rLtVs65yOAaBnZqfu+5HpxDNha0JKmULy8vYVtShRM/KGEJR0wtRwLDssu17OjomyXGYnhkd2asSTfk/CZcYAWKfQFWD5DBc6EkWFm0VurZzM/KhOZRavjwBcWzIBkohn/m7nm7oxm8ur+vriP3b+9vXzfuv47aKa2fb2GFQWKbJvTw7lwbmUFJ8hpEm6cGcBB6Ej2VuYBsT0WOEC/FGPri/r9YOYfe/3DHCV6/hbwryTdE7g0g3wdsdJVcVu4fwoe49Rjfj0YDiRCTI0gD3nNCTIUVWMdUt2HM1lkkiOaJLETjkYFg95u1ahjw+TvbmbK/L+jTbcVbsRek1vllG4AaCOtbvW6LckJyHMGmJJxj0Ou5x5cqrV1E1u6SU1ScSALBl/oqFu6JjxdfrM9eC2f3KpKP4KwY0ZnBCrulenFBphaQ8BZ2oGFJHVKZcOsQPN4Ij8DI6wYxrTbL8fLXkfWq59i6SdyG5iLLH/JdAMi8+3otiqj2Crn8U+IAhb/02mvqBW2XQ+BGf5NGsrf4SCGeOc3XjEPjg0QJEOJwm5fpDwI33xGkadB/lOinSyJX79e7W3fZwAjC4YVgLsvGU=
+    - secure: rrPSP7MtHyLwwId3n+TH2LHpPm0gWLDuxGA10uFbEN11ImJzMX0gtfQhrxJ9i5ThNHLLZwTsTcj9XsBV3j8K/iayIMe3iHA9MLvQIuKSDMI8v+96eVpWZvLZlBfR/YWlHq7CcZeLuvphnrBTReYT4pq3kIYRysez0sRni8Kiz+iV7GzmeeLHGzRJVx+urG3JAJiL8cM6oqJOu+AUblOHQqJCs6gaXHEvcGG4EMFaT4+LFrzlU2LGgKLgGpH6tUWsr1JEnzhUTy1i7ZFo1UCHF8igG7PnsuV+2UEZzpXZaj4jC1xj+MUASRzjqbBUaOHuXd2r5XxI8Ga+3qKTDFrMgPis1SEZ69IOMhqq6W6VHMxfWS/q+aL3/2p5HhQ6Q0xbBqrLF70ULqucXcflDQzFqcKGG05e8B+ctosoATmOQIOAjY884bZwgFmiiM7tK2/4U89/wHanwH5tMRHDcNv7dyacvBzbQz6IpimbG9GSSBkddwDWOMjTA3TSkKyhRthT/nEjUYjRokCD2q0m+dURgIO2Mc01BSZWJQ4jl7Ef2FFFsbven4JIipQBwCo5L5TaqMObG23tiLOAioONqmqBn6FCQ0dpFvwqNEJDcbdwfyz6B4OgKxlqm4fYHJmrAPdN1U8R6AnmAvd5j2YwWT/7+zIQ7jpDUvJIDiuJprr03Wo=
 
     # GITHUB_TOKEN
     - secure: XGFnCBPHGNEJwdRw7CVuUsQukmNM8t+ivvzUBFkxXeLUDza1sU7cjVHyQQH8DAbUu7LaOIE8P0tEcIbxOsI/btfdPqixdVBaaSwJxLSVSy9UQBI3VWdaB++VgVGlLCapL+oWrRuIbjBt7BwsVtud32v0m3suo6PhYa8j5eR/a2E8bxwSPjeTC62vOK8R7JeUMPWrqzzowmSR5Te0RzKubSYYzhMB1PzrXfy06/CQihH/jlCi/jxe4aFivVUFG/Tonvnu8O25J26TlNB2cHJfFAXba1oIE8tJrPvWzAnJtBbyHsvJi2cbnr7DFCiky0HrnGh9twa6erA/Bia2fRVUEyhO5SEltE4ceezRcVaXBNT2W9lkzfJluuBVPD0MTvl6URQIecmg27H8nR1/tS92khlSrPgollkKIbPkGMTLE10/xRp9lWv640TGVaFARz/xy2Af7WTbcj5nq0ePiDSirfHWfrik+bCnAWLJ2JR9uCsjZeIYY8hym3kbvNcl12WzLlI8mESGHQR6v+4zPkhNKfyJjJQp/dRen/sWFBr74+hnfMDuF2NSnu9tHe1UqQ3gbhn5GwVIm2704wQ0gUG0gLuY0RuCp+0WH11smKMNNSFOKRfhKXQUa2ssgpvZukQDih/zvoKqT4WTUYNj6Ocruzov/sKyM2zl5idF9OQF4Gw=
@@ -39,7 +39,6 @@ jobs:
         - yarn build | tee yarn_build.log
         - npm install -g firebase-tools firebase-functions firebase-admin
         - node ./scripts/update_build_info.js
-        - ./.travis/merge_if_success.sh
 
       deploy:
         # production deploy
@@ -54,6 +53,9 @@ jobs:
             all_branches: true
             condition: $TRAVIS_BRANCH = "develop" -a "$DRY_RUN" = "FALSE"
           script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
+
+after_success:
+  - if [ "$DRY_RUN" = "FALSE" ]; then ./.travis/merge_if_success.sh; fi
 
 after_failure:
   - cat yarn_build.log
