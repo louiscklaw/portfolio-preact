@@ -33,18 +33,12 @@ notifications:
 jobs:
   include:
     - stage: Build
-      name: "Build preact app"
+      name: "Build preact app and deploy"
       script:
         - yarn build | tee yarn_build.log
-
-    - stage: "Deploy"
-      name: "Deploy to firebase"
-
-      script:
         - npm install -g firebase-tools firebase-functions firebase-admin
         - node ./scripts/update_build_info.js
-        - yarn build
-        - ls -l build
+        - if [ "$DRY_RUN" = "FALSE" ]; then ./.travis/merge_if_success.sh; fi
       deploy:
         # production deploy
         - provider: script
@@ -58,10 +52,6 @@ jobs:
             all_branches: true
             condition: $TRAVIS_BRANCH = "develop" -a "$DRY_RUN" = "FALSE"
           script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
-
-    - stage: Merge
-      script:
-        - if [ "$DRY_RUN" = "FALSE" ]; then ./.travis/merge_if_success.sh; fi
 
 after_failure:
   - cat yarn_build.log
