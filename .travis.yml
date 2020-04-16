@@ -13,6 +13,12 @@ cache: yarn
 # install:
 #   - yarn build
 
+import:
+  - .travis/env.yml
+  # - .travis/build.yml
+  # - .travis/merge.yml
+  # - .travis/deploy.yml
+
 env:
   - DRY_RUN=FALSE
 
@@ -45,14 +51,9 @@ jobs:
             condition: $TRAVIS_BRANCH = "develop" -a "$DRY_RUN" = "FALSE"
           script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
 
-import:
-  - .travis/env.yml
-  # - .travis/build.yml
-  # - .travis/merge.yml
-  # - .travis/deploy.yml
-
-after_success:
-  - if [ "$DRY_RUN" = "FALSE" ]; then ./.travis/merge_if_success.sh; fi
+    - stage: Merge
+      script:
+        - if [ "$DRY_RUN" = "FALSE" ]; then ./.travis/merge_if_success.sh; fi
 
 after_failure:
   - cat yarn_build.log
