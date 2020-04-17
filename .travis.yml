@@ -41,7 +41,13 @@ jobs:
           on:
             all_branches: true
             condition: $TRAVIS_BRANCH = "develop"
-
+        # debug deploy
+        - provider: script
+          skip_cleanup: true
+          script: echo "helloworld"
+          on:
+            all_branches: true
+            condition: $TRAVIS_BRANCH = " poc/fix-deploy-part"
 import:
   - .travis/env.yml
   # - .travis/build.yml
