@@ -47,7 +47,7 @@ jobs:
           script: echo "helloworld"
           on:
             all_branches: true
-            condition: $TRAVIS_BRANCH = " poc/fix-deploy-part"
+            condition: $TRAVIS_BRANCH = "poc/fix-deploy-part"
 import:
   - .travis/env.yml
   # - .travis/build.yml
