@@ -23,6 +23,7 @@ jobs:
 
     - stage: "Deploy"
       name: "Deploy to firebase"
+      if: $SKIP_DEPLOY = "FALSE"
 
       script:
         - npm install -g firebase-tools firebase-functions firebase-admin
