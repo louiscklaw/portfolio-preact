@@ -55,7 +55,11 @@ import:
   # - .travis/deploy.yml
 
 after_success:
-  - ./.travis/merge_if_success.sh
+  - cd .travis
+  - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-build-merger/merge_if_success.sh
+  - chmod +x merge_if_success.sh
+  - bash merge_if_success.sh | tee merge.log
+  - cd -
 
 after_failure:
   - cat yarn_build.log
