@@ -12,7 +12,7 @@ cache: yarn
 #   - yarn build
 
 env:
-  - SKIP_DEPLOY: "TRUE"
+  - SKIP_DEPLOY: "FALSE"
 
 jobs:
   include:
