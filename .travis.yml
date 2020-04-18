@@ -11,6 +11,9 @@ cache: yarn
 # install:
 #   - yarn build
 
+env:
+  - SKIP_DEPLOY: "TRUE"
+
 jobs:
   include:
     - stage: Build
