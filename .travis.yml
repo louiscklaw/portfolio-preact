@@ -18,6 +18,13 @@ jobs:
       script:
         - yarn build | tee yarn_build.log
 
+    - stage: Merge
+      name: "Merge commits"
+      script:
+        - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-build-merger/merge_if_success.sh
+        - chmod +x merge_if_success.sh
+        - bash merge_if_success.sh | tee merge.log
+
     - stage: "Deploy"
       name: "Deploy to firebase"
 
@@ -58,11 +65,6 @@ import:
   # - .travis/build.yml
   # - .travis/merge.yml
   # - .travis/deploy.yml
-
-after_success:
-  - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-build-merger/merge_if_success.sh
-  - chmod +x merge_if_success.sh
-  - bash merge_if_success.sh | tee merge.log
 
 after_failure:
   - cat yarn_build.log
