@@ -26,6 +26,7 @@ jobs:
         - node ./scripts/update_build_info.js
         - yarn build
         - ls -l build
+
       deploy:
         # production deploy
         - provider: script
@@ -34,6 +35,7 @@ jobs:
           on:
             all_branches: true
             condition: $TRAVIS_BRANCH = "master"
+
         # staging deploy
         - provider: script
           skip_cleanup: true
@@ -41,6 +43,7 @@ jobs:
           on:
             all_branches: true
             condition: $TRAVIS_BRANCH = "develop"
+
         # debug deploy
         - provider: script
           skip_cleanup: true
@@ -48,8 +51,10 @@ jobs:
           on:
             all_branches: true
             condition: $TRAVIS_BRANCH = "poc/fix-deploy-part"
+
 import:
-  - .travis/env.yml
+  # - .travis/env.yml
+  - credentials.yml
   # - .travis/build.yml
   # - .travis/merge.yml
   # - .travis/deploy.yml
