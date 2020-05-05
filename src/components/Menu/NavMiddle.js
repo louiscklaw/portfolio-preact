@@ -33,10 +33,10 @@ function getTravisBuildSite() {
       <li style={style.nav_middle_li}>
         <a
           style={style.a}
-          href="//travis-ci.com/louiscklaw/portfolio-preact/branches"
+          href="https://louiscklaw.github.io/travis-playlist"
           target="_blank"
         >
-          travis build
+          travis build dashboard
         </a>
       </li>
     );
@@ -88,24 +88,27 @@ export default class NavMiddle extends Component {
     var menu_body_class = this.props["menu_body_class"];
     var selector_menu_body = "." + menu_body_class;
 
-    document.querySelectorAll(`.${style["NavMiddle"]} ul li a`).forEach(ele => {
-      ele.addEventListener("click", function() {
-        console.log(hamburger_button_is_active_class);
+    document
+      .querySelectorAll(`.${style["NavMiddle"]} ul li a`)
+      .forEach((ele) => {
+        ele.addEventListener("click", function () {
+          console.log(hamburger_button_is_active_class);
 
-        let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+          let windowWidth =
+            typeof window !== "undefined" ? window.innerWidth : 0;
 
-        if (windowWidth < 500) {
-          // fallback menu button
-          var mobile_menu_classlist = document.querySelector(
-            ".mobile_menu_container"
-          ).classList;
-          mobile_menu_classlist.remove(hamburger_button_is_active_class);
+          if (windowWidth < 500) {
+            // fallback menu button
+            var mobile_menu_classlist = document.querySelector(
+              ".mobile_menu_container"
+            ).classList;
+            mobile_menu_classlist.remove(hamburger_button_is_active_class);
 
-          // hide menu body
-          document.querySelector(selector_menu_body).style.display = "none";
-        }
+            // hide menu body
+            document.querySelector(selector_menu_body).style.display = "none";
+          }
+        });
       });
-    });
   }
   render() {
     return (
