@@ -15,3 +15,6 @@ cd tmp
   pipenv run python3 check-leak.py
 
 cd ..
+
+# done
+exit 0
