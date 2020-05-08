@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+scripts/pre-commit.sh
+
 pretty-quick --staged
 rm -rf build
 yarn build
