@@ -27,6 +27,22 @@ function getStagingSite() {
   }
 }
 
+function getHackmdSite() {
+  if (CHECK_DEV_ENV()) {
+    return (
+      <li style={style.nav_middle_li}>
+        <a
+          style={style.a}
+          href="//hackmd.io/sXN16yjWQVqMh0hyy9yB1A"
+          target="_blank"
+        >
+          Hackmd TODO
+        </a>
+      </li>
+    );
+  }
+}
+
 function getTravisBuildSite() {
   if (CHECK_DEV_ENV()) {
     return (
@@ -142,6 +158,7 @@ export default class NavMiddle extends Component {
           {getTravisBuildSite()}
           {getFirebaseConsole()}
           {getFavouriteLink()}
+          {getHackmdSite()}
         </ul>
       </div>
     );
