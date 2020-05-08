@@ -11,8 +11,18 @@ const CHECK_DEV_ENV = () => {
   return check_result;
 };
 
+const CHECK_STAGING_ENV = () => {
+  // true => development, false => production
+  window.location.search(/\/\/staging-portfolio/);
+  return check_result;
+};
+
+const SHOW_HIDDEN_MENU_ITEM = () => {
+  return CHECK_DEV_ENV() || CHECK_STAGING_ENV();
+};
+
 function getStagingSite() {
-  if (CHECK_DEV_ENV()) {
+  if (SHOW_HIDDEN_MENU_ITEM()) {
     return (
       <li style={style.nav_middle_li}>
         <a
@@ -28,7 +38,7 @@ function getStagingSite() {
 }
 
 function getHackmdSite() {
-  if (CHECK_DEV_ENV()) {
+  if (SHOW_HIDDEN_MENU_ITEM()) {
     return (
       <li style={style.nav_middle_li}>
         <a
@@ -44,7 +54,7 @@ function getHackmdSite() {
 }
 
 function getTravisBuildSite() {
-  if (CHECK_DEV_ENV()) {
+  if (SHOW_HIDDEN_MENU_ITEM()) {
     return (
       <li style={style.nav_middle_li}>
         <a
@@ -60,7 +70,7 @@ function getTravisBuildSite() {
 }
 
 function getFirebaseConsole() {
-  if (CHECK_DEV_ENV()) {
+  if (SHOW_HIDDEN_MENU_ITEM()) {
     return (
       <li style={style.nav_middle_li}>
         <a
@@ -76,7 +86,7 @@ function getFirebaseConsole() {
 }
 
 function getFavouriteLink() {
-  if (CHECK_DEV_ENV()) {
+  if (SHOW_HIDDEN_MENU_ITEM()) {
     return (
       <li style={style.nav_middle_li}>
         <a style={style.a} href="/favourite_link" target="_blank">
