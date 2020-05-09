@@ -58,7 +58,7 @@ jobs:
           script: firebase deploy -f --project $FIREBASE_PROJECT --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
           on:
             all_branches: true
-            condition: $TRAVIS_BRANCH = "develop"
+            condition: $TRAVIS_BRANCH = "ignore/testing-reorder-stages"
 
         # debug deploy
         - provider: script
