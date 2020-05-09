@@ -13,8 +13,7 @@ const CHECK_DEV_ENV = () => {
 
 const CHECK_STAGING_ENV = () => {
   // true => development, false => production
-  window.location.href.search(/\/\/staging-portfolio/);
-  return check_result;
+  return window.location.href.search(/\/\/staging-portfolio/) > 0;
 };
 
 const SHOW_HIDDEN_MENU_ITEM = () => {
