@@ -77,3 +77,10 @@ after_failure:
 #   - pipenv sync
 #   - pipenv run python3 ./merge.py
 #   - cd ..
+
+env:
+  global:
+    - FIREBASE_PROJECT: preactjs-projects
+
+    # FIREBASE_TOKEN
+    - secure: hu7esNhvwkl6oajEQf2A3F1FCZtgibdZnTpXPegcLBPiIGQvE7Yk4uyrp9jQlXqfikJsQvD/yfTWH3doEhsTCY/SOKm8Gqrr6LAzlKQnMEvTPrPW840DTrwF7f4cefT4bAj1gx2yV+LL9nV8ja0xaIJaUsyK2Q0v82jSoOKvmJi3uOFpzKfdePbxAP2k1a1ACs5DtzsJ8Ku2V6eB0mjlqQFIhVw4v4tfqfGHVCMQEdZbKWT+UeZOUW4QmIc4iRi2rhJU5iK0zbMwUYnn6Z0gGUxSWdSMCzNHds3gU9fcU1OH3rE8DENG9Fz06zrIUM7pmXGAXltP8p+qMNy/9pQjIfSmmEb2pkEA6gYRsCkZ0f+ZgcleOMPF2Sy1raIrqTdKzeS0voFlhVw5GK+Z9id2GPUA64gkkbvaaiaB6QuSQaW6ZaKnl9YOFcRl8M7b9qiL2dVONKwXYe/RoO8HZA7yZBZNOdbNp3bQv9Bsj+DEijfq3m6PSeqFCiWfqHsMMK1A+ghMrMZpdDE56R22Q1XacAsmOUjY4ecBUYK+HhkUBPastsa+Ay32l8gIgHROf7a9KMIQ64/7mDdpxlDE6yQqgdDNr1kDTmguZ7AFN/U9y9NTozhgqgul4qy+ZEfUId2X/VY/GKWlgvf/12IspCgxtXTN6Pq2xd5GMpL2G+esD8w=
