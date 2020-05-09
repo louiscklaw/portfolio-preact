@@ -11,6 +11,15 @@ cache: yarn
 # install:
 #   - yarn build
 
+stages:
+  - Unit_test
+  - Test
+  - Build
+  - Deploy
+  - Integration_to_other_repo
+  - Publish_dashboard
+  - Merge
+
 jobs:
   include:
     - stage: Build
