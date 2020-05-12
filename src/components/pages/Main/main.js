@@ -20,7 +20,7 @@ import {
   PageProjectCatalogue,
   PageProjectDetail,
   FavouriteLink,
-  CommonHelmet
+  CommonHelmet,
 } from "../../index";
 
 // import style from './main.scss';
@@ -30,7 +30,7 @@ function onRouteChangeHelloworld() {
   // console.log('on route change helloworld');
   try {
     window.scrollTo({
-      top: 0
+      top: 0,
     });
   } catch (oErr) {
     console.log(oErr);
@@ -51,7 +51,7 @@ export default class Main extends Component {
         flexDirection: styles.showSidebar ? "row" : "column",
 
         width: "100%",
-        minHeight: "100vh"
+        minHeight: "100vh",
       },
 
       content: {
@@ -64,7 +64,7 @@ export default class Main extends Component {
         // top: styles.showSidebar? 'unset': '0vh',
 
         backgroundColor: theme_settings.THEME_COLOR_LIGHTEST,
-        minHeight: "80vh"
+        minHeight: "80vh",
       },
 
       nav_container: {
@@ -72,8 +72,8 @@ export default class Main extends Component {
         backgroundColor: theme_settings.THEME_COLOR,
         width: styles.showSidebar ? "20vw" : "100vw",
 
-        minHeight: styles.showSidebar ? "100vh" : "20vh"
-      }
+        minHeight: styles.showSidebar ? "100vh" : "20vh",
+      },
     };
 
     return (
@@ -104,7 +104,7 @@ export default class Main extends Component {
             <AsyncRoute path="/favourite_link" component={FavouriteLink} />
 
             {/* // default page */}
-            <AsyncRoute path="/" component={PageProjectCatalogue} />
+            <AsyncRoute default component={PageProjectCatalogue} />
           </Router>
         </div>
       </div>
