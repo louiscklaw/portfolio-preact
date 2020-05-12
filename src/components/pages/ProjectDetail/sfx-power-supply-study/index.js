@@ -15,7 +15,8 @@ import {
   Spare,
   ProjectDetailHelmets,
   PrismHelloworld,
-  PrismBash
+  PrismBash,
+  GithubLinkList,
 } from "../../../../components/index";
 
 import head_pic from "./src/PS-STP-0600FPCGXX-G_d061bebe05a4488c96fe855efa35f9b3.jpg";
@@ -49,10 +50,12 @@ class SFXPowerSupplyContent extends Component {
           {/*  */}
 
           <div className={projectDetailStyle.DescBody}>
-            <h3 className={projectDetailStyle.DescTopic}>Repos:</h3>
-            <p>
-              <GithubLink link="https://github.com/louiscklaw/sfx-power-supply-playlist.git" />
-            </p>
+            <GithubLinkList
+              github_links={[
+                "https://github.com/louiscklaw/sfx-power-supply-playlist.git",
+                "https://github.com/louiscklaw/lichee-nano-one-key-package",
+              ]}
+            />
           </div>
         </div>
       </div>

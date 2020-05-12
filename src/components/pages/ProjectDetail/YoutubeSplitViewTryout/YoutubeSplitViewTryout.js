@@ -48,7 +48,9 @@ class YoutubeSplitContent extends Component {
             <h3 className={projectDetailStyle.DescTopic}>Demo:</h3>
             <NewWindowLink link="https://louiscklaw.github.io/youtube-split-view-tryout/" />
 
-            <h3 className={projectDetailStyle.DescTopic}>ref/repo:</h3>
+            <h3 className={projectDetailStyle.DescTopic}>
+              References / Repositories:
+            </h3>
             <NewWindowLink link="https://github.com/louiscklaw/youtube-split-view-tryout" />
           </div>
         </div>

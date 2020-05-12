@@ -42,3 +42,6 @@ ifconfig wlan0 down //关闭对应网卡
 ————————————————
 版权声明：本文为 CSDN 博主「懒人在行动」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/xinxiaoci/article/details/78192421
+
+repo:
+git@github.com:louiscklaw/lichee-nano-one-key-package.git

@@ -1,11 +1,9 @@
 import ProjectTitle from "./ProjectTitle/ProjectTitle";
-import NewWindowLink from "./Links/NewWindowLink";
-import BackToProjects from "./Links/BackToProjects";
 import YoutubeContainer from "./containers/youtube";
 
-import GithubLink from "./Links/GithubLink";
-import GistLink from "./Links/GistLink";
-import SocialLink from "./Links/SocialLink";
+import NewWindowLink from "./Links/NewWindowLink";
+import BackToProjects from "./Links/BackToProjects";
+import { GithubLink, GistLink, SocialLink, GithubLinkList } from "./Links";
 
 // import MetaProjectDetail from './meta/ProjectDetail'
 // import MetaTitle from './MetaTitle/MetaTitle'
@@ -46,6 +44,7 @@ export {
   BackToProjects,
   YoutubeContainer,
   GithubLink,
+  GithubLinkList,
   GistLink,
   SocialLink,
   // MetaProjectDetail,

@@ -50,11 +50,16 @@ class TraefikTryoutContent extends Component {
             <h3 className={projectDetailStyle.DescTopic}>Purpose:</h3>
             <p>My personal tryout for traefik API router.</p>
 
-            <h3 className={projectDetailStyle.DescTopic}>ref/repo:</h3>
+            <h3 className={projectDetailStyle.DescTopic}>
+              References / Repositories:
+            </h3>
 
             <ul>
               <li>
                 <GithubLink link="https://github.com/louiscklaw/traefik-tryout" />
+              </li>
+              <li>
+                <GithubLink link="https://github.com/gaplo917/load-balancer-benchmark" />
               </li>
             </ul>
           </div>

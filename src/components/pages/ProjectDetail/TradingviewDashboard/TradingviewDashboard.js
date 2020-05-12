@@ -48,7 +48,9 @@ class TradContent extends Component {
             <h3 className={projectDetailStyle.DescTopic}>Demo:</h3>
             <NewWindowLink link="https://louiscklaw.github.io/tradingview-tile-tryout" />
 
-            <h3 className={projectDetailStyle.DescTopic}>ref/repo:</h3>
+            <h3 className={projectDetailStyle.DescTopic}>
+              References / Repositories:
+            </h3>
             <NewWindowLink link="https://github.com/louiscklaw/tradingview-tile-tryout" />
           </div>
         </div>

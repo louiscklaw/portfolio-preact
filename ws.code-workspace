@@ -17,6 +17,12 @@
 		},
 		{
 			"path": "/home/logic/_workspace/preactjs-playlist"
+		},
+		{
+			"path": "/home/logic/_workspace/react-playlist"
+		},
+		{
+			"path": "/home/logic/_workspace/appium-playlist"
 		}
 	],
 	"settings": {

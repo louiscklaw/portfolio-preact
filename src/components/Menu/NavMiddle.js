@@ -11,8 +11,17 @@ const CHECK_DEV_ENV = () => {
   return check_result;
 };
 
+const CHECK_STAGING_ENV = () => {
+  // true => development, false => production
+  return window.location.href.search(/\/\/staging-portfolio/) > 0;
+};
+
+const SHOW_HIDDEN_MENU_ITEM = () => {
+  return CHECK_DEV_ENV() || CHECK_STAGING_ENV();
+};
+
 function getStagingSite() {
-  if (CHECK_DEV_ENV()) {
+  if (SHOW_HIDDEN_MENU_ITEM()) {
     return (
       <li style={style.nav_middle_li}>
         <a
@@ -27,16 +36,32 @@ function getStagingSite() {
   }
 }
 
-function getTravisBuildSite() {
-  if (CHECK_DEV_ENV()) {
+function getHackmdSite() {
+  if (SHOW_HIDDEN_MENU_ITEM()) {
     return (
       <li style={style.nav_middle_li}>
         <a
           style={style.a}
-          href="//travis-ci.com/louiscklaw/portfolio-preact/branches"
+          href="//hackmd.io/sXN16yjWQVqMh0hyy9yB1A"
           target="_blank"
         >
-          travis build
+          Hackmd TODO
+        </a>
+      </li>
+    );
+  }
+}
+
+function getTravisBuildSite() {
+  if (SHOW_HIDDEN_MENU_ITEM()) {
+    return (
+      <li style={style.nav_middle_li}>
+        <a
+          style={style.a}
+          href="https://louiscklaw.github.io/travis-playlist"
+          target="_blank"
+        >
+          travis build dashboard
         </a>
       </li>
     );
@@ -44,7 +69,7 @@ function getTravisBuildSite() {
 }
 
 function getFirebaseConsole() {
-  if (CHECK_DEV_ENV()) {
+  if (SHOW_HIDDEN_MENU_ITEM()) {
     return (
       <li style={style.nav_middle_li}>
         <a
@@ -60,7 +85,7 @@ function getFirebaseConsole() {
 }
 
 function getFavouriteLink() {
-  if (CHECK_DEV_ENV()) {
+  if (SHOW_HIDDEN_MENU_ITEM()) {
     return (
       <li style={style.nav_middle_li}>
         <a style={style.a} href="/favourite_link" target="_blank">
@@ -139,6 +164,7 @@ export default class NavMiddle extends Component {
           {getTravisBuildSite()}
           {getFirebaseConsole()}
           {getFavouriteLink()}
+          {getHackmdSite()}
         </ul>
       </div>
     );

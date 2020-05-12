@@ -22,7 +22,7 @@ export default class NavBottom extends Component {
         fontWeight: "bold",
         color: theme.THEME_COLOR_LIGHTEST,
         fontSize: "0.8em",
-        textAlign: "center"
+        textAlign: "center",
       },
       build_date: {
         textDecoration: "underline",
@@ -30,8 +30,8 @@ export default class NavBottom extends Component {
         fontWeight: "bold",
         color: theme.THEME_COLOR_LIGHTEST,
         fontSize: "0.8em",
-        textAlign: "center"
-      }
+        textAlign: "center",
+      },
     };
 
     return (
@@ -40,51 +40,48 @@ export default class NavBottom extends Component {
           <ul style={style.social_links}>
             <li>
               <SocialLink
-                href="https://www.facebook.com/louiscklaw"
+                href="//www.facebook.com/louiscklaw"
                 icon={["fab", "facebook"]}
               />
             </li>
             <li>
               <SocialLink
-                href="https://github.com/louiscklaw"
+                href="//github.com/louiscklaw"
                 icon={["fab", "github"]}
               />
             </li>
             <li>
               <SocialLink
-                href="https://keybase.io/louiscklaw"
+                href="//keybase.io/louiscklaw"
                 icon={["fab", "keybase"]}
               />
             </li>
             <li>
               <SocialLink
-                href="https://www.linkedin.com/in/louiscklaw"
+                href="//www.linkedin.com/in/louiscklaw"
                 icon={["fab", "linkedin"]}
               />
             </li>
             <li>
               <SocialLink
-                href="https://louislabs.slack.com"
+                href="//louislabs.slack.com"
                 icon={["fab", "slack"]}
               />
             </li>
             <li>
-              <SocialLink
-                href="https://t.me/louislabs"
-                icon={["fab", "telegram"]}
-              />
+              <SocialLink href="//t.me/louislabs" icon={["fab", "telegram"]} />
             </li>
           </ul>
         </div>
 
         <div style={style.build_status}>
           <a
-            href="https://travis-ci.com/louiscklaw/portfolio-preact/branches"
+            href="//travis-ci.com/louiscklaw/portfolio-preact/branches"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src="https://travis-ci.com/louiscklaw/portfolio-preact.svg?branch=master"
+              src="//travis-ci.com/louiscklaw/portfolio-preact.svg?branch=master"
               alt=""
               srcSet=""
             />
