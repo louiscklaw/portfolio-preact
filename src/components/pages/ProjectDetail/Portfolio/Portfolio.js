@@ -15,7 +15,7 @@ import {
   ProjectDetailHelmets,
   PrismHelloworld,
   PrismBash,
-  FigureContainer
+  FigureContainer,
 } from "../../../../components/index";
 
 // import './ProjectDescription.css';
@@ -90,10 +90,10 @@ class PortfolioContent extends Component {
             <h3 style={projectDetailStyle.DescTopic}>Repository:</h3>
             <ul style={projectDetailStyle.ul}>
               <li>
-                <NewWindowLink href="https://github.com/louiscklaw/portfolio-preact" />
+                <NewWindowLink link="https://github.com/louiscklaw/portfolio-preact" />
               </li>
               <li>
-                <NewWindowLink href="https://github.com/developit/preact-boilerplate" />
+                <NewWindowLink link="https://github.com/developit/preact-boilerplate" />
               </li>
             </ul>
           </div>
