@@ -11,9 +11,4 @@ do
   travis lint $l &
 done;
 
-for l in $(ls -1 ./.travis/*.yml);
-do
-  travis lint $l &
-done;
-
 wait
