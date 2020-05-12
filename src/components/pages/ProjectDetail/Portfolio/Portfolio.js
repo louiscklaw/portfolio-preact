@@ -74,14 +74,17 @@ class PortfolioContent extends Component {
           <div style={projectDetailStyle.DescBody}>
             <h3 style={projectDetailStyle.DescTopic}>Some information:</h3>
             <ul style={projectDetailStyle.ul}>
-              <li>production site: https://louiscklaw.github.io/</li>
-              <li>
-                firebase hosting of production site:
-                https://production-portfolio.web.app
+              <li style={{ paddingBottom: "0.5em" }}>
+                production site:
+                <NewWindowLink link="https://louiscklaw.github.io" />
               </li>
-              <li>
+              <li style={{ paddingBottom: "0.5em" }}>
+                firebase hosting of production site:
+                <NewWindowLink link="https://production-portfolio.web.app" />
+              </li>
+              <li style={{ paddingBottom: "0.5em" }}>
                 firebase hosting of staging site:
-                https://staging-portfolio-c7cb5.web.app/
+                <NewWindowLink link="https://staging-portfolio-c7cb5.web.app" />
               </li>
             </ul>
           </div>

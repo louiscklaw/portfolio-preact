@@ -12,7 +12,7 @@ export default class NewWindowLink extends Component {
     console.log("findme");
     var { link, text } = this.props;
     return (
-      <div>
+      <>
         <a
           href={link}
           target="_blank"
@@ -24,7 +24,7 @@ export default class NewWindowLink extends Component {
             <FontAwesomeIcon icon={["fas", "external-link-alt"]} />
           </div>
         </a>
-      </div>
+      </>
     );
   }
 }
