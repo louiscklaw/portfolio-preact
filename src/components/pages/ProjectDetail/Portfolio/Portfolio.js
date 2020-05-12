@@ -92,10 +92,10 @@ class PortfolioContent extends Component {
           <div style={projectDetailStyle.DescBody}>
             <h3 style={projectDetailStyle.DescTopic}>Repository:</h3>
             <ul style={projectDetailStyle.ul}>
-              <li>
+              <li style={{ paddingBottom: "0.5em" }}>
                 <NewWindowLink link="https://github.com/louiscklaw/portfolio-preact" />
               </li>
-              <li>
+              <li style={{ paddingBottom: "0.5em" }}>
                 <NewWindowLink link="https://github.com/developit/preact-boilerplate" />
               </li>
             </ul>
