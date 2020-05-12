@@ -2,77 +2,77 @@ import { h } from "preact";
 
 import {
   TradContent,
-  TradThumbnail
+  TradThumbnail,
 } from "./TradingviewDashboard/TradingviewDashboard";
 
 import {
   AppiumContent,
-  AppiumThumbnail
+  AppiumThumbnail,
 } from "./AppiumBehaveNotes/AppiumBehaveNotes";
 import {
   AllwinnerContent,
-  AllWinnerThumbnail
+  AllWinnerThumbnail,
 } from "./AllwinnerV3sTryout/AllwinnerV3sTryout";
 import { HKDataContent, HKDataThumbnail } from "./HKData/index";
 import {
   HKOWeatherBotContent,
-  HKOWeatherBotThumbnail
+  HKOWeatherBotThumbnail,
 } from "./HkoWeatherBot/HkoWeatherBot";
 import {
   LinuxToolboxContent,
-  LinuxToolboxThumbnail
+  LinuxToolboxThumbnail,
 } from "./LinuxToolbox/LinuxToolbox";
 import {
   OpencvCarContent,
-  OpencvCarThumbnail
+  OpencvCarThumbnail,
 } from "./OpencvCarCounting/OpencvCarCounting";
 
 import {
   PetPugProjectContent,
-  PetPugProjectThumbnail
+  PetPugProjectThumbnail,
 } from "./PetPugProject/PetPugProject";
 import { PortfolioContent, PortfolioThumbnail } from "./Portfolio/Portfolio";
 import {
   PrinterBoardContent,
-  PrinterBoardThumbnail
+  PrinterBoardThumbnail,
 } from "./PrinterBoard/PrinterBoard";
 import {
   RTHK31Content,
-  RTHK31Thumbnail
+  RTHK31Thumbnail,
 } from "./Rthk31Rthk32LinuxViewer/Rthk31Rthk32LinuxViewer";
 import {
   Slic3rContent,
-  Slic3rThumbnail
+  Slic3rThumbnail,
 } from "./Slic3rBatchExport/Slic3rBatchExport";
 
 import { TappyContent, TappyThumbnail } from "./Tappy/Tappy";
 import {
   TraefikTryoutContent,
-  TraefikTryoutThumbnail
+  TraefikTryoutThumbnail,
 } from "./TraefikTryout/TraefikTryout";
 import {
   VoronTryoutContent,
-  VoronTryoutThumbnail
+  VoronTryoutThumbnail,
 } from "./VoronTryout/VoronTryout";
 import {
   YoutubeSplitContent,
-  YoutubeSplitThumbnail
+  YoutubeSplitThumbnail,
 } from "./YoutubeSplitViewTryout/YoutubeSplitViewTryout";
 import {
   ZTransferDemoContent,
-  ZTransferDemoThumbnail
+  ZTransferDemoThumbnail,
 } from "./ZTransferDemo/ZTransferDemo";
 
 import {
   SFXPowerSupplyContent,
-  SFXPowerSupplyThumbnail
+  SFXPowerSupplyThumbnail,
 } from "./sfx-power-supply-study/index";
 
 import { AliWangwangThumbnail, AliWangwangContent } from "./Aliwangwang-ubuntu";
 
 import {
   DriverTrainingThumbnail,
-  DriverTrainingContent
+  DriverTrainingContent,
 } from "./DriverTraining";
 
 let project_list = {
@@ -81,65 +81,65 @@ let project_list = {
   allwinner_v3s_tryout: [
     "AllwinnerV3sTryout",
     AllwinnerContent,
-    AllWinnerThumbnail
+    AllWinnerThumbnail,
   ],
   hk_data: ["HKData", HKDataContent, HKDataThumbnail],
   HKOWeatherBot: [
     "HKOWeatherBot",
     HKOWeatherBotContent,
-    HKOWeatherBotThumbnail
+    HKOWeatherBotThumbnail,
   ],
   LinuxToolbox: ["LinuxToolbox", LinuxToolboxContent, LinuxToolboxThumbnail],
   OpenCVCarCounting: [
     "OpenCVCarCounting",
     OpencvCarContent,
-    OpencvCarThumbnail
+    OpencvCarThumbnail,
   ],
   PetPugProject: [
     "PetPugProject",
     PetPugProjectContent,
-    PetPugProjectThumbnail
+    PetPugProjectThumbnail,
   ],
   Portfolio: ["Portfolio", PortfolioContent, PortfolioThumbnail],
   PrinterBoard: ["PrinterBoard", PrinterBoardContent, PrinterBoardThumbnail],
   Rthk31Rthk32LinuxViewer: [
     "Rthk31Rthk32LinuxViewer",
     RTHK31Content,
-    RTHK31Thumbnail
+    RTHK31Thumbnail,
   ],
   Slic3rBatchExport: ["Slic3rBatchExport", Slic3rContent, Slic3rThumbnail],
   Tappy: ["Tappy", TappyContent, TappyThumbnail],
   TraefikTryout: [
     "TraefikTryout",
     TraefikTryoutContent,
-    TraefikTryoutThumbnail
+    TraefikTryoutThumbnail,
   ],
   VoronTryout: ["VoronTryout", VoronTryoutContent, VoronTryoutThumbnail],
   YoutubeSplitViewTryout: [
     "YoutubeSplitViewTryout",
     YoutubeSplitContent,
-    YoutubeSplitThumbnail
+    YoutubeSplitThumbnail,
   ],
   ZTransferDemo: [
     "ZTransferDemo",
     ZTransferDemoContent,
-    ZTransferDemoThumbnail
+    ZTransferDemoThumbnail,
   ],
   SFXPowerSupplyStudy: [
     "SFXPowerSupplyStudy",
     SFXPowerSupplyContent,
-    SFXPowerSupplyThumbnail
+    SFXPowerSupplyThumbnail,
   ],
   AliWangwangUbuntu: [
     "AliWangwangUbuntu",
     AliWangwangContent,
-    AliWangwangThumbnail
+    AliWangwangThumbnail,
   ],
   DriverTraining: [
     "DriverTraining",
     DriverTrainingContent,
-    DriverTrainingThumbnail
-  ]
+    DriverTrainingThumbnail,
+  ],
 };
 
 function showProject(proj_name) {
