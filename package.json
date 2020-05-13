@@ -7,7 +7,7 @@
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "build": "preact build",
     "serve": "preact build && preact serve",
-    "dev": "preact watch",
+    "dev": "preact watch -p 8081",
     "lint": "eslint src",
     "build_dot_file": "node ./gen_dot.js",
     "watch_dot_file": "nodemon -w . --ext '*.dot' --exec yarn build_dot_file"
