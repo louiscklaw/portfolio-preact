@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# set -ex
+
+# mkdir -p /tmp/test_home
+# cp -R /home/node/test/ /tmp/test_home
+
+
+
+# cd /tmp/test_home
+#   # node ./test_vp.js
+
+#   # compare
+
+#   node ./compare_result.js
+# cd ..
