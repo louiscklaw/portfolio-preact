@@ -2,21 +2,26 @@
 
 set -ex
 
+pretty-quick --staged
+
 rm -rf tmp/*
 
 cd tmp
+  # getting needed scripts
+  wget -q https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-check-leak/leak.js &
+  wget -q https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-check-leak/Pipfile &
+  wget -q https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-check-leak/Pipfile.lock &
+  wget -q https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-check-leak/check-leak.py &
 
-  wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-check-leak/leak.js
-  wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-check-leak/Pipfile
-  wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-check-leak/Pipfile.lock
-  wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-check-leak/check-leak.py
+  # script arrived
+  wait
 
   pipenv sync
   pipenv run python3 check-leak.py
 
 cd ..
 
-pretty-quick --staged
+wait
 
 # done
 exit 0
