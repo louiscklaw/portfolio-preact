@@ -11,4 +11,9 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
   // production code
 }
 
-export { active_config };
+const CHECK_DEV_ENV = () => {
+  // true => development, false => production
+  return process.env.NODE_ENV === "development";
+};
+
+export { active_config, CHECK_DEV_ENV };
