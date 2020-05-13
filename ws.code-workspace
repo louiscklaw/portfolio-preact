@@ -23,6 +23,9 @@
 		},
 		{
 			"path": "/home/logic/_workspace/appium-playlist"
+		},
+		{
+			"path": "../puppeteer-playlist"
 		}
 	],
 	"settings": {
