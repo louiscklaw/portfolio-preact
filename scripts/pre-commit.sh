@@ -6,6 +6,8 @@ pretty-quick --staged
 
 rm -rf tmp/*
 
+mkdir -p tmp
+
 cd tmp
   # getting needed scripts
   wget -q https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-check-leak/leak.js &
