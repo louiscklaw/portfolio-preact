@@ -1,6 +1,14 @@
 import { Component } from "preact";
 import { Link } from "preact-router/match";
 
+import {
+  HREF_TO_STAGING_SITE,
+  HREF_TO_HACKMD,
+  HREF_TO_FIREBASE_CONSOLE,
+  HREF_TO_GOOGLE_SEARCH_TREND,
+  HREF_TO_GITHUB,
+} from "../../config/constants";
+
 // import style from '../../style/index.js';
 import style from "./style";
 
@@ -24,11 +32,7 @@ function getStagingSite() {
   if (SHOW_HIDDEN_MENU_ITEM()) {
     return (
       <li style={style.nav_middle_li}>
-        <a
-          style={style.a}
-          href="//staging-portfolio-c7cb5.firebaseapp.com"
-          target="_blank"
-        >
+        <a style={style.a} href={HREF_TO_STAGING_SITE} target="_blank">
           Staging site
         </a>
       </li>
@@ -40,11 +44,7 @@ function getHackmdSite() {
   if (SHOW_HIDDEN_MENU_ITEM()) {
     return (
       <li style={style.nav_middle_li}>
-        <a
-          style={style.a}
-          href="//hackmd.io/sXN16yjWQVqMh0hyy9yB1A"
-          target="_blank"
-        >
+        <a style={style.a} href={HREF_TO_HACKMD} target="_blank">
           Hackmd TODO
         </a>
       </li>
@@ -58,7 +58,7 @@ function getTravisBuildSite() {
       <li style={style.nav_middle_li}>
         <a
           style={style.a}
-          href="https://louiscklaw.github.io/travis-playlist"
+          href={HREF_TO_GITHUB + "/travis-playlist"}
           target="_blank"
         >
           travis build dashboard
@@ -72,11 +72,7 @@ function getFirebaseConsole() {
   if (SHOW_HIDDEN_MENU_ITEM()) {
     return (
       <li style={style.nav_middle_li}>
-        <a
-          style={style.a}
-          href="//console.firebase.google.com/u/1/project/preactjs-projects/overview"
-          target="_blank"
-        >
+        <a style={style.a} href={HREF_TO_FIREBASE_CONSOLE} target="_blank">
           firebase console
         </a>
       </li>
@@ -113,24 +109,27 @@ export default class NavMiddle extends Component {
     var menu_body_class = this.props["menu_body_class"];
     var selector_menu_body = "." + menu_body_class;
 
-    document.querySelectorAll(`.${style["NavMiddle"]} ul li a`).forEach(ele => {
-      ele.addEventListener("click", function() {
-        console.log(hamburger_button_is_active_class);
+    document
+      .querySelectorAll(`.${style["NavMiddle"]} ul li a`)
+      .forEach((ele) => {
+        ele.addEventListener("click", function () {
+          console.log(hamburger_button_is_active_class);
 
-        let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+          let windowWidth =
+            typeof window !== "undefined" ? window.innerWidth : 0;
 
-        if (windowWidth < 500) {
-          // fallback menu button
-          var mobile_menu_classlist = document.querySelector(
-            ".mobile_menu_container"
-          ).classList;
-          mobile_menu_classlist.remove(hamburger_button_is_active_class);
+          if (windowWidth < 500) {
+            // fallback menu button
+            var mobile_menu_classlist = document.querySelector(
+              ".mobile_menu_container"
+            ).classList;
+            mobile_menu_classlist.remove(hamburger_button_is_active_class);
 
-          // hide menu body
-          document.querySelector(selector_menu_body).style.display = "none";
-        }
+            // hide menu body
+            document.querySelector(selector_menu_body).style.display = "none";
+          }
+        });
       });
-    });
   }
   render() {
     return (
@@ -154,7 +153,7 @@ export default class NavMiddle extends Component {
           <li style={style.nav_middle_li}>
             <a
               style={style.a}
-              href="//search-trend-vue.firebaseapp.com"
+              href={HREF_TO_GOOGLE_SEARCH_TREND}
               target="_blank"
             >
               GOOGLE SEARCH TREND
