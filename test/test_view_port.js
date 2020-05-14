@@ -2,11 +2,11 @@ const puppeteer = require("puppeteer");
 
 // import {helloworld} from './config';
 const config = require("./config");
-const { page_list } = require("./page_list");
+const { page_list, vp_list } = require("./test_set");
 
 const { consolePass, consoleStatus, consoleWarning } = require("./common");
 
-config.vp_list.forEach((vp) => {
+vp_list.forEach((vp) => {
   page_list.forEach((page) => {
     // test against view ports
     (async (vp_setting, nav_page) => {
