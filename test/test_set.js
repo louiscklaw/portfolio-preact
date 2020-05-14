@@ -23,7 +23,15 @@ const page_list = [
   "/project_detail/appium_behave_notes",
 ];
 
-const mobile_devices = ["iPhone X"];
+const iphone_8 = [
+  "iPhone 8",
+  "iPhone 8 landscape",
+  "iPhone 8 Plus",
+  "iPhone 8 Plus landscape",
+];
+const iphone_x = ["iPhone X", "iPhone X landscape"];
+const nexus_10 = ["Pixel 2", "Pixel 2 landscape"];
+const mobile_devices = [...iphone_8];
 
 function getTestWebAddress(nav_page) {
   return `http://${REACT_HOST_ADDRESS}:8081${nav_page}`;

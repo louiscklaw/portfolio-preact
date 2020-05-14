@@ -20,7 +20,7 @@ echo "start a react on port 8081"
 #   #   logickee/travis-puppeteer \
 #   #   bash
 
-rm -rf result/*.png
+rm -rf test/result/*.png
 
 # yarn
 

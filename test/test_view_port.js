@@ -25,21 +25,17 @@ vp_list.forEach((vp) => {
       });
       const page = await browser.newPage();
 
-      await gotoPageTakeScreenShot(
-        page,
-        getTestWebAddress(nav_page),
-        getFileName(nav_page, vp_width, vp_height)
-      );
+      await page.goto(getTestWebAddress(nav_page));
+      await page.screenshot({
+        path: getFileName(nav_page, vp_width, vp_height),
+      });
 
       await browser.close();
     })(vp, page);
   });
 });
 
-async function gotoPageTakeScreenShot(page, dest_addr, dest_file) {
-  await page.goto(dest_addr);
-  await page.screenshot({ path: dest_file });
-}
+async function gotoPageTakeScreenShot(page, dest_addr, dest_file) {}
 
 function getFileName(in_addr, page_width, page_height) {
   var page_name = translatePageName(in_addr);

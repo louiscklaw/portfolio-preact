@@ -29,5 +29,6 @@ mobile_devices.forEach((device_in_test) => {
 
 function getFileName(in_addr, mobile_device_name) {
   var page_name = translatePageName(in_addr);
+  var mobile_device_name = mobile_device_name.replace(/ /g, "_");
   return `${RESULT_STORE_DIR}/${page_name}_${mobile_device_name}.png`;
 }
