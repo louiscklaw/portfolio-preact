@@ -2,6 +2,9 @@
 
 set -ex
 
+echo "start a react on port 8081"
+read -p "Press any key to resume ..."
+
 # docker kill puppeteer-chrome
 
 # cd test
