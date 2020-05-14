@@ -17,7 +17,7 @@ set -ex
 #   #   logickee/travis-puppeteer \
 #   #   bash
 
-rm -rf result/*diff.png
+rm -rf result/*.png
 
 # yarn
 
@@ -25,5 +25,5 @@ rm -rf result/*diff.png
 node test/test_view_port.js
 # test_view_port done
 
-# compare test result with the expected one
-node test/compare_result.js
+# # compare test result with the expected one
+# node test/compare_result.js

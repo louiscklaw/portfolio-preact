@@ -15,15 +15,12 @@ const vp_list = [VIEW_PORTS.VP_1920_1080, VIEW_PORTS.VP_1080_1920];
 
 const REACT_HOST_ADDRESS = "127.0.0.1";
 
-const page_list = ["/", "/about"];
-
 const RESULT_STORE_DIR = __dirname + "/result";
 const EXPECTED_SCREEN_CAPTURE_DIR = __dirname + "/expected";
 
 module.exports = {
   VIEW_PORTS,
   vp_list,
-  page_list,
   REACT_HOST_ADDRESS,
 
   EXPECTED_SCREEN_CAPTURE_DIR,

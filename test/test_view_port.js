@@ -2,14 +2,15 @@ const puppeteer = require("puppeteer");
 
 // import {helloworld} from './config';
 const config = require("./config");
+const { page_list } = require("./page_list");
 
 config.vp_list.forEach((vp) => {
-  config.page_list.forEach((page) => {
+  page_list.forEach((page) => {
     // test against view ports
     (async (vp_setting, nav_page) => {
       let vp_width = vp_setting.width;
       let vp_height = vp_setting.height;
-      console.log(`testing view port ${vp_width}x${vp_height}`);
+      console.log(`testing view port ${vp_width}x${vp_height} for ${nav_page}`);
       const browser = await puppeteer.launch({
         defaultViewport: vp_setting,
       });
@@ -28,9 +29,7 @@ config.vp_list.forEach((vp) => {
 
 async function gotoPageTakeScreenShot(page, dest_addr, dest_file) {
   await page.goto(dest_addr);
-  await page.screenshot({
-    path: dest_file,
-  });
+  await page.screenshot({ path: dest_file });
 }
 
 function translatePageName(in_addr) {
