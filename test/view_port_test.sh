@@ -3,7 +3,7 @@
 set -ex
 
 echo "start a react on port 8081"
-read -p "Press any key to resume ..."
+# read -p "Press any key to resume ..."
 
 # docker kill puppeteer-chrome
 
@@ -25,7 +25,8 @@ rm -rf result/*.png
 # yarn
 
 # test against view port
-# node test/test_view_port.js
+node test/test_view_port.js
+node test/test_mobile_view_port.js
 # test_view_port done
 
 # # compare test result with the expected one
