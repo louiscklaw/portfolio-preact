@@ -26,4 +26,4 @@ node test/test_view_port.js
 # test_view_port done
 
 # # compare test result with the expected one
-# node test/compare_result.js
+node test/compare_result.js

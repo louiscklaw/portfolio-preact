@@ -19,6 +19,7 @@
     "build/*"
   ],
   "devDependencies": {
+    "chalk": "^4.0.0",
     "eslint": "^6.0.1",
     "eslint-config-synacor": "^3.0.4",
     "if-env": "^1.0.0",

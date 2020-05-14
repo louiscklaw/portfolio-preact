@@ -4,13 +4,17 @@ const puppeteer = require("puppeteer");
 const config = require("./config");
 const { page_list } = require("./page_list");
 
+const { consolePass, consoleStatus, consoleWarning } = require("./common");
+
 config.vp_list.forEach((vp) => {
   page_list.forEach((page) => {
     // test against view ports
     (async (vp_setting, nav_page) => {
       let vp_width = vp_setting.width;
       let vp_height = vp_setting.height;
-      console.log(`testing view port ${vp_width}x${vp_height} for ${nav_page}`);
+      consoleStatus(
+        `testing view port ${vp_width}x${vp_height} for ${nav_page}`
+      );
       const browser = await puppeteer.launch({
         defaultViewport: vp_setting,
       });
@@ -35,10 +39,14 @@ async function gotoPageTakeScreenShot(page, dest_addr, dest_file) {
 function translatePageName(in_addr) {
   if (in_addr == "/") {
     return "index";
+  } else if (in_addr.match(/\/.*\//g)) {
+    // /project_detail/xxxxx
+    return in_addr.substring(1).replace(/\//, "_");
   } else if ((in_addr[0] == "/") & (in_addr.length > 1)) {
+    // /about
     return in_addr.substring(1);
   } else {
-    console.log(`no matching found for ${in_addr}`);
+    consoleWarning(`no matching found for ${in_addr}`);
     return "not found";
   }
 }

@@ -1,8 +1,14 @@
-const config = require("./config");
-
 const fs = require("fs");
 const PNG = require("pngjs").PNG;
 const pixelmatch = require("pixelmatch");
+
+const config = require("./config");
+const {
+  consolePass,
+  consoleStatus,
+  consoleWarning,
+  consoleFail,
+} = require("./common");
 
 var expected_screen_capture_dir = config.EXPECTED_SCREEN_CAPTURE_DIR;
 var test_screen_capture_dir = config.RESULT_STORE_DIR;
@@ -10,6 +16,7 @@ var test_screen_capture_dir = config.RESULT_STORE_DIR;
 fs.readdir(expected_screen_capture_dir, (err, file) => {
   return file
     .filter((filename) => filename.search(".png") > 0)
+    .sort()
     .map((expected_screen_capture) => {
       var test_png_path =
         test_screen_capture_dir + "/" + expected_screen_capture;
@@ -23,10 +30,10 @@ fs.readdir(expected_screen_capture_dir, (err, file) => {
       var img_error_value = img_check_result[1][1];
       if (img_result) {
         // png the same
-        console.log(`${img_path} pass`);
+        consolePass(`${img_path} pass`);
       } else {
         // png not the same
-        console.log(`${img_path} failed with red value ${img_error_value}`);
+        consoleFail(`${img_path} failed with red pixels ${img_error_value}`);
       }
     });
 });
@@ -50,11 +57,13 @@ function bloatPNGDataArray(png_buffer) {
 }
 
 function checkAlertColor(png_buffer) {
-  return bloatPNGDataArray(png_buffer).filter((RGBA) => RGBA[0] == 255).length;
+  return bloatPNGDataArray(png_buffer).filter((RGBA) => {
+    return RGBA[0] == 255 && RGBA[1] == 0 && RGBA[2] == 0;
+  }).length;
 }
 
 function checkPNGExist(png_file_path) {
-  console.log(png_file_path);
+  consoleStatus(png_file_path);
   return fs.existsSync(png_file_path);
 }
 
@@ -65,7 +74,7 @@ function readPngFile(png_file_path) {
   } catch (err) {
     // Here you get the error when the file was not found,
     // but you also get any other error
-    console.log(`cannot read png file, file wanted: ${png_file_path}`);
+    consoleWarning(`cannot read png file, file wanted: ${png_file_path}`);
     throw err;
   }
 }
