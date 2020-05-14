@@ -17,6 +17,10 @@ set -ex
 #   #   logickee/travis-puppeteer \
 #   #   bash
 
+rm -rf result/*diff.png
+
+# yarn
+
 # test against view port
 node test/test_view_port.js
 # test_view_port done
