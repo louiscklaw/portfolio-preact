@@ -13,29 +13,59 @@ const {
 var expected_screen_capture_dir = config.EXPECTED_SCREEN_CAPTURE_DIR;
 var test_screen_capture_dir = config.RESULT_STORE_DIR;
 
-fs.readdir(expected_screen_capture_dir, (err, file) => {
-  return file
-    .filter((filename) => filename.search(".png") > 0)
-    .sort()
-    .map((expected_screen_capture) => {
-      var test_png_path =
-        test_screen_capture_dir + "/" + expected_screen_capture;
-      var expected_png_path =
-        expected_screen_capture_dir + "/" + expected_screen_capture;
-      return [test_png_path, isPNGSame(test_png_path, expected_png_path)];
-    })
-    .forEach((img_check_result) => {
-      var img_path = img_check_result[0];
-      var img_result = img_check_result[1][0];
-      var img_error_value = img_check_result[1][1];
-      if (img_result) {
-        // png the same
-        consolePass(`${img_path} pass`);
-      } else {
-        // png not the same
-        consoleFail(`${img_path} failed with red pixels ${img_error_value}`);
-      }
-    });
+fs.readdir(expected_screen_capture_dir, (err, file_expected_result) => {
+  fs.readdir(test_screen_capture_dir, (err, file_test_result) => {
+    if (file_expected_result.length != file_test_result.length) {
+      consoleWarning(
+        "the file in directory are not the same, finding the missing file..."
+      );
+
+      file_expected_result.forEach((x) => {
+        if (file_test_result.findIndex((y) => x == y) == -1) {
+          consoleWarning(`${x} not found in test result png directory`);
+        }
+      });
+
+      file_test_result
+        .filter((x) => !(x.search(/diff.png/) >= 0))
+        .forEach((x) => {
+          if (file_expected_result.findIndex((y) => x == y) == -1) {
+            consoleWarning(`${x} not found in expected result png directory`);
+          }
+        });
+
+      return process.exit();
+    } else {
+      consoleStatus("the file in directory are the same, go ahead");
+
+      fs.readdir(expected_screen_capture_dir, (err, file) => {
+        return file
+          .filter((filename) => filename.search(".png") > 0)
+          .sort()
+          .map((expected_screen_capture) => {
+            var test_png_path =
+              test_screen_capture_dir + "/" + expected_screen_capture;
+            var expected_png_path =
+              expected_screen_capture_dir + "/" + expected_screen_capture;
+            return [test_png_path, isPNGSame(test_png_path, expected_png_path)];
+          })
+          .forEach((img_check_result) => {
+            var img_path = img_check_result[0];
+            var img_result = img_check_result[1][0];
+            var img_error_value = img_check_result[1][1];
+            if (img_result) {
+              // png the same
+              consolePass(`${img_path} pass`);
+            } else {
+              // png not the same
+              consoleFail(
+                `${img_path} failed with red pixels ${img_error_value}`
+              );
+            }
+          });
+      });
+    }
+  });
 });
 
 function getDiffPngPath(test_png_path) {
