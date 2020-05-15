@@ -16,19 +16,19 @@ export default class Credits extends Component {
         flexFlow: "column",
         flexWrap: "nowrap",
 
-        padding: is_mobile ? "1em 1em" : "5em 10em"
+        padding: is_mobile ? "1em 1em" : "5em 10em",
         // paddingLeft: '10em',
         // paddingRight: '10em',
         // paddingTop: '5em',
         // paddingBottom: '10em'
       },
       ul: {
-        listStyle: "none"
+        listStyle: "none",
       },
       page_header: {
         fontSize: "2em",
         paddingBottom: "1.5em",
-        width: "100%"
+        width: "100%",
       },
 
       paragraph_body: {
@@ -37,27 +37,27 @@ export default class Credits extends Component {
         // borderWidth: '1px',
         // borderStyle: 'dotted',
         // borderColor: 'yellow',
-        width: "100%"
+        width: "100%",
       },
 
       paragraph_body_section: {
         paddingTop: "1em",
-        paddingBottom: "1em"
+        paddingBottom: "1em",
       },
 
       paragraph_body_h4: {
         paddingTop: "1em",
-        paddingBottom: "1em"
+        paddingBottom: "1em",
       },
 
       pragraph_title: {
-        width: "67%"
-      }
+        width: "67%",
+      },
     };
 
     return (
       <div style={style.page_credit}>
-        <div style={style.page_header}>Credit</div>
+        <div style={style.page_header}>Credits</div>
 
         <div style={style.paragraph_body}>
           <section style={style.paragraph_body_section}>
