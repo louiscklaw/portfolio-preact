@@ -68,9 +68,6 @@ import:
   # - .travis/merge.yml
   # - .travis/deploy.yml
 
-after_failure:
-  - cat yarn_build.log
-
 env:
   global:
     - FIREBASE_PROJECT: preactjs-projects
