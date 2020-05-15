@@ -32,7 +32,7 @@ jobs:
       script:
         - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-build-merger/merge_if_success.sh
         - chmod +x merge_if_success.sh
-        - bash merge_if_success.sh | tee merge.log
+        - bash merge_if_success.sh
 
     - stage: "Deploy"
       name: "Deploy to firebase"
