@@ -25,6 +25,7 @@ jobs:
     - stage: Build
       name: "Build preact app"
       script:
+        - export
         - yarn build | tee yarn_build.log
 
     - stage: Merge
