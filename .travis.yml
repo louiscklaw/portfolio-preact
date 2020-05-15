@@ -27,13 +27,6 @@ jobs:
       script:
         - yarn build | tee yarn_build.log
 
-    - stage: Merge
-      name: "Merge commits"
-      script:
-        - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-build-merger/merge_if_success.sh
-        - chmod +x merge_if_success.sh
-        - bash merge_if_success.sh
-
     - stage: "Deploy"
       name: "Deploy to firebase"
 
@@ -70,6 +63,7 @@ jobs:
 
 import:
   - credentials.yml
+  - travis-merger.yml
   # - .travis/build.yml
   # - .travis/merge.yml
   # - .travis/deploy.yml
