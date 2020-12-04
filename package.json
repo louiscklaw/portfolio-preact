@@ -34,7 +34,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.12.0",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
-    "highlight.js": "^9.17.1",
+    "highlight.js": "^10.4.1",
     "husky": "^4.2.3",
     "mermaid.cli": "^0.5.1",
     "node-sass": "^4.13.0",
