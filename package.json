@@ -37,7 +37,7 @@
     "highlight.js": "^9.17.1",
     "husky": "^4.2.3",
     "mermaid.cli": "^0.5.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "preact": "^10.1.0",
     "preact-async-route": "^2.2.1",
     "preact-helmet": "^4.0.0-alpha-3",
